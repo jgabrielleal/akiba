@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('avatar')->nullable();
             $table->string('music');
             $table->integer('requests');
-            $table->strin('production');
+            $table->string('production');
             $table->string('singer');
         });
     }
