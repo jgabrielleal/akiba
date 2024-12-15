@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+use App\Livewire\Panel\Login;
+
+
+Route::prefix('painel')->group(function () {
+    Route::get('/', Login::class);
 });

@@ -17,7 +17,7 @@ return new class extends Migration
             $table->unsignedBigInteger('author');
             $table->string('title');
             $table->string('cover');
-            $table->string('publication');
+            $table->longText('publication');
             $table->json('tags');
             $table->json('fonts');
             $table->json('reactions');
