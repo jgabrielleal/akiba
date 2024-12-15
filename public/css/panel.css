@@ -1,8 +1,50 @@
 :root {
   --aurora: #FFF6E6;
+  --aurora-cinza: #e6ded1;
   --creme: #FFE8BF;
   --laranja: #FFA919;
-  --dark-blue: #00061A;
+  --azul-escuro: #00061A;
   --azul-medio: #002080;
   --azul-claro: #0091FF;
+}
+
+* {
+  font-family: "Noto Sans", sans-serif;
+}
+
+.panel-body {
+  background: #00061A;
+}
+
+.login .block-logo {
+  margin-bottom: 2rem;
+}
+.login .block-logo img {
+  width: 11rem;
+}
+.login .block-auth {
+  background: #FFF6E6;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+}
+.login .block-auth form input {
+  background-color: #e6ded1;
+  border: 0.1rem solid rgb(224, 224, 224);
+  border-radius: 0.5rem;
+}
+.login .block-auth form inputhover {
+  border: 0.1rem solid rgb(224, 224, 224);
+}
+.login .block-auth form button {
+  background-color: #0091FF;
+  border-radius: 0.5rem;
+  color: #FFF6E6;
+}
+.login .block-footer {
+  color: #FFF6E6;
+  font-size: 1rem;
+  font-weight: 300 !important;
+}
+.login .block-footer a {
+  color: #0091FF;
 }/*# sourceMappingURL=panel.css.map */
