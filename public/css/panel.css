@@ -25,7 +25,7 @@
 .login .block-auth {
   background: #FFF6E6;
   border-radius: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .login .block-auth form input {
   background-color: #e6ded1;
@@ -42,7 +42,7 @@
 }
 .login .block-footer {
   color: #FFF6E6;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 300 !important;
 }
 .login .block-footer a {
