@@ -19,7 +19,7 @@
                             </label>
                             <input type="password" class="form-control shadow-none" id="password" wire:model="password" required>
                         </div>
-                        <div class="mb-1">
+                        <div class="mb-1 d-flex justify-content-end">
                             <button class="btn border-0 shadow-none d-flex gap-1">
                                 <i class="bi bi-box-arrow-in-right"></i>Entrar
                             </button>
@@ -27,8 +27,7 @@
                     </form>
                 </div>
                 <div class="block-footer text-center">
-                    Akiba © 2016 - <?php echo date('Y'); ?> <br/>
-                    Todos os direitos reservados<br/> 
+                    Rede Akiba © 2016 - <?php echo date('Y'); ?> <br/>
                     Aki Panel v1.0.0
                 </div>
             </div>

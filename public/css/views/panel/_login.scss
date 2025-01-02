@@ -1,36 +1,55 @@
 .login {
-    .block-logo {
-        margin-bottom: 2rem;
-        img {
-            width: 11rem;
-        }
+    position: relative;
+    background-image: url('https://wallup.net/wp-content/uploads/2018/09/26/146488-K-ON-Hirasawa_Yui.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; // Ajuste conforme necessário
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); // Ajuste a opacidade conforme necessário
+        z-index: 1;
     }
-    .block-auth {
-        background: $aurora;
-        border-radius: 0.5rem;
-        margin-bottom: 1rem;
-        form{
-            input{
-                background-color: $aurora-cinza;
-                border: 0.1rem solid rgb(224, 224, 224);
-                border-radius: 0.5rem;
-                &hover{
+    .container{
+        position: relative;
+        z-index: 2;
+        .block-logo {
+            margin-bottom: 2rem;
+            img {
+                width: 11rem;
+            }
+        }
+        .block-auth {
+            background: $aurora;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            form{
+                input{
+                    background-color: $aurora-cinza;
                     border: 0.1rem solid rgb(224, 224, 224);
+                    border-radius: 0.5rem;
+                    &hover{
+                        border: 0.1rem solid rgb(224, 224, 224);
+                    }
+                }
+                button{
+                    background-color: $azul-claro;
+                    border-radius: 0.5rem;
+                    color: $aurora;
                 }
             }
-            button{
-                background-color: $azul-claro;
-                border-radius: 0.5rem;
-                color: $aurora;
-            }
         }
-    }
-    .block-footer{
-        color: $aurora;
-        font-size: 0.9rem;
-        font-weight: 300 !important ;
-        a{
-            color: $azul-claro;
+        .block-footer{
+            color: $aurora;
+            font-size: 0.9rem;
+            font-weight: 400 !important ;
+            a{
+                color: $azul-claro;
+            }
         }
     }
 }

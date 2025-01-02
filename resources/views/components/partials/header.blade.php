@@ -3,8 +3,14 @@
 <meta name="author" content="João Gabriel dos Anjos Leal">
 <meta name="description" content="Sua fonte de músicas e notícias sobre animes, mangás e light novels. Tenha acesso também à recomendações, reviews e curiosidades sobre suas obras favoritas. Enquanto isso, na rádio você tem acesso à maior playlist otaku do momento com notícias e programas ao vivo.">
 <meta name="keywords" content="anime, mangá, japão, música, ásia, cosplay, evento">
-<link rel="icon" href="{{ asset('favicon.ico') }}">
-<title>{{ $title ?? 'Page Title' }}</title>
+<link rel="icon" href="{{ asset('/images/favicon.ico') }}">
+<title>
+    @if(isset($title))
+        {{ $title }} | Rede Akiba - O Paraíso dos Otakus
+    @else
+        Rede Akiba - O Paraíso dos Otakus! | Sua Melhor Fonte de Animes (e Mangás) no Brasil!
+    @endif
+</title>
 <!-- Bootstrap -->
 <link rel="preconnect" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 <link rel="preconnect" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">

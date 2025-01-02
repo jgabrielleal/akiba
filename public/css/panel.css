@@ -16,35 +16,56 @@
   background: #00061A;
 }
 
-.login .block-logo {
+.login {
+  position: relative;
+  background-image: url("https://wallup.net/wp-content/uploads/2018/09/26/146488-K-ON-Hirasawa_Yui.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+.login::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+.login .container {
+  position: relative;
+  z-index: 2;
+}
+.login .container .block-logo {
   margin-bottom: 2rem;
 }
-.login .block-logo img {
+.login .container .block-logo img {
   width: 11rem;
 }
-.login .block-auth {
+.login .container .block-auth {
   background: #FFF6E6;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
-.login .block-auth form input {
+.login .container .block-auth form input {
   background-color: #e6ded1;
   border: 0.1rem solid rgb(224, 224, 224);
   border-radius: 0.5rem;
 }
-.login .block-auth form inputhover {
+.login .container .block-auth form inputhover {
   border: 0.1rem solid rgb(224, 224, 224);
 }
-.login .block-auth form button {
+.login .container .block-auth form button {
   background-color: #0091FF;
   border-radius: 0.5rem;
   color: #FFF6E6;
 }
-.login .block-footer {
+.login .container .block-footer {
   color: #FFF6E6;
   font-size: 0.9rem;
-  font-weight: 300 !important;
+  font-weight: 400 !important;
 }
-.login .block-footer a {
+.login .container .block-footer a {
   color: #0091FF;
 }/*# sourceMappingURL=panel.css.map */
