@@ -4,9 +4,10 @@
 <meta name="description" content="Sua fonte de músicas e notícias sobre animes, mangás e light novels. Tenha acesso também à recomendações, reviews e curiosidades sobre suas obras favoritas. Enquanto isso, na rádio você tem acesso à maior playlist otaku do momento com notícias e programas ao vivo.">
 <meta name="keywords" content="anime, mangá, japão, música, ásia, cosplay, evento">
 <link rel="icon" href="{{ asset('/images/favicon.ico') }}">
+<meta name="csrf-token" content="{{ csrf_token() }}"/>
 <title>
     @if(isset($title))
-        {{ $title }} | Rede Akiba - O Paraíso dos Otakus
+        {{ $title }} | Rede Akiba
     @else
         Rede Akiba - O Paraíso dos Otakus! | Sua Melhor Fonte de Animes (e Mangás) no Brasil!
     @endif
