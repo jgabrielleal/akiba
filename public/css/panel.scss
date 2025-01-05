@@ -1,5 +1,6 @@
 // Imports by folder base
 @import "./base/_colors.scss";
+@import "./base/_typography.scss";
 @import "./base/_reset.scss";
 
 // Imports by folder layout
@@ -10,3 +11,4 @@
 
 // Import by folder views
 @import "./views/panel/_login.scss";
+@import "./views/panel/_dashboard.scss";

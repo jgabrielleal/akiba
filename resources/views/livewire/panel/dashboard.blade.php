@@ -1,3 +1,3 @@
-<div>
-    {{-- Success is as dangerous as failure. --}}
+<div class="container mt-5">
+    @livewire('panel.inline.dashboard.boas-vindas')
 </div>

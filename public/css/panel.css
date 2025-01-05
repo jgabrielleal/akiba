@@ -8,8 +8,21 @@
   --azul-claro: #0091FF;
 }
 
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/AvertaRegular.otf");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Averta";
+  src: url("/fonts/AvertaExtraBold.otf");
+  font-weight: bold;
+  font-display: swap;
+}
 * {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Averta", "Noto Sans", sans-serif;
+  font-weight: normal;
 }
 
 .panel-body {
@@ -90,4 +103,16 @@
 }
 .login .container .block-footer a {
   color: #0091FF;
+}
+
+.boasVindas {
+  padding: 0.5rem;
+  border: 0.3rem solid #0091FF;
+  border-radius: 0.8rem;
+  text-align: center;
+  color: #FFA919;
+  text-transform: uppercase;
+  font-style: italic;
+  font-weight: 900;
+  font-size: 1.5rem;
 }/*# sourceMappingURL=panel.css.map */
