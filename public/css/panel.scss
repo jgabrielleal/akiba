@@ -5,5 +5,8 @@
 // Imports by folder layout
 @import "./layout/_breakpoints.scss";
 
+// Imports by folder components
+@import "./components/panel/_navbar.scss";
+
 // Import by folder views
 @import "./views/panel/_login.scss";

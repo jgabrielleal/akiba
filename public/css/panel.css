@@ -16,6 +16,28 @@
   background: #00061A;
 }
 
+.navbar {
+  background-color: #FFF6E6;
+}
+.navbar .navbar-brand img {
+  width: 34px;
+}
+.navbar .navbar-toggler-icon {
+  filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
+}
+.navbar .nav-link {
+  font-weight: 900 !important;
+}
+.navbar .nav-link img {
+  width: 1.3rem;
+}
+.navbar .nav-link:hover {
+  color: #0091FF;
+}
+.navbar .nav-link:hover img {
+  filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
+}
+
 .login {
   position: relative;
   background-image: url("https://i.imgur.com/eKaJC9L.jpeg");

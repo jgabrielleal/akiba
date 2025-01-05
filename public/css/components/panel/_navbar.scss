@@ -1,0 +1,23 @@
+.navbar{
+    background-color: $aurora;
+    .navbar-brand{
+        img{
+            width: 34px;
+        }
+    }
+    .navbar-toggler-icon{
+        filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
+    }
+    .nav-link{
+        font-weight: 900 !important;
+        img{
+            width: 1.3rem;
+        }
+        &:hover{
+            color: $azul-claro;
+            img{
+                filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
+            }
+        }
+    }
+}
