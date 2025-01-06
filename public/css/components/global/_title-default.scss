@@ -1,0 +1,19 @@
+.title-default{
+    position: relative;
+    overflow: hidden !important;
+    h1{
+        color: $laranja;
+        font-size: 1.3rem;
+        font-weight: 900;
+        font-style: italic;
+        text-transform: uppercase;
+        &::after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            margin-top: 0.8rem;
+            margin-left: 1rem;
+            border-bottom: 0.1rem solid $laranja;
+        }
+    }
+}

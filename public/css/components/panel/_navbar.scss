@@ -1,8 +1,15 @@
 .navbar{
     background-color: $aurora;
+    @include xl{
+        height: 3.1rem;
+    }
     .navbar-brand{
         img{
             width: 34px;
+            @include xl{
+                width: 2rem;
+                padding-bottom: 0.14rem;
+            }
         }
     }
     .navbar-toggler-icon{

@@ -6,7 +6,11 @@
 // Imports by folder layout
 @import "./layout/_breakpoints.scss";
 
+// Imports by folder functions
+@import "./functions/text-overflow.scss";
+
 // Imports by folder components
+@import "./components/global/_title-default.scss";
 @import "./components/panel/_navbar.scss";
 
 // Import by folder views

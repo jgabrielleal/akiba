@@ -29,11 +29,42 @@
   background: #00061A;
 }
 
+.title-default {
+  position: relative;
+  overflow: hidden !important;
+}
+.title-default h1 {
+  color: #FFA919;
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.title-default h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  border-bottom: 0.1rem solid #FFA919;
+}
+
 .navbar {
   background-color: #FFF6E6;
 }
+@media (min-width: 1200px) {
+  .navbar {
+    height: 3.1rem;
+  }
+}
 .navbar .navbar-brand img {
   width: 34px;
+}
+@media (min-width: 1200px) {
+  .navbar .navbar-brand img {
+    width: 2rem;
+    padding-bottom: 0.14rem;
+  }
 }
 .navbar .navbar-toggler-icon {
   filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
@@ -115,4 +146,34 @@
   font-style: italic;
   font-weight: 900;
   font-size: 1.5rem;
+}
+
+.avisos-para-equipe .avisos-carrousel {
+  flex-wrap: wrap;
+}
+@media (min-width: 1200px) {
+  .avisos-para-equipe .avisos-carrousel {
+    flex-wrap: nowrap;
+  }
+}
+.avisos-para-equipe .avisos-carrousel .avisos-item {
+  width: 100%;
+  height: 12rem;
+  padding: 1rem;
+  background-color: #0091FF;
+  border-radius: 0.3rem;
+}
+.avisos-para-equipe .avisos-carrousel .avisos-item .avisos-destinatario {
+  font-size: 1.3rem;
+  font-weight: 900;
+  color: #FFF6E6;
+}
+.avisos-para-equipe .avisos-carrousel .avisos-item .avisos-mensagem {
+  font-size: 0.8rem;
+  color: #FFF6E6;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
 }/*# sourceMappingURL=panel.css.map */
