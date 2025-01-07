@@ -13,15 +13,18 @@
 .avisos-para-equipe{
     .avisos-carrousel{
         flex-wrap: wrap;
-        @include xl{
+        @include lg{
             flex-wrap: nowrap;
         }
         .avisos-item{
             width: 100%;
-            height: 12rem;
+            height: auto;
             padding: 1rem;
             background-color: $azul-claro;
             border-radius: 0.3rem;
+            @include xl{
+                height: 12rem;
+            }
             .avisos-destinatario{
                 font-size: 1.3rem;
                 font-weight: 900;
@@ -32,6 +35,19 @@
                 color: $aurora;
                 @include text-overflow(6);
             }
+        }
+    }
+}
+
+.acoes-rapidas{
+    .acoes-rapidas-carrousel{
+        .btn{
+            background-color: $azul-claro;
+            border-radius: 0.3rem;
+            font-size: 1rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            color: $aurora;
         }
     }
 }
