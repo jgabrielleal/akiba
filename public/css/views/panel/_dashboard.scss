@@ -1,53 +1,74 @@
-.boasVindas{
-    padding: 0.5rem;
-    border: 0.3rem solid $azul-claro;
-    border-radius: 0.8rem;
-    text-align: center;
-    color: $laranja;
-    text-transform: uppercase;
-    font-style: italic;
-    font-weight: 900;
-    font-size: 1.5rem;
-}
-
-.avisos-para-equipe{
-    .avisos-carrousel{
-        flex-wrap: wrap;
-        @include lg{
-            flex-wrap: nowrap;
-        }
-        .avisos-item{
-            width: 100%;
-            height: auto;
-            padding: 1rem;
-            background-color: $azul-claro;
-            border-radius: 0.3rem;
-            @include xl{
-                height: 12rem;
+.dashboard{
+    .boasVindas{
+        padding: 0.5rem;
+        border: 0.3rem solid $azul-claro;
+        border-radius: 0.8rem;
+        text-align: center;
+        color: $laranja;
+        text-transform: uppercase;
+        font-style: italic;
+        font-weight: 900;
+        font-size: 1.5rem;
+    }
+    .avisos{
+        .avisos-carrousel{
+            flex-wrap: wrap;
+            @include lg{
+                flex-wrap: nowrap;
             }
-            .avisos-destinatario{
-                font-size: 1.3rem;
-                font-weight: 900;
-                color: $aurora;
-            }
-            .avisos-mensagem{
-                font-size: 0.8rem;
-                color: $aurora;
-                @include text-overflow(6);
+            .avisos-item{
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+                background-color: $azul-claro;
+                border-radius: 0.3rem;
+                @include xl{
+                    height: 12rem;
+                }
+                .avisos-destinatario{
+                    font-size: 1.3rem;
+                    font-weight: 900;
+                    color: $aurora;
+                }
+                .avisos-mensagem{
+                    font-size: 0.8rem;
+                    color: $aurora;
+                    @include text-overflow(6);
+                }
             }
         }
     }
-}
-
-.acoes-rapidas{
-    .acoes-rapidas-carrousel{
-        .btn{
-            background-color: $azul-claro;
-            border-radius: 0.3rem;
-            font-size: 1rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            color: $aurora;
+    .acoes-rapidas{
+        .acoes-rapidas-carrousel{
+            .btn{
+                background-color: $azul-claro;
+                border-radius: 0.3rem;
+                font-size: 1rem;
+                font-weight: 900;
+                text-transform: uppercase;
+                color: $aurora;
+                img{
+                    width: 1.2rem;
+                    filter: invert(100%) sepia(52%) saturate(723%) hue-rotate(343deg) brightness(115%) contrast(110%);
+                }
+            }
+        }
+    }
+    .status-radio{
+        .status-radio-carrousel{
+            display: flex;
+            .status-radio-item{
+                padding-right: 1.5rem;
+                border-right: 0.1rem solid gray;
+                font-size: 1.5rem;
+                font-weight: 300;
+                text-transform: uppercase;
+                color: $laranja;
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
         }
     }
 }

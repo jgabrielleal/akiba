@@ -11,7 +11,7 @@ class AvisosParaEquipe extends Component
         return <<<'HTML'
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
-                <section class="avisos-para-equipe mb-4">
+                <section class="avisos mb-4">
                     <div class="title-default">
                         <h1>Avisos para equipe</h1>
                     </div>

@@ -1,4 +1,4 @@
-<div class="container mt-5">
+<div class="container mt-5 dashboard">
     @livewire('panel.inline.dashboard.boas-vindas')
     @livewire('panel.inline.dashboard.avisos-para-equipe')
     @livewire('panel.inline.dashboard.acoes-rapidas')

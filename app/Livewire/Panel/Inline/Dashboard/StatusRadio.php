@@ -15,6 +15,11 @@ class StatusRadio extends Component
                     <div class="title-default">
                         <h1>Status da Rádio</h1>
                     </div> 
+                    <div class="status-radio-carrousel">
+                        <div class="status-radio-item d-flex gap-2 align-items-center">
+                            <i class="bi bi-soundwave"></i>320 KBPS
+                        </div>
+                    </div>
                 </section>
             </div>
         </div>

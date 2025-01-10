@@ -16,23 +16,20 @@ class AcoesRapidas extends Component
                         <h1>Ações Rápidas</h1>
                     </div>
                     <div class="acoes-rapidas-carrousel d-flex gap-2 mt-1">
-                        <button type="button" class="btn d-flex gap-1">
-                            <i class="bi bi-layers-fill"></i>Nova Matéria
+                        <button type="button" class="btn d-flex align-items-center gap-2">
+                            <img src="{{ asset('icons/panel/acoes_rapidas/adicionar_materias.svg') }}" alt="Adicionar Matérias" />Nova Matéria
                         </button>
-                        <button type="button" class="btn d-flex gap-1">
-                            <i class="bi bi-bell-fill"></i>Criar Avisos
+                        <button type="button" class="btn d-flex align-items-center gap-1">
+                            <img src="{{ asset('icons/panel/acoes_rapidas/adicionar_avisos.svg') }}" alt="Adicionar Avisos" />Criar Avisos
                         </button>
-                        <button type="button" class="btn d-flex gap-1">
-                            <i class="bi bi-cloud-upload-fill"></i>Deixar Arquivos
+                        <button type="button" class="btn d-flex align-items-center gap-2">
+                            <img src="{{ asset('icons/panel/acoes_rapidas/enviar_arquivo.svg') }}" alt="Enviar Arquivo" />Deixar Arquivos
                         </button>
-                        <button type="button" class="btn d-flex gap-1">
-                            <i class="bi bi-mic-fill"></i>Iniciar Programa
+                        <button type="button" class="btn d-flex align-items-center gap-1">
+                            <img src="{{ asset('icons/panel/acoes_rapidas/iniciar_programa.svg') }}" alt="Iniciar Programa" />Iniciar Programa
                         </button>
-                        <button type="button" class="btn d-flex gap-1">
-                            <i class="bi bi-calendar-day-fill"></i>Adicionar Eventos
-                        </button>
-                        <button type="button" class="btn d-flex gap-1">
-                            <i class="bi bi-music-note-list"></i>Caixa de Pedidos
+                        <button type="button" class="btn d-flex align-items-center gap-2">
+                            <img src="{{ asset('icons/panel/acoes_rapidas/adicionar_eventos.svg') }}" alt="Adicionar Eventos" />Adicionar Eventos
                         </button>
                     </div>
                 </section>

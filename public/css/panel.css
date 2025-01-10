@@ -136,7 +136,7 @@
   color: #0091FF;
 }
 
-.boasVindas {
+.dashboard .boasVindas {
   padding: 0.5rem;
   border: 0.3rem solid #0091FF;
   border-radius: 0.8rem;
@@ -147,16 +147,15 @@
   font-weight: 900;
   font-size: 1.5rem;
 }
-
-.avisos-para-equipe .avisos-carrousel {
+.dashboard .avisos .avisos-carrousel {
   flex-wrap: wrap;
 }
 @media (min-width: 992px) {
-  .avisos-para-equipe .avisos-carrousel {
+  .dashboard .avisos .avisos-carrousel {
     flex-wrap: nowrap;
   }
 }
-.avisos-para-equipe .avisos-carrousel .avisos-item {
+.dashboard .avisos .avisos-carrousel .avisos-item {
   width: 100%;
   height: auto;
   padding: 1rem;
@@ -164,16 +163,16 @@
   border-radius: 0.3rem;
 }
 @media (min-width: 1200px) {
-  .avisos-para-equipe .avisos-carrousel .avisos-item {
+  .dashboard .avisos .avisos-carrousel .avisos-item {
     height: 12rem;
   }
 }
-.avisos-para-equipe .avisos-carrousel .avisos-item .avisos-destinatario {
+.dashboard .avisos .avisos-carrousel .avisos-item .avisos-destinatario {
   font-size: 1.3rem;
   font-weight: 900;
   color: #FFFAF3;
 }
-.avisos-para-equipe .avisos-carrousel .avisos-item .avisos-mensagem {
+.dashboard .avisos .avisos-carrousel .avisos-item .avisos-mensagem {
   font-size: 0.8rem;
   color: #FFFAF3;
   overflow: hidden;
@@ -182,12 +181,30 @@
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
 }
-
-.acoes-rapidas .acoes-rapidas-carrousel .btn {
+.dashboard .acoes-rapidas .acoes-rapidas-carrousel .btn {
   background-color: #0091FF;
   border-radius: 0.3rem;
   font-size: 1rem;
   font-weight: 900;
   text-transform: uppercase;
   color: #FFFAF3;
+}
+.dashboard .acoes-rapidas .acoes-rapidas-carrousel .btn img {
+  width: 1.2rem;
+  filter: invert(100%) sepia(52%) saturate(723%) hue-rotate(343deg) brightness(115%) contrast(110%);
+}
+.dashboard .status-radio .status-radio-carrousel {
+  display: flex;
+}
+.dashboard .status-radio .status-radio-carrousel .status-radio-item {
+  padding-right: 1.5rem;
+  border-right: 0.1rem solid gray;
+  font-size: 1.5rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #FFA919;
+}
+.dashboard .status-radio .status-radio-carrousel .status-radio-item img {
+  width: 2rem;
+  height: 2rem;
 }/*# sourceMappingURL=panel.css.map */

@@ -20,42 +20,42 @@
                 <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                            <img src="{{ asset('icons/materias.svg') }}" alt="Matérias" />Matérias
+                            <img src="{{ asset('icons/panel/navbar/materias.svg') }}" alt="Matérias" />Matérias
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                            <img src="{{ asset('icons/locucao.svg') }}" alt="Locução" />Locução
+                            <img src="{{ asset('icons/panel/navbar/locucao.svg') }}" alt="Locução" />Locução
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                            <img src="{{ asset('icons/radio.svg') }}" alt="Rádio" />Rádio
+                            <img src="{{ asset('icons/panel/navbar/radio.svg') }}" alt="Rádio" />Rádio
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                            <img src="{{ asset('icons/podcast.svg') }}" alt="Podcasts" />Podcasts
+                            <img src="{{ asset('icons/panel/navbar/podcast.svg') }}" alt="Podcasts" />Podcasts
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                            <img src="{{ asset('icons/marketing.svg') }}" alt="Marketing" />Marketing
+                            <img src="{{ asset('icons/panel/navbar/marketing.svg') }}" alt="Marketing" />Marketing
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                            <img src="{{ asset('icons/adms.svg') }}" alt="ADM's" />ADM's
+                            <img src="{{ asset('icons/panel/navbar/adms.svg') }}" alt="ADM's" />ADM's
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                            <img src="{{ asset('icons/logs.svg') }}" alt="Logs's" />Logs's
+                            <img src="{{ asset('icons/panel/navbar/logs.svg') }}" alt="Logs's" />Logs's
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                            <img src="{{ asset('icons/perfil.svg') }}" alt="Perfil" />Perfil
+                            <img src="{{ asset('icons/panel/navbar/perfil.svg') }}" alt="Perfil" />Perfil
                         </a>
                     </li>
                 </ul>
