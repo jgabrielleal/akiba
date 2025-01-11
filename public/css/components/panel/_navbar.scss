@@ -1,13 +1,12 @@
 .navbar{
     background-color: $aurora;
     @include xl{
-        height: 3.1rem;
+        height: 2.5rem;
     }
     .navbar-brand{
         img{
             width: 34px;
             @include xl{
-                width: 2rem;
                 padding-bottom: 0.14rem;
             }
         }
