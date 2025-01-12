@@ -26,4 +26,18 @@
             }
         }
     }
+    .etc{
+        .perfil{
+            display: none;
+            @include xl{
+                display: block;
+                img{
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    border-radius: 22.5rem;
+                    border: 0.4rem solid $aurora;
+                }
+            }
+        }
+    }
 }

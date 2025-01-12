@@ -9,7 +9,7 @@ class Navbar extends Component
     public function render()
     {
         return <<<'HTML'
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg mt-lg-4">
             <div class="container">
                 <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -63,10 +63,15 @@ class Navbar extends Component
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/perfil.svg') }}" alt="Perfil" />
+                                <img src="{{ asset('icons/panel/navbar/avisos.svg') }}" alt="Avisos" />
                             </a>
                         </li>
                     </ul>
+                    <div class="etc">
+                        <a href="#" class="perfil">
+                            <img src="https://static.gameloop.com/img/8e93daa12129f25a8bf60eab3ae86c7b.png?imageMogr2/thumbnail/172.8x172.8/format/webp" alt="Usuário" />
+                        </a>
+                    </div>
                 </div>
             </div>
         </nav>
