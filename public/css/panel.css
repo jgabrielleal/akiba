@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --aurora: #FFFAF3;
   --aurora-cinza: #e6ded1;
@@ -8,25 +9,13 @@
   --azul-claro: #0091FF;
 }
 
-@font-face {
-  font-family: "Averta";
-  src: url("/fonts/AvertaRegular.otf");
-  font-weight: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Averta";
-  src: url("/fonts/AvertaExtraBold.otf");
-  font-weight: bold;
-  font-display: swap;
-}
 * {
-  font-family: "Averta", "Noto Sans", sans-serif;
+  font-family: "Noto Sans Display", serif;
   font-weight: normal;
 }
 
 .panel-body {
-  background: #00061A;
+  background: #000036;
 }
 
 .title-default {
@@ -136,8 +125,9 @@
 }
 
 .dashboard .boasVindas {
+  position: relative;
   padding: 0.5rem;
-  border: 0.3rem solid #0091FF;
+  background-color: #002080;
   border-radius: 0.8rem;
   text-align: center;
   color: #FFA919;
@@ -146,30 +136,87 @@
   font-weight: 900;
   font-size: 1.5rem;
 }
-.dashboard .avisos .avisos-carrousel {
+.dashboard .boasVindas img {
+  display: none;
+}
+@media (min-width: 1200px) {
+  .dashboard .boasVindas img {
+    display: initial;
+    width: 5rem;
+    position: absolute;
+    bottom: 0;
+    left: 0.5rem;
+  }
+}
+.dashboard .acoes-rapidas .acoes-rapidas-carrousel {
   flex-wrap: wrap;
 }
-@media (min-width: 992px) {
-  .dashboard .avisos .avisos-carrousel {
+@media (min-width: 1200px) {
+  .dashboard .acoes-rapidas .acoes-rapidas-carrousel {
     flex-wrap: nowrap;
   }
 }
+.dashboard .acoes-rapidas .acoes-rapidas-carrousel button {
+  background: none;
+  border-left: 0;
+  border-top: 0;
+  border-bottom: 0;
+  font-size: 0.9rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #0091FF;
+}
+@media (min-width: 1200px) {
+  .dashboard .acoes-rapidas .acoes-rapidas-carrousel button {
+    padding-right: 1rem;
+    border-right: 0.1rem solid gray;
+  }
+  .dashboard .acoes-rapidas .acoes-rapidas-carrousel button:last-child {
+    border-right: 0;
+  }
+}
+.dashboard .acoes-rapidas .acoes-rapidas-carrousel button img {
+  width: 1.2rem;
+  filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
+}
+.dashboard .avisos .avisos-carrousel {
+  display: flex;
+  flex-direction: row-reverse;
+  overflow-x: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none; /* Desabilita a seleção de texto */
+  cursor: grab;
+}
+.dashboard .avisos .avisos-carrousel::-webkit-scrollbar {
+  display: none;
+}
+.dashboard .avisos .avisos-carrousel.active {
+  cursor: grabbing;
+}
 .dashboard .avisos .avisos-carrousel .avisos-item {
+  flex-shrink: 0;
   width: 100%;
   height: auto;
   padding: 1rem;
   background-color: #0091FF;
-  border-radius: 0.3rem;
+  border-radius: 0.8rem;
 }
 @media (min-width: 1200px) {
   .dashboard .avisos .avisos-carrousel .avisos-item {
+    width: 25rem !important;
     height: 12rem;
   }
 }
-.dashboard .avisos .avisos-carrousel .avisos-item .avisos-destinatario {
+.dashboard .avisos .avisos-carrousel .avisos-item .avisos-destinatario-remetente {
   font-size: 1.3rem;
   font-weight: 900;
+  font-style: italic;
   color: #FFFAF3;
+  pointer-events: none;
 }
 .dashboard .avisos .avisos-carrousel .avisos-item .avisos-mensagem {
   font-size: 0.8rem;
@@ -179,18 +226,7 @@
   display: -webkit-box;
   -webkit-line-clamp: 6;
   -webkit-box-orient: vertical;
-}
-.dashboard .acoes-rapidas .acoes-rapidas-carrousel .btn {
-  background-color: #0091FF;
-  border-radius: 0.3rem;
-  font-size: 1rem;
-  font-weight: 900;
-  text-transform: uppercase;
-  color: #FFFAF3;
-}
-.dashboard .acoes-rapidas .acoes-rapidas-carrousel .btn img {
-  width: 1.2rem;
-  filter: invert(100%) sepia(52%) saturate(723%) hue-rotate(343deg) brightness(115%) contrast(110%);
+  pointer-events: none;
 }
 .dashboard .status-radio .status-radio-carrousel {
   display: flex;

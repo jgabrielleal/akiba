@@ -1,7 +1,8 @@
 .dashboard{
     .boasVindas{
+        position: relative;
         padding: 0.5rem;
-        border: 0.3rem solid $azul-claro;
+        background-color: $azul-medio;
         border-radius: 0.8rem;
         text-align: center;
         color: $laranja;
@@ -9,47 +10,85 @@
         font-style: italic;
         font-weight: 900;
         font-size: 1.5rem;
-    }
-    .avisos{
-        .avisos-carrousel{
-            flex-wrap: wrap;
-            @include lg{
-                flex-wrap: nowrap;
-            }
-            .avisos-item{
-                width: 100%;
-                height: auto;
-                padding: 1rem;
-                background-color: $azul-claro;
-                border-radius: 0.3rem;
-                @include xl{
-                    height: 12rem;
-                }
-                .avisos-destinatario{
-                    font-size: 1.3rem;
-                    font-weight: 900;
-                    color: $aurora;
-                }
-                .avisos-mensagem{
-                    font-size: 0.8rem;
-                    color: $aurora;
-                    @include text-overflow(6);
-                }
+        img{
+            display: none;
+            @include xl{
+                display: initial;
+                width: 5rem;
+                position: absolute;
+                bottom: 0;
+                left: 0.5rem;
             }
         }
     }
     .acoes-rapidas{
         .acoes-rapidas-carrousel{
-            .btn{
-                background-color: $azul-claro;
-                border-radius: 0.3rem;
-                font-size: 1rem;
+            flex-wrap: wrap;
+            @include xl{
+                flex-wrap: nowrap;
+            }
+            button{
+                background: none;
+                border-left: 0;
+                border-top: 0;
+                border-bottom: 0;
+                font-size: 0.9rem;
                 font-weight: 900;
+                font-style: italic;
                 text-transform: uppercase;
-                color: $aurora;
+                color: $azul-claro;
+                @include xl{
+                    padding-right: 1rem;
+                    border-right: 0.1rem solid gray;
+                    &:last-child{
+                        border-right: 0;
+                    }
+                }
                 img{
                     width: 1.2rem;
-                    filter: invert(100%) sepia(52%) saturate(723%) hue-rotate(343deg) brightness(115%) contrast(110%);
+                    filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
+                }
+            }
+        }
+    }
+    .avisos {
+        .avisos-carrousel {
+            display: flex; 
+            flex-direction: row-reverse; 
+            overflow-x: scroll; 
+            scrollbar-width: none; 
+            -ms-overflow-style: none;
+            user-select: none; /* Desabilita a seleção de texto */
+            cursor: grab;
+            &::-webkit-scrollbar {
+                width: 1px;
+            }
+            &.active {
+                cursor: grabbing;
+            }
+            .avisos-item {
+                flex-shrink: 0;
+                width: 100%;
+                height: auto;
+                padding: 1rem;
+                background-color: $azul-claro;
+                border-radius: 0.8rem;
+                @include xl {
+                    width: 25rem !important;
+                    height: 12rem;
+                }
+                .avisos-destinatario-remetente {
+                    font-size: 1.3rem;
+                    font-weight: 900;
+                    font-style: italic;
+                    color: $aurora;
+                    pointer-events: none;
+                }
+                .avisos-mensagem {
+                    font-size: 0.8rem;
+                    color: $aurora;
+                    @include text-overflow(6);
+                    pointer-events: none;
                 }
             }
         }
