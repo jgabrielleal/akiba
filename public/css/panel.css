@@ -182,8 +182,9 @@
 }
 .dashboard .avisos .avisos-carrousel {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   overflow-x: scroll;
+  overflow-y: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
   -webkit-user-select: none;
@@ -192,7 +193,7 @@
   cursor: grab;
 }
 .dashboard .avisos .avisos-carrousel::-webkit-scrollbar {
-  display: none;
+  width: 0;
 }
 .dashboard .avisos .avisos-carrousel.active {
   cursor: grabbing;
@@ -219,14 +220,48 @@
   pointer-events: none;
 }
 .dashboard .avisos .avisos-carrousel .avisos-item .avisos-mensagem {
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   color: #FFFAF3;
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
   pointer-events: none;
+}
+.dashboard .avisos .avisos-carrousel .avisos-item .avisos-confirmacoes {
+  height: 1.8rem;
+  margin-top: -0.3rem;
+}
+.dashboard .avisos .avisos-carrousel .avisos-item .avisos-confirmacoes img {
+  width: 1.8rem;
+  height: 1.8rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  border-radius: 22.5rem;
+  background-color: #FFFAF3;
+}
+.dashboard .avisos .avisos-carrousel .avisos-item .avisos-confirmacoes span {
+  font-size: 1.8rem;
+  color: #FFFAF3;
+}
+.dashboard .avisos .avisos-carrousel .avisos-item .avisos-botoes-confirmacoes {
+  margin-top: -0.3rem;
+}
+.dashboard .avisos .avisos-carrousel .avisos-item .avisos-botoes-confirmacoes button {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0;
+  border-radius: 0.5rem;
+  padding-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFAF3;
+  font-size: 1.5rem;
+  color: #000036;
 }
 .dashboard .status-radio .status-radio-carrousel {
   display: flex;
