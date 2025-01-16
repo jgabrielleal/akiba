@@ -12,7 +12,7 @@
 
     {{ $slot }}
     @include('components.partials.scripts')
-    <script src="{{ asset('js/panel/avisosCarrouselLateral.js') }}"></script>
+    <script src="{{ asset('js/panel/carrouselLateral.js') }}"></script>
 </body>
 
 </html>

@@ -79,6 +79,11 @@
   .navbar .etc .perfil img {
     width: 3.5rem;
     height: 3.5rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: top;
+       object-position: top;
+    background-color: #FFE8BF;
     border-radius: 22.5rem;
     border: 0.4rem solid #FFFAF3;
   }
@@ -195,6 +200,7 @@
   filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
 }
 .dashboard .avisos .avisos-carrousel {
+  border-radius: 0.8rem;
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
@@ -255,7 +261,7 @@
   -o-object-position: top;
      object-position: top;
   border-radius: 22.5rem;
-  background-color: #FFFAF3;
+  background-color: #FFE8BF;
 }
 .dashboard .avisos .avisos-carrousel .avisos-item .avisos-confirmacoes span {
   font-size: 1.8rem;
@@ -276,4 +282,177 @@
   background-color: #FFFAF3;
   font-size: 1.5rem;
   color: #000036;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel {
+  border-radius: 0.8rem;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none; /* Desabilita a seleção de texto */
+  cursor: grab;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel::-webkit-scrollbar {
+  width: 0;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel.active {
+  cursor: grabbing;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background-color: #0091FF;
+  border-radius: 0.8rem;
+}
+@media (min-width: 1200px) {
+  .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item {
+    width: 34.5rem;
+    height: 9rem;
+  }
+}
+@media (min-width: 1200px) {
+  .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-conteudo {
+    width: 22rem;
+  }
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-conteudo h1 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  color: #FFFAF3;
+  pointer-events: none;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-conteudo p {
+  font-size: 0.8rem;
+  color: #FFFAF3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-datas-e-conclusao .calendario {
+  width: 6.4rem;
+  margin-top: -8rem;
+  float: right;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-datas-e-conclusao .calendario .calendario-topo {
+  width: 100%;
+  height: 1.5rem;
+  background-color: #00061A;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  color: #FFFAF3;
+  font-weight: 900;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-datas-e-conclusao .calendario .calendario-conteudo {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #FFFAF3;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #00061A;
+  font-style: italic;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-confirmacoes {
+  margin-top: -2.5rem;
+  float: right;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-confirmacoes button {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 0;
+  border-radius: 0.5rem;
+  padding-top: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FFFAF3;
+  font-size: 1.5rem;
+  color: #000036;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao {
+  flex-shrink: 0;
+  width: 100%;
+  height: auto;
+  padding: 1rem;
+  background-color: #F69700;
+  border-radius: 0.8rem;
+}
+@media (min-width: 1200px) {
+  .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao {
+    width: 37rem;
+    height: 9rem;
+  }
+}
+@media (min-width: 1200px) {
+  .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-conteudo {
+    width: 22rem;
+  }
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-conteudo h1 {
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  color: #FFFAF3;
+  pointer-events: none;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-conteudo p {
+  font-size: 0.8rem;
+  color: #FFFAF3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao .calendario {
+  width: 6.4rem;
+  margin-top: -8rem;
+  float: right;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao .calendario .calendario-topo {
+  width: 100%;
+  height: 1.5rem;
+  background-color: #ED3237;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  color: #00061A;
+  font-weight: 900;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao .calendario .calendario-conteudo {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #000036;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #F69700;
+  font-style: italic;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-confirmacoes {
+  margin-top: -2.5rem;
+  float: right;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-confirmacoes button {
+  border: 0;
+  border-radius: 22.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ED3237;
+  font-size: 0.8rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #FFFAF3;
 }/*# sourceMappingURL=panel.css.map */
