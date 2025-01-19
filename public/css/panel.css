@@ -455,4 +455,48 @@
   font-style: italic;
   text-transform: uppercase;
   color: #FFFAF3;
+}
+.dashboard .ultimas-materias .ultimas-materias-carrousel {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media (min-width: 1200px) {
+  .dashboard .ultimas-materias .ultimas-materias-carrousel {
+    flex-wrap: nowrap;
+  }
+}
+.dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item {
+  width: 100%;
+  height: 11rem;
+  background-color: #0091FF;
+  border-radius: 0.8rem;
+  padding: 0.8rem;
+}
+@media (min-width: 1200px) {
+  .dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item {
+    width: 13.5625rem;
+  }
+}
+.dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item .ultimas-materias-titulo {
+  height: 7.1rem;
+  font-size: 1rem;
+  color: #FFFAF3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+.dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item .ultimas-materias-autor span {
+  color: #FFFAF3;
+  font-style: italic;
+  font-weight: 900;
+}
+.dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item .ultimas-materias-autor div a {
+  color: #FFFAF3;
+  font-size: 1.1rem;
+}
+.dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item .ultimas-materias-autor div a img {
+  width: 1.1rem;
+  filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
 }/*# sourceMappingURL=panel.css.map */

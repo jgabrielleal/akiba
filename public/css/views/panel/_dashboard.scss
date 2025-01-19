@@ -292,4 +292,46 @@
             }
         }
     }
+    .ultimas-materias{
+        .ultimas-materias-carrousel{
+            display: flex;
+            flex-wrap: wrap;
+            @include xl{
+                flex-wrap: nowrap;
+            }
+            .ultimas-materias-item{
+                width: 100%;
+                height: 11rem;
+                background-color: $azul-claro;
+                border-radius: 0.8rem;
+                padding: 0.8rem;
+                @include xl{
+                    width: 13.5625rem;
+                }
+                .ultimas-materias-titulo{
+                    height: 7.1rem;
+                    font-size: 1rem;
+                    color: $aurora;
+                    @include text-overflow(5);
+                }
+                .ultimas-materias-autor{
+                    span{
+                        color: $aurora;
+                        font-style: italic;
+                        font-weight: 900;
+                    }
+                    div{
+                        a{
+                            color: $aurora;
+                            font-size: 1.1rem;
+                            img{
+                                width: 1.1rem;
+                                filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
