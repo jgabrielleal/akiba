@@ -14,19 +14,19 @@ class AcoesRapidas extends Component
                 <section class="acoes-rapidas mb-5">
                     <div class="acoes-rapidas-carrousel d-flex justify-content-center gap-2 mt-1">
                         <button type="button" class="d-flex align-items-center gap-2">
-                            <img src="{{ asset('icons/panel/acoes_rapidas/adicionar_materias.svg') }}" alt="Adicionar Matérias" />Nova Matéria
+                            <img src="{{ asset('icons/panel/adicionar_materias.svg') }}" alt="Adicionar Matérias" />Nova Matéria
                         </button>
                         <button type="button" class="d-flex align-items-center gap-1">
-                            <img src="{{ asset('icons/panel/acoes_rapidas/adicionar_avisos.svg') }}" alt="Adicionar Avisos" />Criar Avisos
+                            <img src="{{ asset('icons/panel/adicionar_avisos.svg') }}" alt="Adicionar Avisos" />Criar Avisos
                         </button>
                         <button type="button" class="d-flex align-items-center gap-2">
-                            <img src="{{ asset('icons/panel/acoes_rapidas/enviar_arquivo.svg') }}" alt="Enviar Arquivo" />Deixar Arquivos
+                            <img src="{{ asset('icons/panel/enviar_arquivo.svg') }}" alt="Enviar Arquivo" />Deixar Arquivos
                         </button>
                         <button type="button" class="d-flex align-items-center gap-1">
-                            <img src="{{ asset('icons/panel/acoes_rapidas/iniciar_programa.svg') }}" alt="Iniciar Programa" />Iniciar Programa
+                            <img src="{{ asset('icons/panel/iniciar_programa.svg') }}" alt="Iniciar Programa" />Iniciar Programa
                         </button>
                         <button type="button" class="d-flex align-items-center gap-2">
-                            <img src="{{ asset('icons/panel/acoes_rapidas/adicionar_eventos.svg') }}" alt="Adicionar Eventos" />Adicionar Eventos
+                            <img src="{{ asset('icons/panel/adicionar_eventos.svg') }}" alt="Adicionar Eventos" />Adicionar Eventos
                         </button>
                     </div>
                 </section>

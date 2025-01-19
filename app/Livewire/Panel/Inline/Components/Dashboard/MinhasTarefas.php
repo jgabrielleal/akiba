@@ -42,7 +42,7 @@ class MinhasTarefas extends Component
                                 </div>
                                 <div class="minhas-tarefas-confirmacoes">
                                     <button>
-                                        <img src="{{ asset('icons/panel/_global/aprovar_negar/aprovar.svg') }}" alt="Aprovar"/>
+                                        <img src="{{ asset('icons/panel/aprovar.svg') }}" alt="Aprovar"/>
                                     </button>
                                 </div>
                             </div>
