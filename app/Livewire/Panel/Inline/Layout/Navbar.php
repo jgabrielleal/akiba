@@ -18,52 +18,52 @@ class Navbar extends Component
                     <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/dashboard.svg') }}" alt="Dashboard" />
+                                <img src="{{ asset('icons/panel/dashboard.svg') }}" alt="Dashboard" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/materias.svg') }}" alt="Matérias" />
+                                <img src="{{ asset('icons/panel/materias.svg') }}" alt="Matérias" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/locucao.svg') }}" alt="Locução" />
+                                <img src="{{ asset('icons/panel/locucao.svg') }}" alt="Locução" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/radio.svg') }}" alt="Rádio" />
+                                <img src="{{ asset('icons/panel/radio.svg') }}" alt="Rádio" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/podcasts.svg') }}" alt="Podcasts" />
+                                <img src="{{ asset('icons/panel/podcasts.svg') }}" alt="Podcasts" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/marketing.svg') }}" alt="Marketing" />
+                                <img src="{{ asset('icons/panel/marketing.svg') }}" alt="Marketing" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/midias.svg') }}" alt="Mídias" />
+                                <img src="{{ asset('icons/panel/midias.svg') }}" alt="Mídias" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/adms.svg') }}" alt="ADM's" />
+                                <img src="{{ asset('icons/panel/adms.svg') }}" alt="ADM's" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/logs.svg') }}" alt="Logs's" />
+                                <img src="{{ asset('icons/panel/logs.svg') }}" alt="Logs's" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
                             <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
-                                <img src="{{ asset('icons/panel/navbar/avisos.svg') }}" alt="Avisos" />
+                                <img src="{{ asset('icons/panel/avisos.svg') }}" alt="Avisos" />
                             </a>
                         </li>
                     </ul>
