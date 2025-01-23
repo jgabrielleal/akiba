@@ -147,7 +147,7 @@
   position: relative;
   padding: 0.5rem;
   background-color: #002080;
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   text-align: center;
   color: #FFA919;
   text-transform: uppercase;
@@ -200,7 +200,7 @@
   filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
 }
 .dashboard .avisos .avisos-carrousel {
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
@@ -209,7 +209,8 @@
   -ms-overflow-style: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-          user-select: none; /* Desabilita a seleção de texto */
+          user-select: none;
+  /* Desabilita a seleção de texto */
   cursor: grab;
 }
 .dashboard .avisos .avisos-carrousel::-webkit-scrollbar {
@@ -224,7 +225,7 @@
   height: auto;
   padding: 1rem;
   background-color: #0091FF;
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
 }
 @media (min-width: 1200px) {
   .dashboard .avisos .avisos-carrousel .avisos-item {
@@ -284,7 +285,7 @@
   color: #000036;
 }
 .dashboard .minhas-tarefas .minhas-tarefas-carrousel {
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
   overflow-x: scroll;
@@ -293,7 +294,8 @@
   -ms-overflow-style: none;
   -webkit-user-select: none;
      -moz-user-select: none;
-          user-select: none; /* Desabilita a seleção de texto */
+          user-select: none;
+  /* Desabilita a seleção de texto */
   cursor: grab;
 }
 .dashboard .minhas-tarefas .minhas-tarefas-carrousel::-webkit-scrollbar {
@@ -308,7 +310,7 @@
   height: auto;
   padding: 1rem;
   background-color: #0091FF;
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
 }
 @media (min-width: 1200px) {
   .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item {
@@ -385,7 +387,7 @@
   height: auto;
   padding: 1rem;
   background-color: #F69700;
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
 }
 @media (min-width: 1200px) {
   .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao {
@@ -469,7 +471,7 @@
   width: 100%;
   height: 11.5rem;
   background-color: #0091FF;
-  border-radius: 0.8rem;
+  border-radius: 0.5rem;
   padding: 0.8rem;
 }
 @media (min-width: 1200px) {
@@ -499,4 +501,89 @@
 .dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item .ultimas-materias-autor div a img {
   width: 1.1rem;
   filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
+}
+.dashboard .calendario .calendario-tags {
+  flex-wrap: wrap;
+}
+@media (min-width: 1200px) {
+  .dashboard .calendario .calendario-tags {
+    flex-wrap: nowrap;
+  }
+}
+.dashboard .calendario .calendario-tags .calendario-tags-item {
+  width: 100%;
+  height: 2rem;
+  background-color: #0091FF;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFAF3;
+  font-weight: 900;
+  font-style: italic;
+}
+.dashboard .calendario .calendario-tags .calendario-tags-item:nth-child(2) {
+  background-color: #B82BFF;
+}
+.dashboard .calendario .calendario-tags .calendario-tags-item:nth-child(3) {
+  background-color: #ED3237;
+}
+.dashboard .calendario .calendario-tags .calendario-tags-item:nth-child(4) {
+  background-color: #00A859;
+}
+.dashboard .calendario .calendario-dias {
+  flex-wrap: wrap;
+}
+@media (min-width: 1200px) {
+  .dashboard .calendario .calendario-dias {
+    flex-wrap: nowrap;
+  }
+}
+.dashboard .calendario .calendario-dias .calendario-dias-item {
+  width: 100%;
+  color: #FFFAF3;
+  font-weight: 900;
+  font-style: italic;
+}
+.dashboard .calendario .calendario-tarefas {
+  flex-wrap: wrap;
+}
+@media (min-width: 1200px) {
+  .dashboard .calendario .calendario-tarefas {
+    flex-wrap: nowrap;
+  }
+}
+.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna {
+  width: 100%;
+}
+.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item {
+  width: 100%;
+  background-color: #0091FF;
+  border-radius: 0.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item span {
+  display: block;
+}
+.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item span:nth-child(1) {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #FFFAF3;
+}
+.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item span:nth-child(3) {
+  text-align: center;
+  font-size: 0.8rem;
+  color: #FFFAF3;
+}
+.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item h1 {
+  margin-top: 0.3rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  text-align: center;
+  color: #FFFAF3;
 }/*# sourceMappingURL=panel.css.map */

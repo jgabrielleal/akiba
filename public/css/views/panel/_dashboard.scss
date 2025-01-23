@@ -1,18 +1,20 @@
-.dashboard{
-    .boasVindas{
+.dashboard {
+    .boasVindas {
         position: relative;
         padding: 0.5rem;
         background-color: $azul-medio;
-        border-radius: 0.8rem;
+        border-radius: 0.5rem;
         text-align: center;
         color: $laranja;
         text-transform: uppercase;
         font-style: italic;
         font-weight: 900;
         font-size: 1.5rem;
-        img{
+
+        img {
             display: none;
-            @include xl{
+
+            @include xl {
                 display: initial;
                 width: 5rem;
                 position: absolute;
@@ -21,13 +23,16 @@
             }
         }
     }
-    .acoes-rapidas{
-        .acoes-rapidas-carrousel{
+
+    .acoes-rapidas {
+        .acoes-rapidas-carrousel {
             flex-wrap: wrap;
-            @include xl{
+
+            @include xl {
                 flex-wrap: nowrap;
             }
-            button{
+
+            button {
                 background: none;
                 border-left: 0;
                 border-top: 0;
@@ -37,48 +42,58 @@
                 font-style: italic;
                 text-transform: uppercase;
                 color: $azul-claro;
-                @include xl{
+
+                @include xl {
                     padding-right: 1rem;
                     border-right: 0.1rem solid gray;
-                    &:last-child{
+
+                    &:last-child {
                         border-right: 0;
                     }
                 }
-                img{
+
+                img {
                     width: 1.2rem;
                     filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
                 }
             }
         }
     }
+
     .avisos {
         .avisos-carrousel {
-            border-radius: 0.8rem;
-            display: flex; 
-            flex-direction: row; 
-            overflow-x: scroll; 
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
             overflow-y: hidden;
-            scrollbar-width: none; 
+            scrollbar-width: none;
             -ms-overflow-style: none;
-            user-select: none; /* Desabilita a seleção de texto */
+            user-select: none;
+            /* Desabilita a seleção de texto */
             cursor: grab;
+
             &::-webkit-scrollbar {
                 width: 0;
             }
+
             &.active {
                 cursor: grabbing;
             }
+
             .avisos-item {
                 flex-shrink: 0;
                 width: 100%;
                 height: auto;
                 padding: 1rem;
                 background-color: $azul-claro;
-                border-radius: 0.8rem;
+                border-radius: 0.5rem;
+
                 @include xl {
                     width: 25rem !important;
                     height: 12rem;
                 }
+
                 .avisos-destinatario-remetente {
                     font-size: 1.3rem;
                     font-weight: 900;
@@ -86,16 +101,19 @@
                     color: $aurora;
                     pointer-events: none;
                 }
+
                 .avisos-mensagem {
                     font-size: 0.75rem;
                     color: $aurora;
                     @include text-overflow(5);
                     pointer-events: none;
                 }
-                .avisos-confirmacoes{
+
+                .avisos-confirmacoes {
                     height: 1.8rem;
                     margin-top: -0.3rem;
-                    img{
+
+                    img {
                         width: 1.8rem;
                         height: 1.8rem;
                         object-fit: cover;
@@ -103,14 +121,17 @@
                         border-radius: 22.5rem;
                         background-color: $creme;
                     }
-                    span{
+
+                    span {
                         font-size: 1.8rem;
                         color: $aurora;
                     }
                 }
-                .avisos-botoes-confirmacoes{
+
+                .avisos-botoes-confirmacoes {
                     margin-top: -0.3rem;
-                    button{
+
+                    button {
                         width: 1.8rem;
                         height: 1.8rem;
                         border: 0;
@@ -127,57 +148,68 @@
             }
         }
     }
-    .minhas-tarefas{
-        .minhas-tarefas-carrousel{
-            border-radius: 0.8rem;
-            display: flex; 
-            flex-direction: row; 
-            overflow-x: scroll; 
+
+    .minhas-tarefas {
+        .minhas-tarefas-carrousel {
+            border-radius: 0.5rem;
+            display: flex;
+            flex-direction: row;
+            overflow-x: scroll;
             overflow-y: hidden;
-            scrollbar-width: none; 
+            scrollbar-width: none;
             -ms-overflow-style: none;
-            user-select: none; /* Desabilita a seleção de texto */
+            user-select: none;
+            /* Desabilita a seleção de texto */
             cursor: grab;
+
             &::-webkit-scrollbar {
                 width: 0;
             }
+
             &.active {
                 cursor: grabbing;
             }
-            .minhas-tarefas-item{
+
+            .minhas-tarefas-item {
                 flex-shrink: 0;
                 width: 100%;
                 height: auto;
                 padding: 1rem;
                 background-color: $azul-claro;
-                border-radius: 0.8rem;
-                @include xl{
+                border-radius: 0.5rem;
+
+                @include xl {
                     width: 34.5rem;
                     height: 9rem;
                 }
-                .minhas-tarefas-conteudo{
-                    @include xl{
+
+                .minhas-tarefas-conteudo {
+                    @include xl {
                         width: 22rem;
                     }
-                    h1{
+
+                    h1 {
                         font-size: 1.3rem;
                         font-weight: 900;
                         font-style: italic;
                         color: $aurora;
                         pointer-events: none;
                     }
-                    p{
+
+                    p {
                         font-size: 0.8rem;
                         color: $aurora;
                         @include text-overflow(4);
                     }
                 }
-                .minhas-tarefas-datas-e-conclusao{
-                    .calendario{
+
+                .minhas-tarefas-datas-e-conclusao {
+                    .calendario {
                         width: 6.4rem;
                         margin-top: -8rem;
                         float: right;
-                        .calendario-topo{
+
+                        .calendario-topo {
                             width: 100%;
                             height: 1.5rem;
                             background-color: $azul-escuro;
@@ -187,7 +219,8 @@
                             font-size: 0.9rem;
                             font-style: italic;
                         }
-                        .calendario-conteudo{
+
+                        .calendario-conteudo {
                             width: 100%;
                             height: 2.5rem;
                             background-color: $aurora;
@@ -199,10 +232,12 @@
                         }
                     }
                 }
-                .minhas-tarefas-confirmacoes{
+
+                .minhas-tarefas-confirmacoes {
                     margin-top: -2.5rem;
                     float: right;
-                    button{
+
+                    button {
                         width: 1.8rem;
                         height: 1.8rem;
                         border: 0;
@@ -217,40 +252,47 @@
                     }
                 }
             }
-            .minhas-tarefas-item-expiracao{
+
+            .minhas-tarefas-item-expiracao {
                 flex-shrink: 0;
                 width: 100%;
                 height: auto;
                 padding: 1rem;
                 background-color: $laranja-secondary;
-                border-radius: 0.8rem;
-                @include xl{
+                border-radius: 0.5rem;
+
+                @include xl {
                     width: 37rem;
                     height: 9rem;
                 }
-                .minhas-tarefas-conteudo{
-                    @include xl{
+
+                .minhas-tarefas-conteudo {
+                    @include xl {
                         width: 22rem;
                     }
-                    h1{
+
+                    h1 {
                         font-size: 1.3rem;
                         font-weight: 900;
                         font-style: italic;
                         color: $aurora;
                         pointer-events: none;
                     }
-                    p{
+
+                    p {
                         font-size: 0.8rem;
                         color: $aurora;
                         @include text-overflow(4);
                     }
                 }
-                .minhas-tarefas-datas-e-conclusao{
-                    .calendario{
+
+                .minhas-tarefas-datas-e-conclusao {
+                    .calendario {
                         width: 6.4rem;
                         margin-top: -8rem;
                         float: right;
-                        .calendario-topo{
+
+                        .calendario-topo {
                             width: 100%;
                             height: 1.5rem;
                             background-color: $vermelho;
@@ -260,7 +302,8 @@
                             font-size: 0.9rem;
                             font-style: italic;
                         }
-                        .calendario-conteudo{
+
+                        .calendario-conteudo {
                             width: 100%;
                             height: 2.5rem;
                             background-color: $azul-escuro-secondary;
@@ -272,10 +315,12 @@
                         }
                     }
                 }
-                .minhas-tarefas-confirmacoes{
+
+                .minhas-tarefas-confirmacoes {
                     margin-top: -2.5rem;
                     float: right;
-                    button{
+
+                    button {
                         border: 0;
                         border-radius: 22.5rem;
                         display: flex;
@@ -292,43 +337,136 @@
             }
         }
     }
-    .ultimas-materias{
-        .ultimas-materias-carrousel{
+
+    .ultimas-materias {
+        .ultimas-materias-carrousel {
             display: flex;
             flex-wrap: wrap;
-            @include xl{
+
+            @include xl {
                 flex-wrap: nowrap;
             }
-            .ultimas-materias-item{
+
+            .ultimas-materias-item {
                 width: 100%;
                 height: 11.5rem;
                 background-color: $azul-claro;
-                border-radius: 0.8rem;
+                border-radius: 0.5rem;
                 padding: 0.8rem;
-                @include xl{
+
+                @include xl {
                     width: 13.5625rem;
                 }
-                .ultimas-materias-titulo{
+
+                .ultimas-materias-titulo {
                     height: 7.5rem;
                     font-size: 1rem;
                     color: $aurora;
                     @include text-overflow(5);
                 }
-                .ultimas-materias-autor{
-                    span{
+
+                .ultimas-materias-autor {
+                    span {
                         color: $aurora;
                         font-style: italic;
                         font-weight: 900;
                     }
-                    div{
-                        a{
+
+                    div {
+                        a {
                             color: $aurora;
                             font-size: 1.1rem;
-                            img{
+
+                            img {
                                 width: 1.1rem;
                                 filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
                             }
                         }
+                    }
+                }
+            }
+        }
+    }
+
+    .calendario {
+        .calendario-tags {
+            flex-wrap: wrap;
+            @include xl{
+                flex-wrap: nowrap;
+            }
+            .calendario-tags-item {
+                width: 100%;
+                height: 2rem;
+                background-color: $azul-claro;
+                border-radius: 0.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: $aurora;
+                font-weight: 900;
+                font-style: italic;
+
+                &:nth-child(2) {
+                    background-color: $roxo;
+                }
+
+                &:nth-child(3) {
+                    background-color: $vermelho;
+                }
+
+                &:nth-child(4) {
+                    background-color: $verde;
+                }
+            }
+        }
+        .calendario-dias{
+            flex-wrap: wrap;
+            @include xl{
+                flex-wrap: nowrap;
+            }
+            .calendario-dias-item{
+                width: 100%;
+                color: $aurora;
+                font-weight: 900;
+                font-style: italic;
+            }
+        }
+        .calendario-tarefas{
+            flex-wrap: wrap;
+            @include xl{
+                flex-wrap: nowrap;
+            }
+            .calendario-tarefas-coluna{
+                width: 100%;
+                .calendario-tarefas-item{
+                    width: 100%;
+                    background-color: $azul-claro;
+                    border-radius: 0.5rem;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    padding-left: 0.8rem;
+                    padding-right: 0.8rem;
+                    span{
+                        display: block;
+                        &:nth-child(1){
+                            text-align: center;
+                            font-size: 1.3rem;
+                            color: $aurora;
+                        }
+                        &:nth-child(3){
+                            text-align: center;
+                            font-size: 0.8rem;
+                            color: $aurora;
+                        }
+                    }
+                    h1{
+                        margin-top: 0.3rem;
+                        margin-bottom: 0.5rem;
+                        font-size: 1.3rem;
+                        font-weight: 900;
+                        font-style: italic;
+                        text-align: center;
+                        color: $aurora;
                     }
                 }
             }
