@@ -1,0 +1,30 @@
+.acoes-rapidas {
+    .acoes-rapidas-carrousel {
+        flex-wrap: wrap;
+        @include xl {
+            flex-wrap: nowrap;
+        }
+        button {
+            background: none;
+            border-left: 0;
+            border-top: 0;
+            border-bottom: 0;
+            font-size: 0.9rem;
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            color: $azul-claro;
+            @include xl {
+                padding-right: 1rem;
+                border-right: 0.1rem solid gray;
+                &:last-child {
+                    border-right: 0;
+                }
+            }
+            img {
+                width: 1.2rem;
+                filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
+            }
+        }
+    }
+}

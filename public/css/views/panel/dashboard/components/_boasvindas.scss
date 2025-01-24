@@ -1,0 +1,22 @@
+.boasVindas {
+    position: relative;
+    padding: 0.5rem;
+    background-color: $azul-medio;
+    border-radius: 0.5rem;
+    text-align: center;
+    color: $laranja;
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: 900;
+    font-size: 1.5rem;
+    img {
+        display: none;
+        @include xl {
+            display: initial;
+            width: 5rem;
+            position: absolute;
+            bottom: 0;
+            left: 0.5rem;
+        }
+    }
+}

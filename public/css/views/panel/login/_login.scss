@@ -4,7 +4,6 @@
     background-size: cover;
     background-position: center;
     height: 100vh; // Ajuste conforme necessário
-
     &::before {
         content: '';
         position: absolute;
@@ -15,11 +14,9 @@
         background-color: rgba(0, 0, 0, 0.027); // Ajuste a opacidade conforme necessário
         z-index: 1;
     }
-
     .container {
         position: relative;
         z-index: 2;
-
         .block-logo {
             margin-bottom: 2rem;
 
@@ -27,12 +24,10 @@
                 width: 11rem;
             }
         }
-
         .block-auth {
             background: $aurora;
             border-radius: 0.5rem;
             margin-bottom: 1rem;
-
             form {
                 input {
                     background-color: $aurora-cinza;
@@ -43,7 +38,6 @@
                         border: 0.1rem solid rgb(224, 224, 224);
                     }
                 }
-
                 button {
                     background-color: $azul-claro;
                     border-radius: 0.5rem;
@@ -51,12 +45,10 @@
                 }
             }
         }
-
         .block-footer {
             color: $aurora;
             font-size: 0.9rem;
             font-weight: 400 !important;
-
             a {
                 color: $azul-claro;
             }
