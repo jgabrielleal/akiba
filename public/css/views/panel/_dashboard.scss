@@ -10,10 +10,8 @@
         font-style: italic;
         font-weight: 900;
         font-size: 1.5rem;
-
         img {
             display: none;
-
             @include xl {
                 display: initial;
                 width: 5rem;
@@ -27,11 +25,9 @@
     .acoes-rapidas {
         .acoes-rapidas-carrousel {
             flex-wrap: wrap;
-
             @include xl {
                 flex-wrap: nowrap;
             }
-
             button {
                 background: none;
                 border-left: 0;
@@ -42,7 +38,6 @@
                 font-style: italic;
                 text-transform: uppercase;
                 color: $azul-claro;
-
                 @include xl {
                     padding-right: 1rem;
                     border-right: 0.1rem solid gray;
@@ -51,7 +46,6 @@
                         border-right: 0;
                     }
                 }
-
                 img {
                     width: 1.2rem;
                     filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
@@ -70,17 +64,13 @@
             scrollbar-width: none;
             -ms-overflow-style: none;
             user-select: none;
-            /* Desabilita a seleção de texto */
             cursor: grab;
-
             &::-webkit-scrollbar {
                 width: 0;
             }
-
             &.active {
                 cursor: grabbing;
             }
-
             .avisos-item {
                 flex-shrink: 0;
                 width: 100%;
@@ -88,12 +78,10 @@
                 padding: 1rem;
                 background-color: $azul-claro;
                 border-radius: 0.5rem;
-
                 @include xl {
                     width: 25rem !important;
                     height: 12rem;
                 }
-
                 .avisos-destinatario-remetente {
                     font-size: 1.3rem;
                     font-weight: 900;
@@ -101,18 +89,15 @@
                     color: $aurora;
                     pointer-events: none;
                 }
-
                 .avisos-mensagem {
                     font-size: 0.75rem;
                     color: $aurora;
                     @include text-overflow(5);
                     pointer-events: none;
                 }
-
                 .avisos-confirmacoes {
                     height: 1.8rem;
                     margin-top: -0.3rem;
-
                     img {
                         width: 1.8rem;
                         height: 1.8rem;
@@ -121,16 +106,13 @@
                         border-radius: 22.5rem;
                         background-color: $creme;
                     }
-
                     span {
                         font-size: 1.8rem;
                         color: $aurora;
                     }
                 }
-
                 .avisos-botoes-confirmacoes {
                     margin-top: -0.3rem;
-
                     button {
                         width: 1.8rem;
                         height: 1.8rem;
@@ -159,17 +141,13 @@
             scrollbar-width: none;
             -ms-overflow-style: none;
             user-select: none;
-            /* Desabilita a seleção de texto */
             cursor: grab;
-
             &::-webkit-scrollbar {
                 width: 0;
             }
-
             &.active {
                 cursor: grabbing;
             }
-
             .minhas-tarefas-item {
                 flex-shrink: 0;
                 width: 100%;
@@ -177,17 +155,14 @@
                 padding: 1rem;
                 background-color: $azul-claro;
                 border-radius: 0.5rem;
-
                 @include xl {
                     width: 34.5rem;
                     height: 9rem;
                 }
-
                 .minhas-tarefas-conteudo {
                     @include xl {
                         width: 22rem;
                     }
-
                     h1 {
                         font-size: 1.3rem;
                         font-weight: 900;
@@ -195,20 +170,17 @@
                         color: $aurora;
                         pointer-events: none;
                     }
-
                     p {
                         font-size: 0.8rem;
                         color: $aurora;
                         @include text-overflow(4);
                     }
                 }
-
                 .minhas-tarefas-datas-e-conclusao {
                     .calendario {
                         width: 6.4rem;
                         margin-top: -8rem;
                         float: right;
-
                         .calendario-topo {
                             width: 100%;
                             height: 1.5rem;
@@ -219,7 +191,6 @@
                             font-size: 0.9rem;
                             font-style: italic;
                         }
-
                         .calendario-conteudo {
                             width: 100%;
                             height: 2.5rem;
@@ -232,11 +203,9 @@
                         }
                     }
                 }
-
                 .minhas-tarefas-confirmacoes {
                     margin-top: -2.5rem;
                     float: right;
-
                     button {
                         width: 1.8rem;
                         height: 1.8rem;
@@ -254,44 +223,18 @@
             }
 
             .minhas-tarefas-item-expiracao {
-                flex-shrink: 0;
-                width: 100%;
-                height: auto;
-                padding: 1rem;
+                @extend .minhas-tarefas-item;
                 background-color: $laranja-secondary;
-                border-radius: 0.5rem;
-
-                @include xl {
-                    width: 37rem;
-                    height: 9rem;
-                }
-
                 .minhas-tarefas-conteudo {
                     @include xl {
-                        width: 22rem;
-                    }
-
-                    h1 {
-                        font-size: 1.3rem;
-                        font-weight: 900;
-                        font-style: italic;
-                        color: $aurora;
-                        pointer-events: none;
-                    }
-
-                    p {
-                        font-size: 0.8rem;
-                        color: $aurora;
-                        @include text-overflow(4);
+                        width: 20rem;
                     }
                 }
-
                 .minhas-tarefas-datas-e-conclusao {
                     .calendario {
                         width: 6.4rem;
                         margin-top: -8rem;
                         float: right;
-
                         .calendario-topo {
                             width: 100%;
                             height: 1.5rem;
@@ -302,7 +245,6 @@
                             font-size: 0.9rem;
                             font-style: italic;
                         }
-
                         .calendario-conteudo {
                             width: 100%;
                             height: 2.5rem;
@@ -315,17 +257,14 @@
                         }
                     }
                 }
-
                 .minhas-tarefas-confirmacoes {
                     margin-top: -2.5rem;
                     float: right;
-
                     button {
+                        width: 11rem;
                         border: 0;
+                        padding-top: 0.445rem;
                         border-radius: 22.5rem;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
                         background-color: $vermelho;
                         font-size: 0.8rem;
                         font-weight: 900;
@@ -442,6 +381,7 @@
                     width: 100%;
                     background-color: $azul-claro;
                     border-radius: 0.5rem;
+                    margin-bottom: 1rem;
                     padding-top: 0.5rem;
                     padding-bottom: 0.5rem;
                     padding-left: 0.8rem;
@@ -468,6 +408,18 @@
                         text-align: center;
                         color: $aurora;
                     }
+                }
+                .calendario-tarefas-item-lives {
+                    @extend .calendario-tarefas-item;
+                    background-color: $roxo;
+                }
+                .calendario-tarefas-item-youtube {
+                    @extend .calendario-tarefas-item;
+                    background-color: $vermelho;
+                }
+                .calendario-tarefas-item-podcast {
+                    @extend .calendario-tarefas-item;
+                    background-color: $verde;
                 }
             }
         }

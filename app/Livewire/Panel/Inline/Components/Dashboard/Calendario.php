@@ -47,51 +47,46 @@ class Calendario extends Component
                     <div class="calendario-tarefas d-flex gap-2 mt-3">
                         <div class="calendario-tarefas-coluna">
                             <div class="calendario-tarefas-item">
-                                <span>08H00</span>
-                                <h1>Revolução Anime</h1>
+                                <span>8:00H</span>
+                                <h1>Revolução Otaku</h1>
                                 <span>Roger Ventura</span>
                             </div>
                         </div>
                         <div class="calendario-tarefas-coluna">
+                        </div>
+                        <div class="calendario-tarefas-coluna">
                             <div class="calendario-tarefas-item">
-                                <span>08H00</span>
-                                <h1>Revolução Anime</h1>
-                                <span>Roger Ventura</span>
+                                <span>20:00H</span>
+                                <h1>Porão da Mia Nee</h1>
+                                <span>Takashi</span>
+                            </div>
+                            <div class="calendario-tarefas-item-youtube">
+                                <span>8:00H</span>
+                                <h1>Vídeo de Gameplay</h1>
+                                <span>Saiko</span>
+                            </div>
+                        </div>
+                        <div class="calendario-tarefas-coluna">
+                        </div>
+                        <div class="calendario-tarefas-coluna">
+                            <div class="calendario-tarefas-item-youtube">
+                                <span>08:00H</span>
+                                <h1>Vídeo explicando palavras</h1>
+                                <span>NHK</span>
                             </div>
                         </div>
                         <div class="calendario-tarefas-coluna">
                             <div class="calendario-tarefas-item">
-                                <span>08H00</span>
-                                <h1>Revolução Anime</h1>
-                                <span>Roger Ventura</span>
+                                <span>22:00H</span>
+                                <h1>Plantão Ecchi</h1>
+                                <span>Takashi </span>
                             </div>
                         </div>
                         <div class="calendario-tarefas-coluna">
-                            <div class="calendario-tarefas-item">
-                                <span>08H00</span>
-                                <h1>Revolução Anime</h1>
-                                <span>Roger Ventura</span>
-                            </div>
-                        </div>
-                        <div class="calendario-tarefas-coluna">
-                            <div class="calendario-tarefas-item">
-                                <span>08H00</span>
-                                <h1>Revolução Anime</h1>
-                                <span>Roger Ventura</span>
-                            </div>
-                        </div>
-                        <div class="calendario-tarefas-coluna">
-                            <div class="calendario-tarefas-item">
-                                <span>08H00</span>
-                                <h1>Revolução Anime</h1>
-                                <span>Roger Ventura</span>
-                            </div>
-                        </div>
-                        <div class="calendario-tarefas-coluna">
-                            <div class="calendario-tarefas-item">
-                                <span>08H00</span>
-                                <h1>Revolução Anime</h1>
-                                <span>Roger Ventura</span>
+                            <div class="calendario-tarefas-item-podcast">
+                                <span>5:00H</span>
+                                <h1>Gravação tema Qual de vocês assistiu mais anime?</h1>
+                                <span>Neko Kirame</span>
                             </div>
                         </div>
                     </div>
