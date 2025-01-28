@@ -9,12 +9,15 @@
         -ms-overflow-style: none;
         user-select: none;
         cursor: grab;
+
         &::-webkit-scrollbar {
             width: 0;
         }
+
         &.active {
             cursor: grabbing;
         }
+
         .avisos-item {
             flex-shrink: 0;
             width: 100%;
@@ -22,10 +25,12 @@
             padding: 1rem;
             background-color: $azul-claro;
             border-radius: 0.5rem;
+
             @include xl {
                 width: 25rem !important;
                 height: 12rem;
             }
+
             .avisos-destinatario-remetente {
                 font-size: 1.3rem;
                 font-weight: 900;
@@ -33,15 +38,18 @@
                 color: $aurora;
                 pointer-events: none;
             }
+
             .avisos-mensagem {
                 font-size: 0.75rem;
                 color: $aurora;
                 @include text-overflow(5);
                 pointer-events: none;
             }
+
             .avisos-confirmacoes {
                 height: 1.8rem;
                 margin-top: -0.3rem;
+
                 img {
                     width: 1.8rem;
                     height: 1.8rem;
@@ -50,13 +58,16 @@
                     border-radius: 22.5rem;
                     background-color: $creme;
                 }
+
                 span {
                     font-size: 1.8rem;
                     color: $aurora;
                 }
             }
+
             .avisos-botoes-confirmacoes {
                 margin-top: -0.3rem;
+
                 button {
                     width: 1.8rem;
                     height: 1.8rem;
@@ -68,7 +79,7 @@
                     justify-content: center;
                     background-color: $aurora;
                     font-size: 1.5rem;
-                    color: $azul-medio-seconday;
+                    color: $azul-medio-secondary;
                 }
             }
         }

@@ -8,11 +8,12 @@
 // Imports by folder functions
 @import "./functions/text-overflow.scss";
 
-// Imports by folder functions
-@import "./components/utils/_title-default.scss";
+// Imports by folder utils
+@import "./utils/_title-default.scss";
 
 // Imports by folder components
 @import "./components/panel/_navbar.scss";
+@import "./components/panel/_status.scss";
 
 // Import by folder views
 @import "./views/panel/login/_login.scss";

@@ -11,6 +11,7 @@
     @livewire('panel.inline.layout.navbar')
 
     {{ $slot }}
+    @livewire('panel.inline.layout.status')
     @include('components.partials.scripts')
     <script src="{{ asset('js/panel/carrouselLateral.js') }}"></script>
 </body>

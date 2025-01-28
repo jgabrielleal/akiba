@@ -9,12 +9,15 @@
         -ms-overflow-style: none;
         user-select: none;
         cursor: grab;
+
         &::-webkit-scrollbar {
             width: 0;
         }
+
         &.active {
             cursor: grabbing;
         }
+
         .minhas-tarefas-item {
             flex-shrink: 0;
             width: 100%;
@@ -22,14 +25,17 @@
             padding: 1rem;
             background-color: $azul-claro;
             border-radius: 0.5rem;
+
             @include xl {
                 width: 34.5rem;
                 height: 9rem;
             }
+
             .minhas-tarefas-conteudo {
                 @include xl {
                     width: 22rem;
                 }
+
                 h1 {
                     font-size: 1.3rem;
                     font-weight: 900;
@@ -37,17 +43,20 @@
                     color: $aurora;
                     pointer-events: none;
                 }
+
                 p {
                     font-size: 0.8rem;
                     color: $aurora;
                     @include text-overflow(4);
                 }
             }
+
             .minhas-tarefas-datas-e-conclusao {
                 .calendario {
                     width: 6.4rem;
                     margin-top: -8rem;
                     float: right;
+
                     .calendario-topo {
                         width: 100%;
                         height: 1.5rem;
@@ -58,6 +67,7 @@
                         font-size: 0.9rem;
                         font-style: italic;
                     }
+
                     .calendario-conteudo {
                         width: 100%;
                         height: 2.5rem;
@@ -70,9 +80,11 @@
                     }
                 }
             }
+
             .minhas-tarefas-confirmacoes {
                 margin-top: -2.5rem;
                 float: right;
+
                 button {
                     width: 1.8rem;
                     height: 1.8rem;
@@ -84,23 +96,27 @@
                     justify-content: center;
                     background-color: $aurora;
                     font-size: 1.5rem;
-                    color: $azul-medio-seconday;
+                    color: $azul-medio-secondary;
                 }
             }
         }
+
         .minhas-tarefas-item-expiracao {
             @extend .minhas-tarefas-item;
             background-color: $laranja-secondary;
+
             .minhas-tarefas-conteudo {
                 @include xl {
                     width: 20rem;
                 }
             }
+
             .minhas-tarefas-datas-e-conclusao {
                 .calendario {
                     width: 6.4rem;
                     margin-top: -8rem;
                     float: right;
+
                     .calendario-topo {
                         width: 100%;
                         height: 1.5rem;
@@ -111,6 +127,7 @@
                         font-size: 0.9rem;
                         font-style: italic;
                     }
+
                     .calendario-conteudo {
                         width: 100%;
                         height: 2.5rem;
@@ -123,9 +140,11 @@
                     }
                 }
             }
+
             .minhas-tarefas-confirmacoes {
                 margin-top: -2.5rem;
                 float: right;
+
                 button {
                     width: 11rem;
                     border: 0;

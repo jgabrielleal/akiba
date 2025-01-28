@@ -88,6 +88,14 @@
   }
 }
 
+.status {
+  width: 100%;
+  bottom: 0;
+  background-color: #000036;
+  border-top: 0.1rem solid #FFA919;
+  border-top-width: 80%;
+}
+
 .login {
   position: relative;
   background-image: url("https://i.imgur.com/eKaJC9L.jpeg");
