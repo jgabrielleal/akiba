@@ -17,7 +17,6 @@ class RestoreDatabase extends Command
 
     public function handle()
     {   
-
         /**
          * PT-BR: Use o arquivo .env para obter as credenciais do banco de dados
          * EN: Use the .env file to get the database credentials
