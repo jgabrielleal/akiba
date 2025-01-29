@@ -10,7 +10,7 @@ services:
         extra_hosts:
             - 'host.docker.internal:host-gateway'
         ports:
-            - '1050:80'
+            - '1053:80'
             - '${VITE_PORT:-5173}:${VITE_PORT:-5173}'
         environment:
             WWWUSER: '${WWWUSER}'
@@ -28,7 +28,7 @@ services:
         container_name: akiba.mysql
         image: 'mysql/mysql-server:8.0'
         ports:
-            - '1051:3306'
+            - '1054:3306'
         environment:
             MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
             MYSQL_ROOT_HOST: '%'
@@ -56,7 +56,7 @@ services:
             PMA_HOST: mysql
             MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
         ports:
-            - '1052:80'
+            - '1055:80'
         depends_on:
             - mysql
         networks:
