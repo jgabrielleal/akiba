@@ -15,8 +15,11 @@
 - Laravel 11x<br>
 - Livewire 3.0
 
-## Dependências obrigatórias
+## Banco de dados
+- MYSQL<br>
+- PHPMyAdmin
 
+## Dependências obrigatórias
 Para rodar o projeto da Rede Akiba, é necessário ter o **Docker** instalado em sua máquina. O Docker será utilizado para criar os containers necessários para a aplicação, como o ambiente para o banco de dados MySQL.
 
 - **Docker**: é fundamental para que o Laravel Sail funcione corretamente, pois ele depende de containers Docker para a execução da aplicação e gerenciamento do banco de dados.
