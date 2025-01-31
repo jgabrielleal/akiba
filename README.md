@@ -5,17 +5,17 @@
     <img src="https://i.imgur.com/4s5yKze.png" width="300rem">
 </div>
 
-## languages used / Linguagens usadas
+## Linguagens usadas
 - Javascript<br>
 - PHP 8.0<br>
 
-## Frameworks and librarys used / Frameworks e bibliotecas usadas
+## Frameworks e bibliotecas usadas
 - Jquery 3.7.1<br>
 - Bootstrap 5.3<br>
 - Laravel 11x<br>
 - Livewire 3.0
 
-## Required dependencies / Dependências obrigatórias
+## Dependências obrigatórias
 
 Para rodar o projeto da Rede Akiba, é necessário ter o **Docker** instalado em sua máquina. O Docker será utilizado para criar os containers necessários para a aplicação, como o ambiente para o banco de dados MySQL.
 
@@ -23,16 +23,7 @@ Para rodar o projeto da Rede Akiba, é necessário ter o **Docker** instalado em
 
 Certifique-se de que o Docker esteja corretamente instalado e configurado antes de executar os comandos abaixo.
 
-## How to use / Como usar
-EN-US:<br>
-1º Install the packages using a command "composer install"<br>
-2º Install Laravel Sail using a command "php artisan sail:install"<br>
-3º Select the mysql database on sail installation<br>
-4º Use the command "./vendor/bin/sail up -d" to create containers in docker"<br>
-5º Use the command "./vendor/bin/sail artisan key:generate" to create key to Laravel<br>
-6º Using the command "./vendor/bin/sail artisan migrate" to create tables in database
-
-PT-BR:<br>
+## Como usar
 1º Instale os pacotes usando o comando "composer install"<br>
 2º Instale o Laravel Sail usando o comando "php artisan sail:install"<br>
 3º Selecione o banco de dados MySQL durante a instalação do Sail<br>
