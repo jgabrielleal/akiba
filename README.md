@@ -24,18 +24,18 @@ Para rodar o projeto da Rede Akiba, é necessário ter o **Docker** instalado em
 Certifique-se de que o Docker esteja corretamente instalado e configurado antes de executar os comandos abaixo.
 
 # How to use / Como usar
-EN-US:
-1º Install the packages using a command "composer install"
-2º Install Laravel Sail using a command "php artisan sail:install"
-3º Select the mysql database on sail installation
-4º Use the command "./vendor/bin/sail up -d" to create containers in docker"
-5º Use the command "./vendor/bin/sail artisan key:generate" to create key to Laravel
+EN-US:<br>
+1º Install the packages using a command "composer install"<br>
+2º Install Laravel Sail using a command "php artisan sail:install"<br>
+3º Select the mysql database on sail installation<br>
+4º Use the command "./vendor/bin/sail up -d" to create containers in docker"<br>
+5º Use the command "./vendor/bin/sail artisan key:generate" to create key to Laravel<br>
 6º Using the command "./vendor/bin/sail artisan migrate" to create tables in database
 
-PT-BR:
-1º Instale os pacotes usando o comando "composer install"
-2º Instale o Laravel Sail usando o comando "php artisan sail:install"
-3º Selecione o banco de dados MySQL durante a instalação do Sail
-4º Use o comando "./vendor/bin/sail up -d" para criar os containers no Docker
-5º Use o comando "./vendor/bin/sail artisan key:generate" para gerar a chave do Laravel
-6º Use o comando "./vendor/bin/sail artisan migrate" para criar as tabelas no banco de dados
+PT-BR:<br>
+1º Instale os pacotes usando o comando "composer install"<br>
+2º Instale o Laravel Sail usando o comando "php artisan sail:install"<br>
+3º Selecione o banco de dados MySQL durante a instalação do Sail<br>
+4º Use o comando "./vendor/bin/sail up -d" para criar os containers no Docker<br>
+5º Use o comando "./vendor/bin/sail artisan key:generate" para gerar a chave do Laravel<br>
+6º Use o comando "./vendor/bin/sail artisan migrate" para criar as tabelas no banco de dados<br>
