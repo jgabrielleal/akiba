@@ -30,6 +30,6 @@ Certifique-se de que o Docker esteja corretamente instalado e configurado antes 
 1º Instale os pacotes usando o comando "composer install"<br>
 2º Instale o Laravel Sail usando o comando "php artisan sail:install"<br>
 3º Selecione o banco de dados MySQL durante a instalação do Sail<br>
-4º Use o comando "./vendor/bin/sail up -d" para criar os containers no Docker<br>
-5º Use o comando "./vendor/bin/sail artisan key:generate" para gerar a chave do Laravel<br>
-6º Use o comando "./vendor/bin/sail artisan migrate" para criar as tabelas no banco de dados<br>
+4º Use o comando "composer sail-start" para criar os containers no Docker<br>
+5º Use o comando "composer sail artisan key:generate" para gerar a chave do Laravel<br>
+6º Use o comando "composer artisan migrate" para criar as tabelas no banco de dados<br>
