@@ -11,7 +11,7 @@ class Calendario extends Component
         return <<<'HTML'
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
-                <section class="calendario mb-5">
+                <section class="calendario">
                     <div class="title-default">
                         <h1>Calendário</h1>
                     </div>

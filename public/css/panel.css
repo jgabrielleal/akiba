@@ -94,6 +94,37 @@
   background-color: #000036;
   border-top: 0.1rem solid #FFA919;
   border-top-width: 80%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  flex-wrap: wrap;
+}
+@media (min-width: 1200px) {
+  .status {
+    flex-wrap: nowrap;
+  }
+}
+@media (min-width: 1200px) {
+  .status .status-item {
+    border-right: 0.1rem solid gray;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  .status .status-item:first-child {
+    padding-left: 0;
+  }
+  .status .status-item:last-child {
+    border-right: 0;
+  }
+}
+.status .status-item span {
+  margin-top: 0.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #FFA919;
+}
+.status .status-item img {
+  width: 1.5rem !important;
+  filter: invert(44%) sepia(44%) saturate(6266%) hue-rotate(189deg) brightness(105%) contrast(104%);
 }
 
 .login {
@@ -311,22 +342,14 @@
 }
 .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao {
   flex-shrink: 0;
-  width: 100%;
-  height: auto;
+  width: 34.5rem;
+  height: 9rem;
   padding: 1rem;
   background-color: #0091FF;
   border-radius: 0.5rem;
 }
-@media (min-width: 1200px) {
-  .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao {
-    width: 34.5rem;
-    height: 9rem;
-  }
-}
-@media (min-width: 1200px) {
-  .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-conteudo, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-conteudo {
-    width: 22rem;
-  }
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-conteudo, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-conteudo {
+  width: 20rem;
 }
 .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-conteudo h1, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-conteudo h1 {
   font-size: 1.3rem;
@@ -343,6 +366,9 @@
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
+}
+.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-datas-e-conclusao, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao {
+  position: relative;
 }
 .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-datas-e-conclusao .calendario, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao .calendario {
   width: 6.4rem;
@@ -371,7 +397,8 @@
 }
 .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-confirmacoes, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-confirmacoes {
   margin-top: -2.5rem;
-  float: right;
+  position: absolute;
+  right: 0;
 }
 .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-confirmacoes button, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-confirmacoes button {
   width: 1.8rem;
@@ -418,10 +445,6 @@
   font-weight: 900;
   color: #F69700;
   font-style: italic;
-}
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-confirmacoes {
-  margin-top: -2.5rem;
-  float: right;
 }
 .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-confirmacoes button {
   width: 11rem;
@@ -478,6 +501,9 @@
 .dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item .ultimas-materias-autor div a img {
   width: 1.1rem;
   filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
+}
+.dashboard .calendario {
+  margin-bottom: 8rem;
 }
 .dashboard .calendario .calendario-tags {
   flex-wrap: wrap;

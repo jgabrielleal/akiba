@@ -4,4 +4,33 @@
     background-color: $azul-escuro-secondary;
     border-top: 0.1rem solid $laranja;
     border-top-width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    flex-wrap: wrap;
+    @include xl{
+        flex-wrap: nowrap;
+    }
+    .status-item{
+        @include xl{
+            border-right: 0.1rem solid gray;
+            padding-left: 1rem;
+            padding-right: 1rem;
+            &:first-child{
+                padding-left: 0;
+            }
+            &:last-child{
+                border-right: 0;
+            }
+        }
+        span{
+            margin-top: 0.2rem;
+            font-size: 1rem;
+            font-weight: 500;
+            color: $laranja;
+        }
+        img{
+            width: 1.5rem !important;
+            filter: invert(44%) sepia(44%) saturate(6266%) hue-rotate(189deg) brightness(105%) contrast(104%);
+        }
+    }
 }
