@@ -3,16 +3,13 @@
 namespace App\Livewire\Panel;
 
 use Livewire\Attributes\Layout;
-use Livewire\Attributes\Title;
 use Livewire\Component;
 
 use Illuminate\Support\Facades\Auth;
 
+#[Layout('components.layouts.login')]
 class Login extends Component
 {
-    #[Layout('components.layouts.login')]
-    #[Title('Realize o Login')]
-
     public $username;
     public $password;
 
@@ -32,6 +29,6 @@ class Login extends Component
 
     public function render()
     {
-        return view('livewire.panel.login');
+        return view('livewire.panel.login')->title("Realize o login");
     }
 }

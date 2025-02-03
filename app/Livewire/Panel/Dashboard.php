@@ -2,17 +2,12 @@
 
 namespace App\Livewire\Panel;
 
-use Livewire\Attributes\Layout;
-use Livewire\Attributes\Title;
 use Livewire\Component;
 
 use Illuminate\Support\Facades\Auth;
 
 class Dashboard extends Component
 {
-    #[Layout('components.layouts.app')]
-    #[Title('Dashboard')]
-
     public $logged;
 
     public function mount()
@@ -25,8 +20,6 @@ class Dashboard extends Component
 
     public function render()
     {
-        return view('livewire.panel.dashboard', [
-            'logged' => $this->logged
-        ]);
+        return view('livewire.panel.dashboard')->title("Dashboard");
     }
 }
