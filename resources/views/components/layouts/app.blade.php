@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{ asset('css/panel.css') }}">
 </head>
 
-<body class="panel-body">
+<body class="app-body">
     @livewire('panel.inline.layout.navbar')
 
     {{ $slot }}

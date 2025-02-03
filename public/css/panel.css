@@ -13,7 +13,7 @@
   font-weight: normal;
 }
 
-.panel-body {
+.app-body {
   background: #000036;
 }
 
@@ -68,14 +68,14 @@
 .navbar .nav-link:hover img {
   filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
 }
-.navbar .etc .perfil {
+.navbar .nav-additional .profile {
   display: none;
 }
 @media (min-width: 1200px) {
-  .navbar .etc .perfil {
+  .navbar .nav-additional .profile {
     display: block;
   }
-  .navbar .etc .perfil img {
+  .navbar .nav-additional .profile img {
     width: 3.5rem;
     height: 3.5rem;
     -o-object-fit: cover;
@@ -181,7 +181,7 @@
   color: #0091FF;
 }
 
-.dashboard .boasVindas {
+.dashboard .wellcome {
   position: relative;
   padding: 0.5rem;
   background-color: #002080;
@@ -193,11 +193,11 @@
   font-weight: 900;
   font-size: 1.5rem;
 }
-.dashboard .boasVindas img {
+.dashboard .wellcome img {
   display: none;
 }
 @media (min-width: 1200px) {
-  .dashboard .boasVindas img {
+  .dashboard .wellcome img {
     display: initial;
     width: 5rem;
     position: absolute;
@@ -237,7 +237,7 @@
   width: 1.2rem;
   filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
 }
-.dashboard .avisos .avisos-carrousel {
+.dashboard .warnings .warnings-carrousel {
   border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
@@ -250,13 +250,13 @@
           user-select: none;
   cursor: grab;
 }
-.dashboard .avisos .avisos-carrousel::-webkit-scrollbar {
+.dashboard .warnings .warnings-carrousel::-webkit-scrollbar {
   width: 0;
 }
-.dashboard .avisos .avisos-carrousel.active {
+.dashboard .warnings .warnings-carrousel.active {
   cursor: grabbing;
 }
-.dashboard .avisos .avisos-carrousel .avisos-item {
+.dashboard .warnings .warnings-carrousel .warnings-item {
   flex-shrink: 0;
   width: 100%;
   height: auto;
@@ -265,19 +265,19 @@
   border-radius: 0.5rem;
 }
 @media (min-width: 1200px) {
-  .dashboard .avisos .avisos-carrousel .avisos-item {
+  .dashboard .warnings .warnings-carrousel .warnings-item {
     width: 25rem !important;
     height: 12rem;
   }
 }
-.dashboard .avisos .avisos-carrousel .avisos-item .avisos-destinatario-remetente {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-sender {
   font-size: 1.3rem;
   font-weight: 900;
   font-style: italic;
   color: #FFFAF3;
   pointer-events: none;
 }
-.dashboard .avisos .avisos-carrousel .avisos-item .avisos-mensagem {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-message {
   font-size: 0.75rem;
   color: #FFFAF3;
   overflow: hidden;
@@ -287,11 +287,11 @@
   -webkit-box-orient: vertical;
   pointer-events: none;
 }
-.dashboard .avisos .avisos-carrousel .avisos-item .avisos-confirmacoes {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations {
   height: 1.8rem;
   margin-top: -0.3rem;
 }
-.dashboard .avisos .avisos-carrousel .avisos-item .avisos-confirmacoes img {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations img {
   width: 1.8rem;
   height: 1.8rem;
   -o-object-fit: cover;
@@ -301,14 +301,14 @@
   border-radius: 22.5rem;
   background-color: #FFE8BF;
 }
-.dashboard .avisos .avisos-carrousel .avisos-item .avisos-confirmacoes span {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations span {
   font-size: 1.8rem;
   color: #FFFAF3;
 }
-.dashboard .avisos .avisos-carrousel .avisos-item .avisos-botoes-confirmacoes {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations {
   margin-top: -0.3rem;
 }
-.dashboard .avisos .avisos-carrousel .avisos-item .avisos-botoes-confirmacoes button {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations button {
   width: 1.8rem;
   height: 1.8rem;
   border: 0;
@@ -321,7 +321,7 @@
   font-size: 1.5rem;
   color: #000036;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel {
+.dashboard .my-tasks .my-tasks-carrousel {
   border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
@@ -334,13 +334,13 @@
           user-select: none;
   cursor: grab;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel::-webkit-scrollbar {
+.dashboard .my-tasks .my-tasks-carrousel::-webkit-scrollbar {
   width: 0;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel.active {
+.dashboard .my-tasks .my-tasks-carrousel.active {
   cursor: grabbing;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations {
   flex-shrink: 0;
   width: 34.5rem;
   height: 9rem;
@@ -348,17 +348,17 @@
   background-color: #0091FF;
   border-radius: 0.5rem;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-conteudo, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-conteudo {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content {
   width: 20rem;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-conteudo h1, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-conteudo h1 {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content h1, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content h1 {
   font-size: 1.3rem;
   font-weight: 900;
   font-style: italic;
   color: #FFFAF3;
   pointer-events: none;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-conteudo p, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-conteudo p {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content p, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content p {
   font-size: 0.8rem;
   color: #FFFAF3;
   overflow: hidden;
@@ -367,15 +367,15 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-datas-e-conclusao, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion {
   position: relative;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-datas-e-conclusao .calendario, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao .calendario {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar {
   width: 6.4rem;
   margin-top: -8rem;
   float: right;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-datas-e-conclusao .calendario .calendario-topo, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao .calendario .calendario-topo {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-top, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-top {
   width: 100%;
   height: 1.5rem;
   background-color: #00061A;
@@ -385,7 +385,7 @@
   font-size: 0.9rem;
   font-style: italic;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-datas-e-conclusao .calendario .calendario-conteudo, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao .calendario .calendario-conteudo {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-content {
   width: 100%;
   height: 2.5rem;
   background-color: #FFFAF3;
@@ -395,12 +395,12 @@
   color: #00061A;
   font-style: italic;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-confirmacoes, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-confirmacoes {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations {
   margin-top: -2.5rem;
   position: absolute;
   right: 0;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item .minhas-tarefas-confirmacoes button, .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-confirmacoes button {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations button, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations button {
   width: 1.8rem;
   height: 1.8rem;
   border: 0;
@@ -413,20 +413,20 @@
   font-size: 1.5rem;
   color: #000036;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations {
   background-color: #F69700;
 }
 @media (min-width: 1200px) {
-  .dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-conteudo {
+  .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content {
     width: 20rem;
   }
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao .calendario {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar {
   width: 6.4rem;
   margin-top: -8rem;
   float: right;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao .calendario .calendario-topo {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-top {
   width: 100%;
   height: 1.5rem;
   background-color: #ED3237;
@@ -436,7 +436,7 @@
   font-size: 0.9rem;
   font-style: italic;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-datas-e-conclusao .calendario .calendario-conteudo {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-content {
   width: 100%;
   height: 2.5rem;
   background-color: #000036;
@@ -446,7 +446,7 @@
   color: #F69700;
   font-style: italic;
 }
-.dashboard .minhas-tarefas .minhas-tarefas-carrousel .minhas-tarefas-item-expiracao .minhas-tarefas-confirmacoes button {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations button {
   width: 11rem;
   border: 0;
   padding-top: 0.445rem;
@@ -458,16 +458,16 @@
   text-transform: uppercase;
   color: #FFFAF3;
 }
-.dashboard .ultimas-materias .ultimas-materias-carrousel {
+.dashboard .last-posts .last-posts-carrousel {
   display: flex;
   flex-wrap: wrap;
 }
 @media (min-width: 1200px) {
-  .dashboard .ultimas-materias .ultimas-materias-carrousel {
+  .dashboard .last-posts .last-posts-carrousel {
     flex-wrap: nowrap;
   }
 }
-.dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item {
+.dashboard .last-posts .last-posts-carrousel .last-posts-item {
   width: 100%;
   height: 11.5rem;
   background-color: #0091FF;
@@ -475,11 +475,11 @@
   padding: 0.8rem;
 }
 @media (min-width: 1200px) {
-  .dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item {
+  .dashboard .last-posts .last-posts-carrousel .last-posts-item {
     width: 13.5625rem;
   }
 }
-.dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item .ultimas-materias-titulo {
+.dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-title {
   height: 7.5rem;
   font-size: 1rem;
   color: #FFFAF3;
@@ -489,31 +489,31 @@
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
-.dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item .ultimas-materias-autor span {
+.dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author span {
   color: #FFFAF3;
   font-style: italic;
   font-weight: 900;
 }
-.dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item .ultimas-materias-autor div a {
+.dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author div a {
   color: #FFFAF3;
   font-size: 1.1rem;
 }
-.dashboard .ultimas-materias .ultimas-materias-carrousel .ultimas-materias-item .ultimas-materias-autor div a img {
+.dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author div a img {
   width: 1.1rem;
   filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
 }
-.dashboard .calendario {
+.dashboard .calendar {
   margin-bottom: 8rem;
 }
-.dashboard .calendario .calendario-tags {
+.dashboard .calendar .calendar-tags {
   flex-wrap: wrap;
 }
 @media (min-width: 1200px) {
-  .dashboard .calendario .calendario-tags {
+  .dashboard .calendar .calendar-tags {
     flex-wrap: nowrap;
   }
 }
-.dashboard .calendario .calendario-tags .calendario-tags-item {
+.dashboard .calendar .calendar-tags .calendar-tags-item {
   width: 100%;
   height: 2rem;
   background-color: #0091FF;
@@ -525,41 +525,41 @@
   font-weight: 900;
   font-style: italic;
 }
-.dashboard .calendario .calendario-tags .calendario-tags-item:nth-child(2) {
+.dashboard .calendar .calendar-tags .calendar-tags-item:nth-child(2) {
   background-color: #B82BFF;
 }
-.dashboard .calendario .calendario-tags .calendario-tags-item:nth-child(3) {
+.dashboard .calendar .calendar-tags .calendar-tags-item:nth-child(3) {
   background-color: #ED3237;
 }
-.dashboard .calendario .calendario-tags .calendario-tags-item:nth-child(4) {
+.dashboard .calendar .calendar-tags .calendar-tags-item:nth-child(4) {
   background-color: #00A859;
 }
-.dashboard .calendario .calendario-dias {
+.dashboard .calendar .calendar-days {
   flex-wrap: wrap;
 }
 @media (min-width: 1200px) {
-  .dashboard .calendario .calendario-dias {
+  .dashboard .calendar .calendar-days {
     flex-wrap: nowrap;
   }
 }
-.dashboard .calendario .calendario-dias .calendario-dias-item {
+.dashboard .calendar .calendar-days .calendar-days-item {
   width: 100%;
   color: #FFFAF3;
   font-weight: 900;
   font-style: italic;
 }
-.dashboard .calendario .calendario-tarefas {
+.dashboard .calendar .calendar-tasks {
   flex-wrap: wrap;
 }
 @media (min-width: 1200px) {
-  .dashboard .calendario .calendario-tarefas {
+  .dashboard .calendar .calendar-tasks {
     flex-wrap: nowrap;
   }
 }
-.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna {
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns {
   width: 100%;
 }
-.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item, .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-podcast, .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-youtube, .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-lives {
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives {
   width: 100%;
   background-color: #0091FF;
   border-radius: 0.5rem;
@@ -569,20 +569,20 @@
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 }
-.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item span, .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-podcast span, .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-youtube span, .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-lives span {
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span {
   display: block;
 }
-.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item span:nth-child(1), .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-podcast span:nth-child(1), .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-youtube span:nth-child(1), .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-lives span:nth-child(1) {
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span:nth-child(1), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span:nth-child(1), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span:nth-child(1), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span:nth-child(1) {
   text-align: center;
   font-size: 1.3rem;
   color: #FFFAF3;
 }
-.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item span:nth-child(3), .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-podcast span:nth-child(3), .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-youtube span:nth-child(3), .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-lives span:nth-child(3) {
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span:nth-child(3), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span:nth-child(3), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span:nth-child(3), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span:nth-child(3) {
   text-align: center;
   font-size: 0.8rem;
   color: #FFFAF3;
 }
-.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item h1, .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-podcast h1, .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-youtube h1, .dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-lives h1 {
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item h1, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast h1, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube h1, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives h1 {
   margin-top: 0.3rem;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
@@ -591,12 +591,12 @@
   text-align: center;
   color: #FFFAF3;
 }
-.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-lives {
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives {
   background-color: #B82BFF;
 }
-.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-youtube {
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube {
   background-color: #ED3237;
 }
-.dashboard .calendario .calendario-tarefas .calendario-tarefas-coluna .calendario-tarefas-item-podcast {
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast {
   background-color: #00A859;
 }/*# sourceMappingURL=panel.css.map */

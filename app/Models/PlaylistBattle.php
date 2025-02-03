@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class PlaylistBattle extends Model
 {
     /**
-     * Nome da tabela associada com o modelo.
      * Name of the table associated with the model.
      *
      * @var string
@@ -15,7 +14,6 @@ class PlaylistBattle extends Model
     protected $table = 'playlist_battle';
 
     /**
-     * The attributes that are mass assignable.
      * Os atributos que podem ser atribuídos em massa.
      *
      * @var array<int, string>
@@ -26,7 +24,6 @@ class PlaylistBattle extends Model
     ];
 
     /**
-     * Os atributos que devem ser convertidos.
      * The attributes that should be cast.
      *
      * @var array<string, string>
@@ -37,7 +34,6 @@ class PlaylistBattle extends Model
     ];
 
     /**
-     * Pega o usuário que atualizou a batalha de playlists e cria um relacionamento de muitos-para-um.
      * Get the user that updated the playlist battle and create a many-to-one relationship.
      */
     public function updatedBy()

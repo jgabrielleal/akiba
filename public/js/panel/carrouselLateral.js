@@ -1,36 +1,36 @@
-function carrouselLateral(target){
-    $(document).ready(function() {
+function carrouselLateral(target) {
+    $(document).ready(function () {
         const carrouselTarget = $(target);
         let isMousePressionado = false;
         let inicioX;
         let scrollLeft;
-    
-        carrouselTarget.on('mousedown', function(e) {
+
+        carrouselTarget.on('mousedown', function (e) {
             isMousePressionado = true;
             carrouselTarget.addClass('rolagem-ativa');
             inicioX = e.pageX - carrouselTarget.offset().left;
             scrollLeft = carrouselTarget.scrollLeft();
         });
-    
-        carrouselTarget.on('mouseleave mouseup', function() {
+
+        carrouselTarget.on('mouseleave mouseup', function () {
             isMousePressionado = false;
             carrouselTarget.removeClass('rolagem-ativa');
         });
-    
-        carrouselTarget.on('mousemove', function(e) {
+
+        carrouselTarget.on('mousemove', function (e) {
             if (!isMousePressionado) return;
             e.preventDefault();
             const posicaoX = e.pageX - carrouselTarget.offset().left;
             const rolagem = (posicaoX - inicioX) * 1; //scroll-fast
             carrouselTarget.scrollLeft(scrollLeft - rolagem);
         });
-    
-        carrouselTarget.on('wheel', function(e) {
+
+        carrouselTarget.on('wheel', function (e) {
             e.preventDefault();
             carrouselTarget.scrollLeft(carrouselTarget.scrollLeft() + e.originalEvent.deltaY);
         });
     });
 }
 
-carrouselLateral('.avisos-carrousel');
-carrouselLateral('.minhas-tarefas-carrousel');
+carrouselLateral('.warnings-carrousel');
+carrouselLateral('.my-tasks-carrousel');

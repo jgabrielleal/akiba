@@ -1,5 +1,5 @@
-.avisos {
-    .avisos-carrousel {
+.warnings {
+    .warnings-carrousel {
         border-radius: 0.5rem;
         display: flex;
         flex-direction: row;
@@ -9,7 +9,6 @@
         -ms-overflow-style: none;
         user-select: none;
         cursor: grab;
-
         &::-webkit-scrollbar {
             width: 0;
         }
@@ -17,39 +16,33 @@
         &.active {
             cursor: grabbing;
         }
-
-        .avisos-item {
+        .warnings-item {
             flex-shrink: 0;
             width: 100%;
             height: auto;
             padding: 1rem;
             background-color: $azul-claro;
             border-radius: 0.5rem;
-
             @include xl {
                 width: 25rem !important;
                 height: 12rem;
             }
-
-            .avisos-destinatario-remetente {
+            .warnings-sender {
                 font-size: 1.3rem;
                 font-weight: 900;
                 font-style: italic;
                 color: $aurora;
                 pointer-events: none;
             }
-
-            .avisos-mensagem {
+            .warnings-message {
                 font-size: 0.75rem;
                 color: $aurora;
                 @include text-overflow(5);
                 pointer-events: none;
             }
-
-            .avisos-confirmacoes {
+            .warnings-peoples-confirmations {
                 height: 1.8rem;
                 margin-top: -0.3rem;
-
                 img {
                     width: 1.8rem;
                     height: 1.8rem;
@@ -58,16 +51,13 @@
                     border-radius: 22.5rem;
                     background-color: $creme;
                 }
-
                 span {
                     font-size: 1.8rem;
                     color: $aurora;
                 }
             }
-
-            .avisos-botoes-confirmacoes {
+            .warnings-buttons-confirmations {
                 margin-top: -0.3rem;
-
                 button {
                     width: 1.8rem;
                     height: 1.8rem;

@@ -13,7 +13,6 @@ class User extends Authenticatable
     use HasFactory, Notifiable;
 
     /**
-     * Nome da tabela associada com o modelo.
      * Name of the table associated with the model.
      *
      * @var string
@@ -21,7 +20,6 @@ class User extends Authenticatable
     protected $table = 'users';
 
     /**
-     * Os atributos que podem ser atribuídos em massa.
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
@@ -43,7 +41,6 @@ class User extends Authenticatable
     ];
 
     /**
-     * Os atributos que devem ser convertidos.
      * The attributes that should be cast.
      *
      * @var array<string, string>
@@ -65,7 +62,6 @@ class User extends Authenticatable
     ];
 
     /**
-     * Os atributos que devem ser ocultados para serialização.
      * The attributes that should be hidden for serialization.
      *
      * @var array<int, string>
@@ -76,7 +72,6 @@ class User extends Authenticatable
     ];
 
     /**
-     * Pega os atributos que devem ser convertidos.
      * Get the attributes that should be cast.
      *
      * @return array<string, string>
@@ -91,7 +86,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega os programas privados do usuário e cria um relacionamento de um-para-muitos.
      * Get the private shows for the user and create a one-to-many relationship.
      */
     public function privateShows()
@@ -100,7 +94,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega os programas públicos do usuário e cria um relacionamento de um-para-muitos.
      * Get the public shows for the user and create a one-to-many relationship.
      */
     public function publicShows()
@@ -109,7 +102,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega o usuário que é responsável pelo AutoDJ e cria um relacionamento de um-para-um.
      * Get the user that is responsible for the AutoDJ and create a one-to-one relationship.
      */
     public function autoDJShow()
@@ -118,7 +110,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega os podcasts que o usuário é author e cria um relacionamento de um-para-muitos.
      * Get the podcasts for the user and create a one-to-many relationship.
      */
     public function podcats()
@@ -127,7 +118,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega os posts do usuário e cria um relacionamento de um-para-muitos.
      * Get the posts of the user and create a one-to-many relationship.
      */
     public function posts()
@@ -136,7 +126,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega o usuário que foi indicado como autor e cria um relacionamento de muitos-para-um.
      * Get the user that is indicated as the author and create a many-to-one relationship.
      */
     public function author()
@@ -145,7 +134,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega os eventos do usuário e cria um relacionamento de um-para-muitos.
      * Get the events of the user and create a one-to-many relationship.
      */
     public function events()
@@ -154,7 +142,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega os avisos que o usuário enviou e cria um relacionamento de um-para-muitos.
      * Get the warnings that the user sent and create a one-to-many relationship.
      */
     public function sentWarnings()
@@ -163,16 +150,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega os avisos que o usuário recebeu e cria um relacionamento de um-para-muitos.
-     * Get the warnings that the user received and create a one-to-many relationship.
-     */
-    public function receivedWarnings()
-    {
-        return $this->hasMany(Warning::class, 'receiver');
-    }
-
-    /**
-     * Pega os uploads no repositório que o usuário enviou e cria um relacionamento de um-para-muitos.
      * Get the uploads in the repository that the user sent and create a one-to-many relationship.
      */
     public function repository()
@@ -181,7 +158,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega os eventos que o usuário está designado no calendario e cria um relacionamento de um-para-muitos.
      * Get the events that the user is assigned in the calendar and create a one-to-many relationship.
      */
     public function calendar()
@@ -190,7 +166,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega as batalhas de playlists atualizadas pelo usuário e cria um relacionamento de um-para-muitos.
      * Get the playlist battles updated by the user and create a one-to-many relationship.
      */
     public function playlistBattles()
@@ -199,7 +174,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Pega as enquetes atualizadas pelo usuário e cria um relacionamento de um-para-muitos.
      * Get the polls updated by the user and create a one-to-many relationship.
      */
     public function polls()

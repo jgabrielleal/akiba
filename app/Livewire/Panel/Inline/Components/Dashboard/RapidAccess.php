@@ -4,7 +4,7 @@ namespace App\Livewire\Panel\Inline\Components\Dashboard;
 
 use Livewire\Component;
 
-class AcoesRapidas extends Component
+class RapidAccess extends Component
 {
     public function render()
     {
@@ -17,7 +17,7 @@ class AcoesRapidas extends Component
                             <img src="{{ asset('icons/panel/adicionar_materias.svg') }}" alt="Adicionar Matérias" />Nova Matéria
                         </button>
                         <button type="button" class="d-flex align-items-center gap-1">
-                            <img src="{{ asset('icons/panel/adicionar_avisos.svg') }}" alt="Adicionar Avisos" />Criar Avisos
+                            <img src="{{ asset('icons/panel/adicionar_avisos.svg') }}" alt="Adicionar Avisos" />Criar avisos
                         </button>
                         <button type="button" class="d-flex align-items-center gap-2">
                             <img src="{{ asset('icons/panel/enviar_arquivo.svg') }}" alt="Enviar Arquivo" />Deixar Arquivos

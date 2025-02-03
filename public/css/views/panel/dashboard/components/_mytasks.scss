@@ -1,5 +1,5 @@
-.minhas-tarefas {
-    .minhas-tarefas-carrousel {
+.my-tasks {
+    .my-tasks-carrousel {
         border-radius: 0.5rem;
         display: flex;
         flex-direction: row;
@@ -15,14 +15,14 @@
         &.active {
             cursor: grabbing;
         }
-        .minhas-tarefas-item {
+        .my-tasks-item {
             flex-shrink: 0;
             width: 34.5rem;
-            height: 9rem;           
+            height: 9rem;
             padding: 1rem;
             background-color: $azul-claro;
             border-radius: 0.5rem;
-            .minhas-tarefas-conteudo {
+            .my-tasks-content {
                 width: 20rem;
                 h1 {
                     font-size: 1.3rem;
@@ -37,13 +37,13 @@
                     @include text-overflow(4);
                 }
             }
-            .minhas-tarefas-datas-e-conclusao {
+            .my-tasks-dates-and-completion {
                 position: relative;
-                .calendario {
+                .calendar {
                     width: 6.4rem;
                     margin-top: -8rem;
                     float: right;
-                    .calendario-topo {
+                    .calendar-top {
                         width: 100%;
                         height: 1.5rem;
                         background-color: $azul-escuro;
@@ -53,7 +53,7 @@
                         font-size: 0.9rem;
                         font-style: italic;
                     }
-                    .calendario-conteudo {
+                    .calendar-content {
                         width: 100%;
                         height: 2.5rem;
                         background-color: $aurora;
@@ -65,7 +65,7 @@
                     }
                 }
             }
-            .minhas-tarefas-confirmacoes {
+            .my-tasks-confirmations {
                 margin-top: -2.5rem;
                 position: absolute;
                 right: 0;
@@ -84,20 +84,20 @@
                 }
             }
         }
-        .minhas-tarefas-item-expiracao {
-            @extend .minhas-tarefas-item;
+        .my-tasks-expirations {
+            @extend .my-tasks-item;
             background-color: $laranja-secondary;
-            .minhas-tarefas-conteudo {
+            .my-tasks-content {
                 @include xl {
                     width: 20rem;
                 }
             }
-            .minhas-tarefas-datas-e-conclusao {
-                .calendario {
+            .my-tasks-dates-and-completion {
+                .calendar {
                     width: 6.4rem;
                     margin-top: -8rem;
                     float: right;
-                    .calendario-topo {
+                    .calendar-top {
                         width: 100%;
                         height: 1.5rem;
                         background-color: $vermelho;
@@ -107,7 +107,7 @@
                         font-size: 0.9rem;
                         font-style: italic;
                     }
-                    .calendario-conteudo {
+                    .calendar-content {
                         width: 100%;
                         height: 2.5rem;
                         background-color: $azul-escuro-secondary;
@@ -119,7 +119,7 @@
                     }
                 }
             }
-            .minhas-tarefas-confirmacoes {
+            .my-tasks-confirmations {
                 button {
                     width: 11rem;
                     border: 0;

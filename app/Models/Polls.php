@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Polls extends Model
 {
     /**
-     * Nome da tabela associada com o modelo.
      * Name of the table associated with the model.
      *
      * @var string
@@ -15,7 +14,6 @@ class Polls extends Model
     protected $table = 'polls';
 
     /**
-     * The attributes that are mass assignable.
      * Os atributos que podem ser atribuídos em massa.
      *
      * @var array<int, string>
@@ -27,7 +25,6 @@ class Polls extends Model
     ];
 
     /**
-     * Os atributos que devem ser convertidos.
      * The attributes that should be cast.
      *
      * @var array<string, string>
@@ -39,7 +36,6 @@ class Polls extends Model
     ];
 
     /**
-     * Pega o usuário que atualizou a enquete e cria um relacionamento de muitos-para-um.
      * Get the user that updated the poll and create a many-to-one relationship.
      */
     public function updatedBy()

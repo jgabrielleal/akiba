@@ -14,14 +14,12 @@ return new class extends Migration
         Schema::create('warnings', function (Blueprint $table) {
             $table->timestamps();
             $table->id();
-            $table->boolean('team');
             $table->unsignedBigInteger('sender');
-            $table->unsignedBigInteger('receiver');
+            $table->json('receivers');
             $table->string('message');
 
             // Foreign keys
             $table->foreign('sender')->references('id')->on('users')->onDelete('restrict');
-            $table->foreign('receiver')->references('id')->on('users')->onDelete('restrict');
         });
     }
 

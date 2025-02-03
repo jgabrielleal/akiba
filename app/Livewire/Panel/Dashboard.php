@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Dashboard extends Component
 {
-    #[Layout('components.layouts.panel')]
+    #[Layout('components.layouts.app')]
     #[Title('Dashboard')]
 
     public $logged;

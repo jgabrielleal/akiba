@@ -4,20 +4,20 @@ namespace App\Livewire\Panel\Inline\Components\Dashboard;
 
 use Livewire\Component;
 
-class MinhasTarefas extends Component
+class MyTasks extends Component
 {
     public function render()
     {
         return <<<'HTML'
         <div class="row">
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
-                <section class="minhas-tarefas mb-5">
+                <section class="my-tasks mb-5">
                     <div class="title-default">
                         <h1>Minhas Tarefas</h1>
                     </div>
-                    <div class="minhas-tarefas-carrousel gap-3">
-                        <div class="minhas-tarefas-item">
-                            <div class="minhas-tarefas-conteudo">
+                    <div class="my-tasks-carrousel gap-3">
+                        <div class="my-tasks-item">
+                            <div class="my-tasks-content">
                                 <h1 class="text-uppercase">A tarefa não foi concluída</h1>
                                 <p>
                                     It is a long established fact that a reader will be distracted by 
@@ -31,24 +31,24 @@ class MinhasTarefas extends Component
                                     by accident, sometimes on purpose (injected humour and the like).
                                 </p>
                             </div>
-                            <div class="minhas-tarefas-datas-e-conclusao">
-                                <div class="calendario">
-                                    <span class="calendario-topo d-block text-uppercase d-flex align-items-center justify-content-center">
+                            <div class="my-tasks-dates-and-completion">
+                                <div class="calendar">
+                                    <span class="calendar-top d-block text-uppercase d-flex align-items-center justify-content-center">
                                         Data Limite
                                     </span>
-                                    <span class="calendario-conteudo d-block text-uppercase d-flex align-items-center justify-content-center">
+                                    <span class="calendar-content d-block text-uppercase d-flex align-items-center justify-content-center">
                                         10/05
                                     </span>
                                 </div>
-                                <div class="minhas-tarefas-confirmacoes">
+                                <div class="my-tasks-confirmations">
                                     <button>
                                         <img src="{{ asset('icons/panel/aprovar.svg') }}" alt="Aprovar"/>
                                     </button>
                                 </div>
                             </div>
                         </div>
-                        <div class="minhas-tarefas-item-expiracao">
-                            <div class="minhas-tarefas-conteudo">
+                        <div class="my-tasks-expirations">
+                            <div class="my-tasks-content">
                                 <h1 class="text-uppercase">A tarefa não foi concluída</h1>
                                 <p>
                                     It is a long established fact that a reader will be distracted by 
@@ -62,16 +62,16 @@ class MinhasTarefas extends Component
                                     by accident, sometimes on purpose (injected humour and the like).
                                 </p>
                             </div>
-                            <div class="minhas-tarefas-datas-e-conclusao">
-                                <div class="calendario">
-                                    <span class="calendario-topo d-block text-uppercase d-flex align-items-center justify-content-center">
+                            <div class="my-tasks-dates-and-completion">
+                                <div class="calendar">
+                                    <span class="calendar-top d-block text-uppercase d-flex align-items-center justify-content-center">
                                         Data Limite
                                     </span>
-                                    <span class="calendario-conteudo d-block text-uppercase d-flex align-items-center justify-content-center">
+                                    <span class="calendar-content d-block text-uppercase d-flex align-items-center justify-content-center">
                                         10/05
                                     </span>
                                 </div>
-                                <div class="minhas-tarefas-confirmacoes">
+                                <div class="my-tasks-confirmations">
                                     <button class="btn">
                                         Solicitar conclusão
                                     </button>

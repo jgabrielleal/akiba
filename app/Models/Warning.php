@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Warning extends Model
 {
     /**
-     * Nome da tabela associada com o modelo.
      * Name of the table associated with the model.
      *
      * @var string
@@ -15,7 +14,6 @@ class Warning extends Model
     protected $table = 'warnings';
 
     /**
-     * The attributes that are mass assignable.
      * Os atributos que podem ser atribuídos em massa.
      *
      * @var array<int, string>
@@ -28,7 +26,6 @@ class Warning extends Model
     ];
 
     /**
-     * Os atributos que devem ser convertidos.
      * The attributes that should be cast.
      *
      * @var array<string, string>
@@ -41,7 +38,6 @@ class Warning extends Model
     ];
 
     /**
-     * Pega o usuário que enviou o aviso e cria um relacionamento de muitos-para-um.
      * Get the user that sent the warning and create a many-to-one relationship.
      */
     public function sender()
@@ -50,7 +46,6 @@ class Warning extends Model
     }
 
     /**
-     * Pega o usuário que recebeu o aviso e cria um relacionamento de muitos-para-um.
      * Get the user that received the warning and create a many-to-one relationship.
      */
     public function receiver()

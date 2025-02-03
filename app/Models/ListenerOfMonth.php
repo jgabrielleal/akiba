@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class ListenerOfMonth extends Model
 {
     /**
-     * Nome da tabela associada com o modelo.
      * Name of the table associated with the model.
      *
      * @var string
@@ -15,7 +14,6 @@ class ListenerOfMonth extends Model
     protected $table = 'listener_of_month';
 
     /**
-     * The attributes that are mass assignable.
      * Os atributos que podem ser atribuídos em massa.
      *
      * @var array<int, string>
@@ -29,7 +27,6 @@ class ListenerOfMonth extends Model
     ];
 
     /**
-     * Os atributos que devem ser convertidos.
      * The attributes that should be cast.
      *
      * @var array<string, string>

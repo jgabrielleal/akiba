@@ -7,7 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class ListenerRequests extends Model
 {
     /**
-     * Nome da tabela associada com o modelo.
      * Name of the table associated with the model.
      *
      * @var string
@@ -15,7 +14,6 @@ class ListenerRequests extends Model
     protected $table = 'listener_requests';
 
     /**
-     * Os atributos que podem ser atribuídos em massa.
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
@@ -28,7 +26,6 @@ class ListenerRequests extends Model
     ];
 
     /**
-     * Os atributos que devem ser convertidos.
      * The attributes that should be cast.
      *
      * @var array<string, string>
@@ -41,7 +38,6 @@ class ListenerRequests extends Model
     ];
 
     /**
-     * Pega o modelo indicado na coluna on_air e cria um relacionamento muitos-para-um.
      * Get the model indicated in the on_air column and create a many-to-one relationship.
      */
     public function onAir()
@@ -50,7 +46,6 @@ class ListenerRequests extends Model
     }
 
     /**
-     * Pega a música que foi solicitada pelo ouvinte e cria um relacionamento de muitos-pra-um.
      * Get the song that was requested by the listener and create a many-to-one relationship.
      */
     public function music()

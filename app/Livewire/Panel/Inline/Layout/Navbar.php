@@ -67,8 +67,8 @@ class Navbar extends Component
                             </a>
                         </li>
                     </ul>
-                    <div class="etc">
-                        <a href="#" class="perfil">
+                    <div class="nav-additional">
+                        <a href="#" class="profile">
                             <img src="https://static.gameloop.com/img/8e93daa12129f25a8bf60eab3ae86c7b.png?imageMogr2/thumbnail/172.8x172.8/format/webp" alt="Usuário" />
                         </a>
                     </div>
