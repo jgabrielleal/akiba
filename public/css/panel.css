@@ -127,14 +127,14 @@
   filter: invert(44%) sepia(44%) saturate(6266%) hue-rotate(189deg) brightness(105%) contrast(104%);
 }
 
-.login {
+.auth {
   position: relative;
   background-image: url("https://i.imgur.com/eKaJC9L.jpeg");
   background-size: cover;
   background-position: center;
   height: 100vh;
 }
-.login::before {
+.auth::before {
   content: "";
   position: absolute;
   top: 0;
@@ -144,40 +144,40 @@
   background-color: rgba(0, 0, 0, 0.027);
   z-index: 1;
 }
-.login .container {
+.auth .container {
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
-.login .container .block-logo {
+.auth .container .block-logo {
   margin-bottom: 2rem;
 }
-.login .container .block-logo img {
+.auth .container .block-logo img {
   width: 11rem;
 }
-.login .container .block-auth {
+.auth .container .block-auth {
   background: #FFFAF3;
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
-.login .container .block-auth form input {
+.auth .container .block-auth form input {
   background-color: #e6ded1;
   border: 0.1rem solid rgb(224, 224, 224);
   border-radius: 0.5rem;
 }
-.login .container .block-auth form inputhover {
+.auth .container .block-auth form inputhover {
   border: 0.1rem solid rgb(224, 224, 224);
 }
-.login .container .block-auth form button {
+.auth .container .block-auth form button {
   background-color: #0091FF;
   border-radius: 0.5rem;
   color: #FFFAF3;
 }
-.login .container .block-footer {
+.auth .container .block-credits {
   color: #FFFAF3;
   font-size: 0.9rem;
   font-weight: 400 !important;
 }
-.login .container .block-footer a {
+.auth .container .block-credits a {
   color: #0091FF;
 }
 
