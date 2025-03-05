@@ -2,10 +2,19 @@
 
 namespace App\Livewire\Panel\Inline\Components\Dashboard;
 
+use App\Models\Posts;
+
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
 class LastPosts extends Component
 {
+    public function list_all()
+    {
+        $posts = Posts::with('author')->take(5)->get();
+        return $posts->toArray();
+    }
+
     public function render()
     {
         return <<<'HTML'
@@ -16,151 +25,28 @@ class LastPosts extends Component
                         <h1>Últimas matérias</h1>
                     </div>
                     <div class="last-posts-carrousel gap-2">
-                        <div class="last-posts-item">
-                            <p class="last-posts-title">
-                                It is a long established fact that a reader 
-                                will be distracted by the readable content 
-                                of a page when looking at its layout. The point 
-                                of using Lorem Ipsum is that it has a more-or-less 
-                                normal distribution of letters, as opposed to 
-                                using 'Content here, content here', making it look 
-                                like readable English. Many desktop publishing packages 
-                                and web page editors now use Lorem Ipsum as their 
-                                default model text, and a search for 'lorem ipsum' will 
-                                uncover many web sites still in their infancy. Various 
-                                versions have evolved over the years, sometimes by accident, 
-                                sometimes on purpose (injected humour and the like).
-                            </p>
-                            <div class="last-posts-author d-flex justify-content-between">
-                                <span class="d-block text-uppercase">
-                                    Neko Kirame
-                                </span>
-                                <div class="d-flex gap-2">
-                                    <a href="#">
-                                        <img src="{{ asset('icons/panel/visualizar.svg') }}" alt="Editar"/>
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('icons/panel/editar.svg') }}" alt="Editar"/>
-                                    </a>
+                        @for($i = 0; $i < count($this->list_all()); $i++)
+                            <div class="last-posts-item">
+                                <p class="last-posts-title">
+                                    {{ $this->list_all()[$i]['title'] }}
+                                </p>
+                                <div class="last-posts-author d-flex justify-content-between">
+                                    <span class="d-block text-uppercase">
+                                        {{ $this->list_all()[$i]['author']['nickname'] }}
+                                    </span>
+                                    <div class="d-flex gap-2">
+                                        <a href="https://akiba.com.br/materia/{{ $this->list_all()[$i]['slug'] }}" target="_blank">
+                                            <img src="{{ asset('icons/panel/visualizar.svg') }}" alt="Editar"/>
+                                        </a>
+                                        @if(Auth::user()->id == $this->list_all()[$i]['author']['id'])
+                                            <a href="https://akiba.com.br/painel/materia/{{ $this->list_all()[$i]['slug'] }}">
+                                                <img src="{{ asset('icons/panel/editar.svg') }}" alt="Editar"/>
+                                            </a>
+                                        @endif
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="last-posts-item">
-                            <p class="last-posts-title">
-                                It is a long established fact that a reader 
-                                will be distracted by the readable content 
-                                of a page when looking at its layout. The point 
-                                of using Lorem Ipsum is that it has a more-or-less 
-                                normal distribution of letters, as opposed to 
-                                using 'Content here, content here', making it look 
-                                like readable English. Many desktop publishing packages 
-                                and web page editors now use Lorem Ipsum as their 
-                                default model text, and a search for 'lorem ipsum' will 
-                                uncover many web sites still in their infancy. Various 
-                                versions have evolved over the years, sometimes by accident, 
-                                sometimes on purpose (injected humour and the like).
-                            </p>
-                            <div class="last-posts-author d-flex justify-content-between">
-                                <span class="d-block text-uppercase">
-                                    Neko Kirame
-                                </span>
-                                <div class="d-flex gap-2">
-                                    <a href="#">
-                                        <img src="{{ asset('icons/panel/visualizar.svg') }}" alt="Editar"/>
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('icons/panel/editar.svg') }}" alt="Editar"/>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="last-posts-item">
-                            <p class="last-posts-title">
-                                It is a long established fact that a reader 
-                                will be distracted by the readable content 
-                                of a page when looking at its layout. The point 
-                                of using Lorem Ipsum is that it has a more-or-less 
-                                normal distribution of letters, as opposed to 
-                                using 'Content here, content here', making it look 
-                                like readable English. Many desktop publishing packages 
-                                and web page editors now use Lorem Ipsum as their 
-                                default model text, and a search for 'lorem ipsum' will 
-                                uncover many web sites still in their infancy. Various 
-                                versions have evolved over the years, sometimes by accident, 
-                                sometimes on purpose (injected humour and the like).
-                            </p>
-                            <div class="last-posts-author d-flex justify-content-between">
-                                <span class="d-block text-uppercase">
-                                    Neko Kirame
-                                </span>
-                                <div class="d-flex gap-2">
-                                    <a href="#">
-                                        <img src="{{ asset('icons/panel/visualizar.svg') }}" alt="Editar"/>
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('icons/panel/editar.svg') }}" alt="Editar"/>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="last-posts-item">
-                            <p class="last-posts-title">
-                                It is a long established fact that a reader 
-                                will be distracted by the readable content 
-                                of a page when looking at its layout. The point 
-                                of using Lorem Ipsum is that it has a more-or-less 
-                                normal distribution of letters, as opposed to 
-                                using 'Content here, content here', making it look 
-                                like readable English. Many desktop publishing packages 
-                                and web page editors now use Lorem Ipsum as their 
-                                default model text, and a search for 'lorem ipsum' will 
-                                uncover many web sites still in their infancy. Various 
-                                versions have evolved over the years, sometimes by accident, 
-                                sometimes on purpose (injected humour and the like).
-                            </p>
-                            <div class="last-posts-author d-flex justify-content-between">
-                                <span class="d-block text-uppercase">
-                                    Neko Kirame
-                                </span>
-                                <div class="d-flex gap-2">
-                                    <a href="#">
-                                        <img src="{{ asset('icons/panel/visualizar.svg') }}" alt="Editar"/>
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('icons/panel/editar.svg') }}" alt="Editar"/>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="last-posts-item">
-                            <p class="last-posts-title">
-                                It is a long established fact that a reader 
-                                will be distracted by the readable content 
-                                of a page when looking at its layout. The point 
-                                of using Lorem Ipsum is that it has a more-or-less 
-                                normal distribution of letters, as opposed to 
-                                using 'Content here, content here', making it look 
-                                like readable English. Many desktop publishing packages 
-                                and web page editors now use Lorem Ipsum as their 
-                                default model text, and a search for 'lorem ipsum' will 
-                                uncover many web sites still in their infancy. Various 
-                                versions have evolved over the years, sometimes by accident, 
-                                sometimes on purpose (injected humour and the like).
-                            </p>
-                            <div class="last-posts-author d-flex justify-content-between">
-                                <span class="d-block text-uppercase">
-                                    Neko Kirame
-                                </span>
-                                <div class="d-flex gap-2">
-                                    <a href="#">
-                                        <img src="{{ asset('icons/panel/visualizar.svg') }}" alt="Editar"/>
-                                    </a>
-                                    <a href="#">
-                                        <img src="{{ asset('icons/panel/editar.svg') }}" alt="Editar"/>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        @endfor
                     </div>
                 </section>
             </div>

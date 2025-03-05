@@ -1,17 +1,20 @@
+@use "../../base/colors";
+@use "../../layout/breakpoints";
+
 .status{
     width: 100%;
     bottom: 0;
-    background-color: $azul-escuro-secondary;
-    border-top: 0.1rem solid $laranja;
+    background-color: colors.$azul-escuro-secondary;
+    border-top: 0.1rem solid colors.$laranja;
     border-top-width: 80%;
     padding-top: 1rem;
     padding-bottom: 1rem;
     flex-wrap: wrap;
-    @include xl{
+    @include breakpoints.xl{
         flex-wrap: nowrap;
     }
     .status-item{
-        @include xl{
+        @include breakpoints.xl{
             border-right: 0.1rem solid gray;
             padding-left: 1rem;
             padding-right: 1rem;
@@ -26,7 +29,7 @@
             margin-top: 0.2rem;
             font-size: 1rem;
             font-weight: 500;
-            color: $laranja;
+            color: colors.$laranja;
         }
         img{
             width: 1.5rem !important;

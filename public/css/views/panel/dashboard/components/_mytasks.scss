@@ -1,3 +1,7 @@
+@use "../../../../base/colors";
+@use "../../../../functions/textoverflow";
+@use "../../../../layout/breakpoints";
+
 .my-tasks {
     .my-tasks-carrousel {
         border-radius: 0.5rem;
@@ -20,7 +24,7 @@
             width: 34.5rem;
             height: 9rem;
             padding: 1rem;
-            background-color: $azul-claro;
+            background-color: colors.$azul-claro;
             border-radius: 0.5rem;
             .my-tasks-content {
                 width: 20rem;
@@ -28,13 +32,14 @@
                     font-size: 1.3rem;
                     font-weight: 900;
                     font-style: italic;
-                    color: $aurora;
+                    color: colors.$aurora;
                     pointer-events: none;
                 }
                 p {
+                    height: 5rem;
                     font-size: 0.8rem;
-                    color: $aurora;
-                    @include text-overflow(4);
+                    color: colors.$aurora;
+                    @include textoverflow.text-overflow(4);
                 }
             }
             .my-tasks-dates-and-completion {
@@ -46,9 +51,9 @@
                     .calendar-top {
                         width: 100%;
                         height: 1.5rem;
-                        background-color: $azul-escuro;
+                        background-color: colors.$azul-escuro;
                         border-radius: 0.5rem 0.5rem 0rem 0rem;
-                        color: $aurora;
+                        color: colors.$aurora;
                         font-weight: 900;
                         font-size: 0.9rem;
                         font-style: italic;
@@ -56,11 +61,11 @@
                     .calendar-content {
                         width: 100%;
                         height: 2.5rem;
-                        background-color: $aurora;
+                        background-color: colors.$aurora;
                         border-radius: 0rem 0rem 0.5rem 0.5rem;
                         font-size: 1.5rem;
                         font-weight: 900;
-                        color: $azul-escuro;
+                        color: colors.$azul-escuro;
                         font-style: italic;
                     }
                 }
@@ -78,17 +83,19 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: $aurora;
+                    background-color: colors.$aurora;
                     font-size: 1.5rem;
-                    color: $azul-medio-secondary;
+                    color: colors.$azul-medio-secondary;
                 }
             }
         }
+
+        // Tasks that are about to expire
         .my-tasks-expirations {
             @extend .my-tasks-item;
-            background-color: $laranja-secondary;
+            background-color: colors.$laranja-secondary;
             .my-tasks-content {
-                @include xl {
+                @include breakpoints.xl {
                     width: 20rem;
                 }
             }
@@ -100,9 +107,9 @@
                     .calendar-top {
                         width: 100%;
                         height: 1.5rem;
-                        background-color: $vermelho;
+                        background-color: colors.$vermelho;
                         border-radius: 0.5rem 0.5rem 0rem 0rem;
-                        color: $azul-escuro;
+                        color: colors.$azul-escuro;
                         font-weight: 900;
                         font-size: 0.9rem;
                         font-style: italic;
@@ -110,11 +117,11 @@
                     .calendar-content {
                         width: 100%;
                         height: 2.5rem;
-                        background-color: $azul-escuro-secondary;
+                        background-color: colors.$azul-escuro-secondary;
                         border-radius: 0rem 0rem 0.5rem 0.5rem;
                         font-size: 1.5rem;
                         font-weight: 900;
-                        color: $laranja-secondary;
+                        color: colors.$laranja-secondary;
                         font-style: italic;
                     }
                 }
@@ -125,12 +132,64 @@
                     border: 0;
                     padding-top: 0.445rem;
                     border-radius: 22.5rem;
-                    background-color: $vermelho;
+                    background-color: colors.$vermelho;
                     font-size: 0.8rem;
                     font-weight: 900;
                     font-style: italic;
                     text-transform: uppercase;
-                    color: $aurora;
+                    color: colors.$aurora;
+                }
+            }
+        }
+
+        // Tasks that are overdue
+        .my-tasks-overdue {
+            @extend .my-tasks-item;
+            background-color: colors.$vermelho;
+            .my-tasks-content {
+                @include breakpoints.xl {
+                    width: 20rem;
+                }
+            }
+            .my-tasks-dates-and-completion {
+                .calendar {
+                    width: 6.4rem;
+                    margin-top: -8rem;
+                    float: right;
+                    .calendar-top {
+                        width: 100%;
+                        height: 1.5rem;
+                        background-color: colors.$aurora;
+                        border-radius: 0.5rem 0.5rem 0rem 0rem;
+                        color: colors.$azul-escuro;
+                        font-weight: 900;
+                        font-size: 0.9rem;
+                        font-style: italic;
+                    }
+                    .calendar-content {
+                        width: 100%;
+                        height: 2.5rem;
+                        background-color: colors.$azul-escuro-secondary;
+                        border-radius: 0rem 0rem 0.5rem 0.5rem;
+                        font-size: 1.5rem;
+                        font-weight: 900;
+                        color: colors.$laranja-secondary;
+                        font-style: italic;
+                    }
+                }
+            }
+            .my-tasks-confirmations {
+                button {
+                    width: 11rem;
+                    border: 0;
+                    padding-top: 0.445rem;
+                    border-radius: 22.5rem;
+                    background-color: colors.$aurora;
+                    font-size: 0.8rem;
+                    font-weight: 900;
+                    font-style: italic;
+                    text-transform: uppercase;
+                    color: colors.$vermelho;
                 }
             }
         }

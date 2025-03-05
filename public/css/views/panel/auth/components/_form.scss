@@ -1,10 +1,12 @@
+@use "../../../../base/colors";
+
 .block-auth {
-    background: $aurora;
+    background: colors.$aurora;
     border-radius: 0.5rem;
     margin-bottom: 1rem;
     form {
         input {
-            background-color: $aurora-cinza;
+            background-color: colors.$aurora-cinza;
             border: 0.1rem solid rgb(224, 224, 224);
             border-radius: 0.5rem;
 
@@ -13,9 +15,9 @@
             }
         }
         button {
-            background-color: $azul-claro;
+            background-color: colors.$azul-claro;
             border-radius: 0.5rem;
-            color: $aurora;
+            color: colors.$aurora;
         }
     }
 }

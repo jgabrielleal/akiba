@@ -1,8 +1,9 @@
+@use "sass:meta";
 .dashboard {
-    @import "./components/_wellcome.scss";
-    @import "./components/_rapidaccess.scss";
-    @import "./components/_warnings.scss";
-    @import "./components/_mytasks.scss";
-    @import "./components/_lastposts.scss";
-    @import "./components/_calendar.scss";
+    @include meta.load-css("components/_wellcome.scss");
+    @include meta.load-css("components/_rapidaccess.scss");
+    @include meta.load-css("components/_warnings.scss");
+    @include meta.load-css("components/_mytasks.scss");
+    @include meta.load-css("components/_lastposts.scss");
+    @include meta.load-css("components/_calendar.scss");
 }

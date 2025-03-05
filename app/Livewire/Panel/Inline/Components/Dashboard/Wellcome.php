@@ -9,9 +9,9 @@ class Wellcome extends Component
 {
     public $nickname;
 
-    public function mount()
+    public function get_nickname()
     {
-        $this->nickname = Auth::user()->nickname;
+       return Auth::user()->nickname;
     }
 
     public function render()
@@ -19,9 +19,9 @@ class Wellcome extends Component
         return <<<'HTML'
         <div class="row d-flex justify-content-center">
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-xxl-8">
-                @if($this->nickname)
+                @if($this->get_nickname())
                 <section class="wellcome mt-2 mb-5">
-                    E aí {{$this->nickname}}, O que tem pra hoje?
+                    E aí {{$this->get_nickname()}}, O que tem pra hoje?
                     <img src="{{ asset('images/panel/boas_vindas_avatar.png') }}" class="img-fluid" alt="Boas Vindas">
                 </section>
                 @else

@@ -1,38 +1,44 @@
+@use "../../../../base/colors";
+@use "../../../../functions/textoverflow";
+@use "../../../../layout/breakpoints";
+
 //Bloco de últimas matérias
 .last-posts {
     .last-posts-carrousel {
         display: flex;
         flex-wrap: wrap;
-        @include xl {
+        @include breakpoints.xl {
             flex-wrap: nowrap;
         }
         .last-posts-item {
             width: 100%;
             height: 11.5rem;
-            background-color: $azul-claro;
+            background-color: colors.$azul-claro;
             border-radius: 0.5rem;
             padding: 0.8rem;
-            @include xl {
+            @include breakpoints.xl {
                 width: 13.5625rem;
             }
             .last-posts-title {
-                height: 7.5rem;
+                height: 7.65rem;
                 font-size: 1rem;
-                color: $aurora;
-                @include text-overflow(5);
+                color: colors.$aurora;
+                @include textoverflow.text-overflow(5);
             }
             .last-posts-author {
+                padding-top: -0.5rem;
                 span {
-                    color: $aurora;
+                    color: colors.$aurora;
                     font-style: italic;
                     font-weight: 900;
                 }
                 div {
                     a {
-                        color: $aurora;
+                        color: colors.$aurora;
                         font-size: 1.1rem;
                         img {
                             width: 1.1rem;
+                            margin-top: -0.3rem;
                             filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
                         }
                     }

@@ -1,3 +1,7 @@
+@use "../../../../base/colors";
+@use "../../../../functions/textoverflow";
+@use "../../../../layout/breakpoints";
+
 .warnings {
     .warnings-carrousel {
         border-radius: 0.5rem;
@@ -21,9 +25,9 @@
             width: 100%;
             height: auto;
             padding: 1rem;
-            background-color: $azul-claro;
+            background-color: colors.$azul-claro;
             border-radius: 0.5rem;
-            @include xl {
+            @include breakpoints.xl {
                 width: 25rem !important;
                 height: 12rem;
             }
@@ -31,29 +35,30 @@
                 font-size: 1.3rem;
                 font-weight: 900;
                 font-style: italic;
-                color: $aurora;
+                color: colors.$aurora;
                 pointer-events: none;
             }
             .warnings-message {
+                height: 5.5rem;
+                margin-top: -0.1rem;
                 font-size: 0.75rem;
-                color: $aurora;
-                @include text-overflow(5);
+                color: colors.$aurora;
+                @include textoverflow.text-overflow(5);
                 pointer-events: none;
             }
             .warnings-peoples-confirmations {
                 height: 1.8rem;
-                margin-top: -0.3rem;
                 img {
                     width: 1.8rem;
                     height: 1.8rem;
                     object-fit: cover;
                     object-position: top;
                     border-radius: 22.5rem;
-                    background-color: $creme;
+                    background-color: colors.$creme;
                 }
                 span {
                     font-size: 1.8rem;
-                    color: $aurora;
+                    color: colors.$aurora;
                 }
             }
             .warnings-buttons-confirmations {
@@ -67,11 +72,15 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: $aurora;
+                    background-color: colors.$aurora;
                     font-size: 1.5rem;
-                    color: $azul-medio-secondary;
+                    color: colors.$azul-medio-secondary;
                 }
             }
+        }
+        .warnings-item-completed{
+            @extend .warnings-item;
+            background-color: colors.$verde;
         }
     }
 }

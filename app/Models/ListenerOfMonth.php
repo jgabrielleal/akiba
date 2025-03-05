@@ -6,18 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class ListenerOfMonth extends Model
 {
-    /**
-     * Name of the table associated with the model.
-     *
-     * @var string
-     */
     protected $table = 'listener_of_month';
 
-    /**
-     * Os atributos que podem ser atribuídos em massa.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
         'avatar',
         'listener',
@@ -26,11 +16,6 @@ class ListenerOfMonth extends Model
         'show',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
     protected $casts = [
         'avatar' => 'string',
         'listener' => 'string',

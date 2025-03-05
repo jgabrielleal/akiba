@@ -1,20 +1,20 @@
 // Imports by folder base
-@import "./base/_colors.scss";
-@import "./base/_reset.scss";
+@use "base/colors.scss";
+@use "base/_reset.scss";
 
 // Imports by folder layout
-@import "./layout/_breakpoints.scss";
+@use "layout/_breakpoints.scss";
 
 // Imports by folder functions
-@import "./functions/textoverflow.scss";
+@use "functions/textoverflow.scss";
 
 // Imports by folder utils
-@import "./utils/_titledefault.scss";
+@use "utils/_titledefault.scss";
 
 // Imports by folder components
-@import "./components/panel/_navbar.scss";
-@import "./components/panel/_status.scss";
+@use "components/panel/_navbar.scss";
+@use "components/panel/_status.scss";
 
 // Import by folder views
-@import "./views/panel/auth/_auth.scss";
-@import "./views/panel/dashboard/_dashboard.scss";
+@use "views/panel/auth/_auth.scss";
+@use "views/panel/dashboard/_dashboard.scss";

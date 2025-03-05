@@ -1,9 +1,11 @@
+@use "sass:meta";
 .auth {
     position: relative;
     background-image: url('https://i.imgur.com/eKaJC9L.jpeg');
     background-size: cover;
     background-position: center;
     height: 100vh;
+
     &::before {
         content: '';
         position: absolute;
@@ -14,11 +16,12 @@
         background-color: rgba(0, 0, 0, 0.027);
         z-index: 1;
     }
+
     .container {
         position: relative;
         z-index: 3;
-        @import "./components/_logo.scss";
-        @import "./components/_form.scss";
-        @import "./components/_credits.scss";
+        @include meta.load-css("components/_logo.scss");
+        @include meta.load-css("components/_form.scss");
+        @include meta.load-css("components/_credits.scss");
     }
 }

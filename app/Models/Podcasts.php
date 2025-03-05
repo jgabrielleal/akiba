@@ -6,19 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Podcasts extends Model
 {
-
-    /**
-     * Name of the table associated with the model.
-     *
-     * @var string
-     */
     protected $table = 'podcasts';
 
-    /**
-     * Os atributos que podem ser atribuídos em massa.
-     *
-     * @var array<int, string>
-     */
     protected $fillable = [
         'author',
         'thumb',
@@ -30,11 +19,6 @@ class Podcasts extends Model
         'audio_address',
     ];
 
-    /**
-     * The attributes that should be cast.
-     *
-     * @var array<string, string>
-     */
     protected $casts = [
         'author' => 'integer',
         'thumb' => 'string',
@@ -46,9 +30,6 @@ class Podcasts extends Model
         'audio_address' => 'string',
     ];
 
-    /**
-     * Get the user that is indicated as the author and create a many-to-one relationship.
-     */
     public function author()
     {
         return $this->belongsTo(User::class, 'author');

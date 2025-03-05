@@ -1,12 +1,15 @@
+@use "../../base/colors";
+@use "../../layout/breakpoints";
+
 .navbar{
-    background-color: $aurora;
-    @include xl{
+    background-color: colors.$aurora;
+    @include breakpoints.xl{
         height: 2.5rem;
     }
     .navbar-brand{
         img{
             width: 34px;
-            @include xl{
+            @include breakpoints.xl{
                 padding-bottom: 0.14rem;
             }
         }
@@ -20,7 +23,7 @@
             width: 1.3rem;
         }
         &:hover{
-            color: $azul-claro;
+            color: colors.$azul-claro;
             img{
                 filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
             }
@@ -29,16 +32,16 @@
     .nav-additional{
         .profile{
             display: none;
-            @include xl{
+            @include breakpoints.xl{
                 display: block;
                 img{
                     width: 3.5rem;
                     height: 3.5rem;
                     object-fit: cover;
                     object-position: top;
-                    background-color: $creme;
+                    background-color: colors.$creme;
                     border-radius: 22.5rem;
-                    border: 0.4rem solid $aurora;
+                    border: 0.4rem solid colors.$aurora;
                 }
             }
         }

@@ -18,8 +18,7 @@ class RestoreDatabase extends Command
     public function handle()
     {   
         /**
-         * PT-BR: Use o arquivo .env para obter as credenciais do banco de dados
-         * EN: Use the .env file to get the database credentials
+         * Use the .env file to get the database credentials
          */
         $database = env('DB_DATABASE');
         $username = env('DB_USERNAME');
@@ -27,8 +26,7 @@ class RestoreDatabase extends Command
         $host = env('DB_HOST');
 
         /**
-         * PT-BR: Verifica se o arquivo de backup existe
-         * EN: Verify if the backup file exists
+         * Verify if the backup file exists
          */
 
         $dir = storage_path('backup');
@@ -39,14 +37,12 @@ class RestoreDatabase extends Command
         }
 
         /**
-         * PT-BR: Define o comando a ser executado
-         * EN: Set the command to execute
+         * Set the command to execute
          */
         $command = "mysql --user={$username} --password={$password} --host={$host} {$database} < {$file}";
 
         /**
-         * PT-BR: Executa o comando MYSQL para restaurar o backup
-         * EN: Execute the MYSQL command to restore the backup
+         * Execute the MYSQL command to restore the backup
          */
         $return = null;
         $output = null;

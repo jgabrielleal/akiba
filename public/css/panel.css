@@ -12,6 +12,13 @@
   font-family: "Noto Sans Display", serif;
   font-weight: normal;
 }
+*:disabled {
+  opacity: 0.5;
+}
+
+.disabled {
+  opacity: 0.7;
+}
 
 .app-body {
   background: #000036;
@@ -78,10 +85,8 @@
   .navbar .nav-additional .profile img {
     width: 3.5rem;
     height: 3.5rem;
-    -o-object-fit: cover;
-       object-fit: cover;
-    -o-object-position: top;
-       object-position: top;
+    object-fit: cover;
+    object-position: top;
     background-color: #FFE8BF;
     border-radius: 22.5rem;
     border: 0.4rem solid #FFFAF3;
@@ -154,6 +159,15 @@
 .auth .container .block-logo img {
   width: 11rem;
 }
+.auth .container :root {
+  --aurora: #FFFAF3;
+  --aurora-cinza: #e6ded1;
+  --creme: #FFE8BF;
+  --laranja: #FFA919;
+  --azul-escuro: #00061A;
+  --azul-medio: #002080;
+  --azul-claro: #0091FF;
+}
 .auth .container .block-auth {
   background: #FFFAF3;
   border-radius: 0.5rem;
@@ -172,6 +186,15 @@
   border-radius: 0.5rem;
   color: #FFFAF3;
 }
+.auth .container :root {
+  --aurora: #FFFAF3;
+  --aurora-cinza: #e6ded1;
+  --creme: #FFE8BF;
+  --laranja: #FFA919;
+  --azul-escuro: #00061A;
+  --azul-medio: #002080;
+  --azul-claro: #0091FF;
+}
 .auth .container .block-credits {
   color: #FFFAF3;
   font-size: 0.9rem;
@@ -181,6 +204,15 @@
   color: #0091FF;
 }
 
+.dashboard :root {
+  --aurora: #FFFAF3;
+  --aurora-cinza: #e6ded1;
+  --creme: #FFE8BF;
+  --laranja: #FFA919;
+  --azul-escuro: #00061A;
+  --azul-medio: #002080;
+  --azul-claro: #0091FF;
+}
 .dashboard .wellcome {
   position: relative;
   padding: 0.5rem;
@@ -204,6 +236,15 @@
     bottom: 0;
     left: 0.5rem;
   }
+}
+.dashboard :root {
+  --aurora: #FFFAF3;
+  --aurora-cinza: #e6ded1;
+  --creme: #FFE8BF;
+  --laranja: #FFA919;
+  --azul-escuro: #00061A;
+  --azul-medio: #002080;
+  --azul-claro: #0091FF;
 }
 .dashboard .acoes-rapidas .acoes-rapidas-carrousel {
   flex-wrap: wrap;
@@ -237,6 +278,15 @@
   width: 1.2rem;
   filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
 }
+.dashboard :root {
+  --aurora: #FFFAF3;
+  --aurora-cinza: #e6ded1;
+  --creme: #FFE8BF;
+  --laranja: #FFA919;
+  --azul-escuro: #00061A;
+  --azul-medio: #002080;
+  --azul-claro: #0091FF;
+}
 .dashboard .warnings .warnings-carrousel {
   border-radius: 0.5rem;
   display: flex;
@@ -245,9 +295,7 @@
   overflow-y: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   cursor: grab;
 }
 .dashboard .warnings .warnings-carrousel::-webkit-scrollbar {
@@ -256,7 +304,7 @@
 .dashboard .warnings .warnings-carrousel.active {
   cursor: grabbing;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item {
+.dashboard .warnings .warnings-carrousel .warnings-item, .dashboard .warnings .warnings-carrousel .warnings-item-completed {
   flex-shrink: 0;
   width: 100%;
   height: auto;
@@ -265,19 +313,21 @@
   border-radius: 0.5rem;
 }
 @media (min-width: 1200px) {
-  .dashboard .warnings .warnings-carrousel .warnings-item {
+  .dashboard .warnings .warnings-carrousel .warnings-item, .dashboard .warnings .warnings-carrousel .warnings-item-completed {
     width: 25rem !important;
     height: 12rem;
   }
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-sender {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-sender, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-sender {
   font-size: 1.3rem;
   font-weight: 900;
   font-style: italic;
   color: #FFFAF3;
   pointer-events: none;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-message {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-message, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-message {
+  height: 5.5rem;
+  margin-top: -0.1rem;
   font-size: 0.75rem;
   color: #FFFAF3;
   overflow: hidden;
@@ -287,28 +337,25 @@
   -webkit-box-orient: vertical;
   pointer-events: none;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-peoples-confirmations {
   height: 1.8rem;
-  margin-top: -0.3rem;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations img {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations img, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-peoples-confirmations img {
   width: 1.8rem;
   height: 1.8rem;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  object-fit: cover;
+  object-position: top;
   border-radius: 22.5rem;
   background-color: #FFE8BF;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations span {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations span, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-peoples-confirmations span {
   font-size: 1.8rem;
   color: #FFFAF3;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-buttons-confirmations {
   margin-top: -0.3rem;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations button {
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations button, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-buttons-confirmations button {
   width: 1.8rem;
   height: 1.8rem;
   border: 0;
@@ -321,6 +368,18 @@
   font-size: 1.5rem;
   color: #000036;
 }
+.dashboard .warnings .warnings-carrousel .warnings-item-completed {
+  background-color: #00A859;
+}
+.dashboard :root {
+  --aurora: #FFFAF3;
+  --aurora-cinza: #e6ded1;
+  --creme: #FFE8BF;
+  --laranja: #FFA919;
+  --azul-escuro: #00061A;
+  --azul-medio: #002080;
+  --azul-claro: #0091FF;
+}
 .dashboard .my-tasks .my-tasks-carrousel {
   border-radius: 0.5rem;
   display: flex;
@@ -329,9 +388,7 @@
   overflow-y: hidden;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  user-select: none;
   cursor: grab;
 }
 .dashboard .my-tasks .my-tasks-carrousel::-webkit-scrollbar {
@@ -340,7 +397,7 @@
 .dashboard .my-tasks .my-tasks-carrousel.active {
   cursor: grabbing;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations {
   flex-shrink: 0;
   width: 34.5rem;
   height: 9rem;
@@ -348,17 +405,18 @@
   background-color: #0091FF;
   border-radius: 0.5rem;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content {
   width: 20rem;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content h1, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content h1 {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content h1, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content h1, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content h1 {
   font-size: 1.3rem;
   font-weight: 900;
   font-style: italic;
   color: #FFFAF3;
   pointer-events: none;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content p, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content p {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content p, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content p, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content p {
+  height: 5rem;
   font-size: 0.8rem;
   color: #FFFAF3;
   overflow: hidden;
@@ -367,15 +425,15 @@
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion {
   position: relative;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar {
   width: 6.4rem;
   margin-top: -8rem;
   float: right;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-top, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-top {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-top, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-top, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-top {
   width: 100%;
   height: 1.5rem;
   background-color: #00061A;
@@ -385,7 +443,7 @@
   font-size: 0.9rem;
   font-style: italic;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-content {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-content {
   width: 100%;
   height: 2.5rem;
   background-color: #FFFAF3;
@@ -395,12 +453,12 @@
   color: #00061A;
   font-style: italic;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-confirmations, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations {
   margin-top: -2.5rem;
   position: absolute;
   right: 0;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations button, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations button {
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations button, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-confirmations button, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations button {
   width: 1.8rem;
   height: 1.8rem;
   border: 0;
@@ -458,6 +516,60 @@
   text-transform: uppercase;
   color: #FFFAF3;
 }
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue {
+  background-color: #ED3237;
+}
+@media (min-width: 1200px) {
+  .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content {
+    width: 20rem;
+  }
+}
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar {
+  width: 6.4rem;
+  margin-top: -8rem;
+  float: right;
+}
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-top {
+  width: 100%;
+  height: 1.5rem;
+  background-color: #FFFAF3;
+  border-radius: 0.5rem 0.5rem 0rem 0rem;
+  color: #00061A;
+  font-weight: 900;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-content {
+  width: 100%;
+  height: 2.5rem;
+  background-color: #000036;
+  border-radius: 0rem 0rem 0.5rem 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #F69700;
+  font-style: italic;
+}
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-confirmations button {
+  width: 11rem;
+  border: 0;
+  padding-top: 0.445rem;
+  border-radius: 22.5rem;
+  background-color: #FFFAF3;
+  font-size: 0.8rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #ED3237;
+}
+.dashboard :root {
+  --aurora: #FFFAF3;
+  --aurora-cinza: #e6ded1;
+  --creme: #FFE8BF;
+  --laranja: #FFA919;
+  --azul-escuro: #00061A;
+  --azul-medio: #002080;
+  --azul-claro: #0091FF;
+}
 .dashboard .last-posts .last-posts-carrousel {
   display: flex;
   flex-wrap: wrap;
@@ -480,7 +592,7 @@
   }
 }
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-title {
-  height: 7.5rem;
+  height: 7.65rem;
   font-size: 1rem;
   color: #FFFAF3;
   overflow: hidden;
@@ -488,6 +600,9 @@
   display: -webkit-box;
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
+}
+.dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author {
+  padding-top: -0.5rem;
 }
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author span {
   color: #FFFAF3;
@@ -500,7 +615,17 @@
 }
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author div a img {
   width: 1.1rem;
+  margin-top: -0.3rem;
   filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
+}
+.dashboard :root {
+  --aurora: #FFFAF3;
+  --aurora-cinza: #e6ded1;
+  --creme: #FFE8BF;
+  --laranja: #FFA919;
+  --azul-escuro: #00061A;
+  --azul-medio: #002080;
+  --azul-claro: #0091FF;
 }
 .dashboard .calendar {
   margin-bottom: 8rem;
@@ -599,4 +724,6 @@
 }
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast {
   background-color: #00A859;
-}/*# sourceMappingURL=panel.css.map */
+}
+
+/*# sourceMappingURL=panel.css.map */

@@ -1,7 +1,10 @@
+@use "../../../../base/colors";
+@use "../../../../layout/breakpoints";
+
 .acoes-rapidas {
     .acoes-rapidas-carrousel {
         flex-wrap: wrap;
-        @include xl {
+        @include breakpoints.xl {
             flex-wrap: nowrap;
         }
         button {
@@ -13,8 +16,8 @@
             font-weight: 900;
             font-style: italic;
             text-transform: uppercase;
-            color: $azul-claro;
-            @include xl {
+            color: colors.$azul-claro;
+            @include breakpoints.xl {
                 padding-right: 1rem;
                 border-right: 0.1rem solid gray;
                 &:last-child {
