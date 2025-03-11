@@ -3,9 +3,21 @@
 namespace App\Livewire\Panel\Inline\Layout;
 
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
 
 class Navbar extends Component
 {
+    public $avatar;
+
+    public function mount()
+    {
+       if(Auth::user()->avatar){
+            $this->avatar = Auth::user()->avatar;
+       }else{
+            $this->avatar = "https://i.pinimg.com/736x/ce/5f/69/ce5f699887b75fa38904635e0fe60dbb.jpg";  
+       }
+    }
+
     public function render()
     {
         return <<<'HTML'
@@ -69,7 +81,7 @@ class Navbar extends Component
                     </ul>
                     <div class="nav-additional">
                         <a href="#" class="profile">
-                            <img src="https://static.gameloop.com/img/8e93daa12129f25a8bf60eab3ae86c7b.png?imageMogr2/thumbnail/172.8x172.8/format/webp" alt="Usuário" />
+                            <img src="{{ $this->avatar }}" alt="Usuário" />
                         </a>
                     </div>
                 </div>

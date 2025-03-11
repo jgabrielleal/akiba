@@ -16,6 +16,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('author');
             $table->unsignedBigInteger('responsible');
+            $table->string('day_of_week');
             $table->time('hours');
             $table->string('event');
             $table->string('category');

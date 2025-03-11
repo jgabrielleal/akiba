@@ -100,7 +100,12 @@ class User extends Authenticatable
         return $this->hasMany(Repository::class, 'author');
     }
 
-    public function calendar()
+    public function calendarAuthor()
+    {
+        return $this->hasMany(Calendar::class, 'author');
+    }
+
+    public function calendarResponsible()
     {
         return $this->hasMany(Calendar::class, 'responsible');
     }

@@ -10,7 +10,7 @@ use Livewire\Component;
 
 class Warnings extends Component
 {
-    public function list_all()
+    public function get_all()
     {
         $warnings = Warning::with('sender')->get();
         $warnings = $warnings->map(function ($warning) {
@@ -33,7 +33,7 @@ class Warnings extends Component
         return $warnings->toArray();
     }
 
-    public function confirm_user_in_warning($warning_id)
+    public function confirm_user_for_warning($warning_id)
     {
         $user = Auth::user();
         $warning = Warning::find($warning_id);
@@ -49,31 +49,31 @@ class Warnings extends Component
     {
         return <<<'HTML'
         <div class="row">
-            @if($this->list_all())
+            @if($this->get_all())
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
                     <section class="warnings mb-5">
                         <div class="title-default">
                             <h1>Avisos para equipe</h1>
                         </div>
                         <div class="warnings-carrousel gap-3">
-                            @for($i = 0; $i < count($this->list_all()); $i++)
-                                @if($this->list_all()[$i]['participating'])
+                            @for($i = 0; $i < count($this->get_all()); $i++)
+                                @if($this->get_all()[$i]['participating'])
                                     <div class="warnings-item-completed">
                                         <h1 class="warnings-sender text-uppercase">
-                                            {{ $this->list_all()[$i]['sender']['nickname'] }}
+                                            {{ $this->get_all()[$i]['sender']['nickname'] }}
                                         </h1>
                                         <p class="warnings-message">
-                                            {{ $this->list_all()[$i]['message'] }}
+                                            {{ $this->get_all()[$i]['message'] }}
                                         </p>
                                         <div class="d-flex justify-content-between">
                                             <div class="warnings-peoples-confirmations d-flex gap-2">
-                                                @foreach($this->list_all()[$i]['avatars'] as $avatar)
+                                                @foreach($this->get_all()[$i]['avatars'] as $avatar)
                                                     <img src="{{ $avatar }}" alt="Avatar do colaborador" class="avatar">
                                                 @endforeach
                                             </div>
                                             <div class="warnings-buttons-confirmations d-flex gap-1">
-                                                @if(!$this->list_all()[$i]['participating'])
-                                                    <button wire:click="confirm_user_in_warning({{ $this->list_all()[$i]['id'] }})">
+                                                @if(!$this->get_all()[$i]['participating'])
+                                                    <button wire:click="confirm_user_for_warning({{ $this->get_all()[$i]['id'] }})">
                                                         <img src="{{ asset('icons/panel/aprovar.svg') }}" alt="Aprovar"/>
                                                     </button>
                                                 @endif
@@ -83,19 +83,19 @@ class Warnings extends Component
                                 @else
                                     <div class="warnings-item">
                                         <h1 class="warnings-sender text-uppercase">
-                                            {{ $this->list_all()[$i]['sender']['nickname'] }}
+                                            {{ $this->get_all()[$i]['sender']['nickname'] }}
                                         </h1>
                                         <p class="warnings-message">
-                                            {{ $this->list_all()[$i]['message'] }}
+                                            {{ $this->get_all()[$i]['message'] }}
                                         </p>
                                         <div class="d-flex justify-content-between">
                                             <div class="warnings-peoples-confirmations d-flex gap-2">
-                                                @foreach($this->list_all()[$i]['avatars'] as $avatar)
+                                                @foreach($this->get_all()[$i]['avatars'] as $avatar)
                                                     <img src="{{ $avatar }}" alt="Avatar do colaborador" class="avatar">
                                                 @endforeach
                                             </div>
                                             <div class="warnings-buttons-confirmations d-flex gap-1">
-                                                <button wire:click="confirm_user_in_warning({{ $this->list_all()[$i]['id'] }})">
+                                                <button wire:click="confirm_user_for_warning({{ $this->get_all()[$i]['id'] }})">
                                                     <img src="{{ asset('icons/panel/aprovar.svg') }}" alt="Aprovar"/>
                                                 </button>
                                             </div>

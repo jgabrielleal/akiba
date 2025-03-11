@@ -4,5 +4,5 @@
     @livewire('panel.inline.components.dashboard.Warnings')
     @livewire('panel.inline.components.dashboard.MyTasks')
     @livewire('panel.inline.components.dashboard.LastPosts')
-    @livewire('panel.inline.components.dashboard.Calendar')
+    @livewire('panel.inline.components.dashboard.TeamCalendar')
 </div>
