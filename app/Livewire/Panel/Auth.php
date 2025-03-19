@@ -2,14 +2,13 @@
 
 namespace App\Livewire\Panel;
 
-use Livewire\Attributes\Layout;
 use Livewire\Component;
 
 class Auth extends Component
 {
-    #[Layout('components.layouts.auth')]
+    #[Layout('components.layouts.panel.auth')]
     public function render()
     {
-        return view('livewire.panel.auth')->title('Realize o Login');
+        return view('livewire.panel.auth')->title('Realize o Login')->layout('components.layouts.app');
     }
 }

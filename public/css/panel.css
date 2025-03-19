@@ -1,11 +1,17 @@
 :root {
+  --background: #000036;
   --aurora: #FFFAF3;
   --aurora-cinza: #e6ded1;
   --creme: #FFE8BF;
+  --vermelho: #ED3237;
   --laranja: #FFA919;
+  --laranja-secondary: #F69700;
   --azul-escuro: #00061A;
   --azul-medio: #002080;
+  --azul-medio-secondary: #000036;
   --azul-claro: #0091FF;
+  --roxo: #B82BFF;
+  --verde: #00A859;
 }
 
 * {
@@ -16,12 +22,8 @@
   opacity: 0.5;
 }
 
-.disabled {
-  opacity: 0.7;
-}
-
-.app-body {
-  background: #000036;
+body {
+  background-color: var(--background);
 }
 
 .title-default {
@@ -29,7 +31,7 @@
   overflow: hidden !important;
 }
 .title-default h1 {
-  color: #FFA919;
+  color: var(--laranja);
   font-size: 1.3rem;
   font-weight: 900;
   font-style: italic;
@@ -41,11 +43,15 @@
   width: 100%;
   margin-top: 0.8rem;
   margin-left: 1rem;
-  border-bottom: 0.1rem solid #FFA919;
+  border-bottom: 0.1rem solid var(--laranja);
+}
+
+.disabled {
+  opacity: 0.7;
 }
 
 .navbar {
-  background-color: #FFFAF3;
+  background-color: var(--aurora);
 }
 @media (min-width: 1200px) {
   .navbar {
@@ -70,7 +76,7 @@
   width: 1.3rem;
 }
 .navbar .nav-link:hover {
-  color: #0091FF;
+  color: var(--azul-claro);
 }
 .navbar .nav-link:hover img {
   filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
@@ -87,17 +93,17 @@
     height: 3.5rem;
     object-fit: cover;
     object-position: top;
-    background-color: #FFE8BF;
+    background-color: var(--creme);
     border-radius: 22.5rem;
-    border: 0.4rem solid #FFFAF3;
+    border: 0.4rem solid var(--aurora);
   }
 }
 
 .status {
   width: 100%;
   bottom: 0;
-  background-color: #000036;
-  border-top: 0.1rem solid #FFA919;
+  background-color: var(--azul-medio-secondary);
+  border-top: 0.1rem solid var(--laranja);
   border-top-width: 80%;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -125,7 +131,7 @@
   margin-top: 0.2rem;
   font-size: 1rem;
   font-weight: 500;
-  color: #FFA919;
+  color: var(--laranja);
 }
 .status .status-item img {
   width: 1.5rem !important;
@@ -159,22 +165,13 @@
 .auth .container .block-logo img {
   width: 11rem;
 }
-.auth .container :root {
-  --aurora: #FFFAF3;
-  --aurora-cinza: #e6ded1;
-  --creme: #FFE8BF;
-  --laranja: #FFA919;
-  --azul-escuro: #00061A;
-  --azul-medio: #002080;
-  --azul-claro: #0091FF;
-}
 .auth .container .block-auth {
-  background: #FFFAF3;
+  background: var(--aurora);
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
 .auth .container .block-auth form input {
-  background-color: #e6ded1;
+  background-color: var(--aurora) -cinza;
   border: 0.1rem solid rgb(224, 224, 224);
   border-radius: 0.5rem;
 }
@@ -182,44 +179,26 @@
   border: 0.1rem solid rgb(224, 224, 224);
 }
 .auth .container .block-auth form button {
-  background-color: #0091FF;
+  background-color: var(--azul-claro);
   border-radius: 0.5rem;
-  color: #FFFAF3;
-}
-.auth .container :root {
-  --aurora: #FFFAF3;
-  --aurora-cinza: #e6ded1;
-  --creme: #FFE8BF;
-  --laranja: #FFA919;
-  --azul-escuro: #00061A;
-  --azul-medio: #002080;
-  --azul-claro: #0091FF;
+  color: var(--aurora);
 }
 .auth .container .block-credits {
-  color: #FFFAF3;
+  color: var(--aurora);
   font-size: 0.9rem;
   font-weight: 400 !important;
 }
 .auth .container .block-credits a {
-  color: #0091FF;
+  color: var(--azul-claro);
 }
 
-.dashboard :root {
-  --aurora: #FFFAF3;
-  --aurora-cinza: #e6ded1;
-  --creme: #FFE8BF;
-  --laranja: #FFA919;
-  --azul-escuro: #00061A;
-  --azul-medio: #002080;
-  --azul-claro: #0091FF;
-}
 .dashboard .wellcome {
   position: relative;
   padding: 0.5rem;
-  background-color: #002080;
+  background-color: var(--azul-medio);
   border-radius: 0.5rem;
   text-align: center;
-  color: #FFA919;
+  color: var(--laranja);
   text-transform: uppercase;
   font-style: italic;
   font-weight: 900;
@@ -236,15 +215,6 @@
     bottom: 0;
     left: 0.5rem;
   }
-}
-.dashboard :root {
-  --aurora: #FFFAF3;
-  --aurora-cinza: #e6ded1;
-  --creme: #FFE8BF;
-  --laranja: #FFA919;
-  --azul-escuro: #00061A;
-  --azul-medio: #002080;
-  --azul-claro: #0091FF;
 }
 .dashboard .acoes-rapidas .acoes-rapidas-carrousel {
   flex-wrap: wrap;
@@ -263,7 +233,7 @@
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  color: #0091FF;
+  color: var(--azul-claro);
 }
 @media (min-width: 1200px) {
   .dashboard .acoes-rapidas .acoes-rapidas-carrousel button {
@@ -277,15 +247,6 @@
 .dashboard .acoes-rapidas .acoes-rapidas-carrousel button img {
   width: 1.2rem;
   filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
-}
-.dashboard :root {
-  --aurora: #FFFAF3;
-  --aurora-cinza: #e6ded1;
-  --creme: #FFE8BF;
-  --laranja: #FFA919;
-  --azul-escuro: #00061A;
-  --azul-medio: #002080;
-  --azul-claro: #0091FF;
 }
 .dashboard .warnings .warnings-carrousel {
   border-radius: 0.5rem;
@@ -309,7 +270,7 @@
   width: 100%;
   height: auto;
   padding: 1rem;
-  background-color: #0091FF;
+  background-color: var(--azul-claro);
   border-radius: 0.5rem;
 }
 @media (min-width: 1200px) {
@@ -322,14 +283,14 @@
   font-size: 1.3rem;
   font-weight: 900;
   font-style: italic;
-  color: #FFFAF3;
+  color: var(--aurora);
   pointer-events: none;
 }
 .dashboard .warnings .warnings-carrousel .warnings-item .warnings-message, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-message {
   height: 5.5rem;
   margin-top: -0.1rem;
   font-size: 0.75rem;
-  color: #FFFAF3;
+  color: var(--aurora);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -346,11 +307,11 @@
   object-fit: cover;
   object-position: top;
   border-radius: 22.5rem;
-  background-color: #FFE8BF;
+  background-color: var(--creme);
 }
 .dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations span, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-peoples-confirmations span {
   font-size: 1.8rem;
-  color: #FFFAF3;
+  color: var(--aurora);
 }
 .dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-buttons-confirmations {
   margin-top: -0.3rem;
@@ -364,21 +325,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FFFAF3;
+  background-color: var(--aurora);
   font-size: 1.5rem;
-  color: #000036;
+  color: var(--azul-medio-secondary);
 }
 .dashboard .warnings .warnings-carrousel .warnings-item-completed {
-  background-color: #00A859;
-}
-.dashboard :root {
-  --aurora: #FFFAF3;
-  --aurora-cinza: #e6ded1;
-  --creme: #FFE8BF;
-  --laranja: #FFA919;
-  --azul-escuro: #00061A;
-  --azul-medio: #002080;
-  --azul-claro: #0091FF;
+  background-color: var(--verde);
 }
 .dashboard .my-tasks .my-tasks-carrousel {
   border-radius: 0.5rem;
@@ -402,7 +354,7 @@
   width: 34.5rem;
   height: 9rem;
   padding: 1rem;
-  background-color: #0091FF;
+  background-color: var(--azul-claro);
   border-radius: 0.5rem;
 }
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content {
@@ -412,13 +364,13 @@
   font-size: 1.3rem;
   font-weight: 900;
   font-style: italic;
-  color: #FFFAF3;
+  color: var(--aurora);
   pointer-events: none;
 }
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content p, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content p, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content p {
   height: 5rem;
   font-size: 0.8rem;
-  color: #FFFAF3;
+  color: var(--aurora);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -436,9 +388,9 @@
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-top, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-top, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-top {
   width: 100%;
   height: 1.5rem;
-  background-color: #00061A;
+  background-color: var(--azul-escuro);
   border-radius: 0.5rem 0.5rem 0rem 0rem;
-  color: #FFFAF3;
+  color: var(--aurora);
   font-weight: 900;
   font-size: 0.9rem;
   font-style: italic;
@@ -446,11 +398,11 @@
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-content {
   width: 100%;
   height: 2.5rem;
-  background-color: #FFFAF3;
+  background-color: var(--aurora);
   border-radius: 0rem 0rem 0.5rem 0.5rem;
   font-size: 1.5rem;
   font-weight: 900;
-  color: #00061A;
+  color: var(--azul-escuro);
   font-style: italic;
 }
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-confirmations, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations {
@@ -467,12 +419,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #FFFAF3;
+  background-color: var(--aurora);
   font-size: 1.5rem;
-  color: #000036;
+  color: var(--azul-medio-secondary);
 }
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations {
-  background-color: #F69700;
+  background-color: var(--laranja-secondary);
 }
 @media (min-width: 1200px) {
   .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content {
@@ -487,9 +439,9 @@
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-top {
   width: 100%;
   height: 1.5rem;
-  background-color: #ED3237;
+  background-color: var(--vermelho);
   border-radius: 0.5rem 0.5rem 0rem 0rem;
-  color: #00061A;
+  color: var(--azul-escuro);
   font-weight: 900;
   font-size: 0.9rem;
   font-style: italic;
@@ -497,11 +449,11 @@
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-content {
   width: 100%;
   height: 2.5rem;
-  background-color: #000036;
+  background-color: var(--azul-medio-secondary);
   border-radius: 0rem 0rem 0.5rem 0.5rem;
   font-size: 1.5rem;
   font-weight: 900;
-  color: #F69700;
+  color: var(--laranja-secondary);
   font-style: italic;
 }
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations button {
@@ -509,15 +461,15 @@
   border: 0;
   padding-top: 0.445rem;
   border-radius: 22.5rem;
-  background-color: #ED3237;
+  background-color: var(--vermelho);
   font-size: 0.8rem;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  color: #FFFAF3;
+  color: var(--aurora);
 }
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue {
-  background-color: #ED3237;
+  background-color: var(--vermelho);
 }
 @media (min-width: 1200px) {
   .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content {
@@ -532,9 +484,9 @@
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-top {
   width: 100%;
   height: 1.5rem;
-  background-color: #FFFAF3;
+  background-color: var(--aurora);
   border-radius: 0.5rem 0.5rem 0rem 0rem;
-  color: #00061A;
+  color: var(--azul-escuro);
   font-weight: 900;
   font-size: 0.9rem;
   font-style: italic;
@@ -542,11 +494,11 @@
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-content {
   width: 100%;
   height: 2.5rem;
-  background-color: #000036;
+  background-color: var(--azul-medio-secondary);
   border-radius: 0rem 0rem 0.5rem 0.5rem;
   font-size: 1.5rem;
   font-weight: 900;
-  color: #F69700;
+  color: var(--laranja-secondary);
   font-style: italic;
 }
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-confirmations button {
@@ -554,21 +506,12 @@
   border: 0;
   padding-top: 0.445rem;
   border-radius: 22.5rem;
-  background-color: #FFFAF3;
+  background-color: var(--aurora);
   font-size: 0.8rem;
   font-weight: 900;
   font-style: italic;
   text-transform: uppercase;
-  color: #ED3237;
-}
-.dashboard :root {
-  --aurora: #FFFAF3;
-  --aurora-cinza: #e6ded1;
-  --creme: #FFE8BF;
-  --laranja: #FFA919;
-  --azul-escuro: #00061A;
-  --azul-medio: #002080;
-  --azul-claro: #0091FF;
+  color: var(--vermelho);
 }
 .dashboard .last-posts .last-posts-carrousel {
   display: flex;
@@ -582,7 +525,7 @@
 .dashboard .last-posts .last-posts-carrousel .last-posts-item {
   width: 100%;
   height: 11.5rem;
-  background-color: #0091FF;
+  background-color: var(--azul-claro);
   border-radius: 0.5rem;
   padding: 0.8rem;
 }
@@ -594,7 +537,7 @@
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-title {
   height: 7.65rem;
   font-size: 1rem;
-  color: #FFFAF3;
+  color: var(--aurora);
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box;
@@ -605,27 +548,18 @@
   padding-top: -0.5rem;
 }
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author span {
-  color: #FFFAF3;
+  color: var(--aurora);
   font-style: italic;
   font-weight: 900;
 }
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author div a {
-  color: #FFFAF3;
+  color: var(--aurora);
   font-size: 1.1rem;
 }
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author div a img {
   width: 1.1rem;
   margin-top: -0.3rem;
   filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
-}
-.dashboard :root {
-  --aurora: #FFFAF3;
-  --aurora-cinza: #e6ded1;
-  --creme: #FFE8BF;
-  --laranja: #FFA919;
-  --azul-escuro: #00061A;
-  --azul-medio: #002080;
-  --azul-claro: #0091FF;
 }
 .dashboard .calendar {
   margin-bottom: 8rem;
@@ -641,23 +575,23 @@
 .dashboard .calendar .calendar-tags .calendar-tags-item {
   width: 100%;
   height: 2rem;
-  background-color: #0091FF;
+  background-color: var(--azul-claro);
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #FFFAF3;
+  color: var(--aurora);
   font-weight: 900;
   font-style: italic;
 }
 .dashboard .calendar .calendar-tags .calendar-tags-item:nth-child(2) {
-  background-color: #B82BFF;
+  background-color: var(--roxo);
 }
 .dashboard .calendar .calendar-tags .calendar-tags-item:nth-child(3) {
-  background-color: #ED3237;
+  background-color: var(--vermelho);
 }
 .dashboard .calendar .calendar-tags .calendar-tags-item:nth-child(4) {
-  background-color: #00A859;
+  background-color: var(--verde);
 }
 .dashboard .calendar .calendar-days {
   flex-wrap: wrap;
@@ -669,7 +603,7 @@
 }
 .dashboard .calendar .calendar-days .calendar-days-item {
   width: 100%;
-  color: #FFFAF3;
+  color: var(--aurora);
   font-weight: 900;
   font-style: italic;
 }
@@ -686,7 +620,7 @@
 }
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives {
   width: 100%;
-  background-color: #0091FF;
+  background-color: var(--azul-claro);
   border-radius: 0.5rem;
   margin-bottom: 1rem;
   padding-top: 0.5rem;
@@ -700,12 +634,12 @@
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span:nth-child(1), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span:nth-child(1), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span:nth-child(1), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span:nth-child(1) {
   text-align: center;
   font-size: 1.3rem;
-  color: #FFFAF3;
+  color: var(--aurora);
 }
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span:nth-child(3), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span:nth-child(3), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span:nth-child(3), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span:nth-child(3) {
   text-align: center;
   font-size: 0.8rem;
-  color: #FFFAF3;
+  color: var(--aurora);
 }
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item h1, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast h1, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube h1, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives h1 {
   margin-top: 0.3rem;
@@ -714,16 +648,16 @@
   font-weight: 900;
   font-style: italic;
   text-align: center;
-  color: #FFFAF3;
+  color: var(--aurora);
 }
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives {
-  background-color: #B82BFF;
+  background-color: var(--roxo);
 }
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube {
-  background-color: #ED3237;
+  background-color: var(--vermelho);
 }
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast {
-  background-color: #00A859;
+  background-color: var(--verde);
 }
 
 /*# sourceMappingURL=panel.css.map */

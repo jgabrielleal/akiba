@@ -1,77 +1,93 @@
-@use "../../../../base/colors";
 @use "../../../../layout/breakpoints";
 
 //Bloco de calendário
 .calendar {
     margin-bottom: 8rem;
+
     .calendar-tags {
         flex-wrap: wrap;
+
         @include breakpoints.xl {
             flex-wrap: nowrap;
         }
+
         .calendar-tags-item {
             width: 100%;
             height: 2rem;
-            background-color: colors.$azul-claro;
+            background-color: var(--azul-claro);
             border-radius: 0.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: colors.$aurora;
+            color: var(--aurora);
             font-weight: 900;
             font-style: italic;
+
             &:nth-child(2) {
-                background-color: colors.$roxo;
+                background-color: var(--roxo);
             }
+
             &:nth-child(3) {
-                background-color: colors.$vermelho;
+                background-color: var(--vermelho);
             }
+
             &:nth-child(4) {
-                background-color: colors.$verde;
+                background-color: var(--verde);
             }
         }
     }
+
     .calendar-days {
         flex-wrap: wrap;
+
         @include breakpoints.xl {
             flex-wrap: nowrap;
         }
+
         .calendar-days-item {
             width: 100%;
-            color: colors.$aurora;
+            color: var(--aurora);
             font-weight: 900;
             font-style: italic;
         }
     }
+
     .calendar-tasks {
         flex-wrap: wrap;
+
         @include breakpoints.xl {
             flex-wrap: nowrap;
         }
+
         .calendar-tasks-columns {
             width: 100%;
+
             .calendar-tasks-item {
                 width: 100%;
-                background-color: colors.$azul-claro;
+                background-color: var(--azul-claro);
                 border-radius: 0.5rem;
                 margin-bottom: 1rem;
                 padding-top: 0.5rem;
                 padding-bottom: 0.5rem;
                 padding-left: 0.8rem;
                 padding-right: 0.8rem;
+
                 span {
                     display: block;
+
                     &:nth-child(1) {
                         text-align: center;
                         font-size: 1.3rem;
-                        color: colors.$aurora;
+                        color: var(--aurora);
                     }
+
                     &:nth-child(3) {
                         text-align: center;
                         font-size: 0.8rem;
-                        color: colors.$aurora;
+                        color: var(--aurora);
                     }
                 }
+
                 h1 {
                     margin-top: 0.3rem;
                     margin-bottom: 0.5rem;
@@ -79,20 +95,23 @@
                     font-weight: 900;
                     font-style: italic;
                     text-align: center;
-                    color: colors.$aurora;
+                    color: var(--aurora);
                 }
             }
+
             .calendar-tasks-item-lives {
                 @extend .calendar-tasks-item;
-                background-color: colors.$roxo;
+                background-color: var(--roxo);
             }
+
             .calendar-tasks-item-youtube {
                 @extend .calendar-tasks-item;
-                background-color: colors.$vermelho;
+                background-color: var(--vermelho);
             }
+
             .calendar-tasks-item-podcast {
                 @extend .calendar-tasks-item;
-                background-color: colors.$verde;
+                background-color: var(--verde);
             }
         }
     }

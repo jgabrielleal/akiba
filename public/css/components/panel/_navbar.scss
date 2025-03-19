@@ -1,47 +1,57 @@
-@use "../../base/colors";
 @use "../../layout/breakpoints";
 
-.navbar{
-    background-color: colors.$aurora;
-    @include breakpoints.xl{
+.navbar {
+    background-color: var(--aurora);
+
+    @include breakpoints.xl {
         height: 2.5rem;
     }
-    .navbar-brand{
-        img{
+
+    .navbar-brand {
+        img {
             width: 34px;
-            @include breakpoints.xl{
+
+            @include breakpoints.xl {
                 padding-bottom: 0.14rem;
             }
         }
     }
-    .navbar-toggler-icon{
+
+    .navbar-toggler-icon {
         filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
     }
-    .nav-link{
+
+    .nav-link {
         font-weight: 900 !important;
-        img{
+
+        img {
             width: 1.3rem;
         }
-        &:hover{
-            color: colors.$azul-claro;
-            img{
+
+        &:hover {
+            color: var(--azul-claro);
+
+            img {
                 filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
             }
         }
     }
-    .nav-additional{
-        .profile{
+
+    .nav-additional {
+        .profile {
             display: none;
-            @include breakpoints.xl{
+
+            @include breakpoints.xl {
                 display: block;
-                img{
+
+                img {
                     width: 3.5rem;
                     height: 3.5rem;
                     object-fit: cover;
                     object-position: top;
-                    background-color: colors.$creme;
+                    background-color: var(--creme);
                     border-radius: 22.5rem;
-                    border: 0.4rem solid colors.$aurora;
+                    border: 0.4rem solid var(--aurora);
                 }
             }
         }

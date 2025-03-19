@@ -1,6 +1,7 @@
 // Imports by folder base
 @use "base/colors.scss";
 @use "base/_reset.scss";
+@use "base/_helpers.scss";
 
 // Imports by folder layout
 @use "layout/_breakpoints.scss";
@@ -9,7 +10,6 @@
 @use "functions/textoverflow.scss";
 
 // Imports by folder utils
-@use "utils/_titledefault.scss";
 
 // Imports by folder components
 @use "components/panel/_navbar.scss";
@@ -18,3 +18,4 @@
 // Import by folder views
 @use "views/panel/auth/_auth.scss";
 @use "views/panel/dashboard/_dashboard.scss";
+@use "views/panel/posts/_posts.scss";

@@ -2,14 +2,15 @@
 
 namespace App\Livewire\Panel;
 
+use Illuminate\Support\Facades\Auth;
 use Livewire\Component;
 
-use Illuminate\Support\Facades\Auth;
 
 class Dashboard extends Component
 {
+    
     public $logged;
-
+    
     public function mount()
     {
         if (!Auth::check()) {
@@ -17,9 +18,9 @@ class Dashboard extends Component
         }
         $this->logged = Auth::user();
     }
-
+    
     public function render()
     {
-        return view('livewire.panel.dashboard')->title("Dashboard");
+        return view('livewire.panel.dashboard')->title("Dashboard")->layout('components.layouts.app');
     }
 }

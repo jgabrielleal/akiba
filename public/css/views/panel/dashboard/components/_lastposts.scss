@@ -1,4 +1,3 @@
-@use "../../../../base/colors";
 @use "../../../../functions/textoverflow";
 @use "../../../../layout/breakpoints";
 
@@ -7,35 +6,43 @@
     .last-posts-carrousel {
         display: flex;
         flex-wrap: wrap;
+
         @include breakpoints.xl {
             flex-wrap: nowrap;
         }
+
         .last-posts-item {
             width: 100%;
             height: 11.5rem;
-            background-color: colors.$azul-claro;
+            background-color: var(--azul-claro);
             border-radius: 0.5rem;
             padding: 0.8rem;
+
             @include breakpoints.xl {
                 width: 13.5625rem;
             }
+
             .last-posts-title {
                 height: 7.65rem;
                 font-size: 1rem;
-                color: colors.$aurora;
+                color: var(--aurora);
                 @include textoverflow.text-overflow(5);
             }
+
             .last-posts-author {
                 padding-top: -0.5rem;
+
                 span {
-                    color: colors.$aurora;
+                    color: var(--aurora);
                     font-style: italic;
                     font-weight: 900;
                 }
+
                 div {
                     a {
-                        color: colors.$aurora;
+                        color: var(--aurora);
                         font-size: 1.1rem;
+
                         img {
                             width: 1.1rem;
                             margin-top: -0.3rem;

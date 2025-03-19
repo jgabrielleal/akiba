@@ -19,7 +19,7 @@ class Form extends Component
         ]);
 
         if (Auth::attempt(['username' => $this->username, 'password' => $this->password])) {
-            return $this->redirect('/painel/dashboard', navigate: true);
+            return $this->redirect('/painel/dashboard');
         } else {
             $this->error = 'Usuário ou senha inválidos';
         }

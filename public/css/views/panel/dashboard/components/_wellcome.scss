@@ -1,19 +1,20 @@
-@use "../../../../base/colors";
 @use "../../../../layout/breakpoints";
 
 .wellcome {
     position: relative;
     padding: 0.5rem;
-    background-color: colors.$azul-medio;
+    background-color: var(--azul-medio);
     border-radius: 0.5rem;
     text-align: center;
-    color: colors.$laranja;
+    color: var(--laranja);
     text-transform: uppercase;
     font-style: italic;
     font-weight: 900;
     font-size: 1.5rem;
+
     img {
         display: none;
+
         @include breakpoints.xl {
             display: initial;
             width: 5rem;

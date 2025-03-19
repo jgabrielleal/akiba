@@ -1,10 +1,9 @@
-@use "../../../../base/colors";
-
 .block-credits {
-    color: colors.$aurora;
+    color: var(--aurora);
     font-size: 0.9rem;
     font-weight: 400 !important;
+
     a {
-        color: colors.$azul-claro;
+        color: var(--azul-claro);
     }
 }
