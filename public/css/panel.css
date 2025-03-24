@@ -1,23 +1,8 @@
-:root {
-  --background: #000036;
-  --aurora: #FFFAF3;
-  --aurora-cinza: #e6ded1;
-  --creme: #FFE8BF;
-  --vermelho: #ED3237;
-  --laranja: #FFA919;
-  --laranja-secondary: #F69700;
-  --azul-escuro: #00061A;
-  --azul-medio: #002080;
-  --azul-medio-secondary: #000036;
-  --azul-claro: #0091FF;
-  --roxo: #B82BFF;
-  --verde: #00A859;
-}
-
 * {
   font-family: "Noto Sans Display", serif;
   font-weight: normal;
 }
+
 *:disabled {
   opacity: 0.5;
 }
@@ -30,6 +15,7 @@ body {
   position: relative;
   overflow: hidden !important;
 }
+
 .title-default h1 {
   color: var(--laranja);
   font-size: 1.3rem;
@@ -37,6 +23,7 @@ body {
   font-style: italic;
   text-transform: uppercase;
 }
+
 .title-default h1::after {
   content: "";
   position: absolute;
@@ -53,41 +40,52 @@ body {
 .navbar {
   background-color: var(--aurora);
 }
+
 @media (min-width: 1200px) {
   .navbar {
     height: 2.5rem;
   }
 }
+
 .navbar .navbar-brand img {
   width: 34px;
 }
+
 @media (min-width: 1200px) {
   .navbar .navbar-brand img {
     padding-bottom: 0.14rem;
   }
 }
+
 .navbar .navbar-toggler-icon {
   filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
 }
+
 .navbar .nav-link {
   font-weight: 900 !important;
 }
+
 .navbar .nav-link img {
   width: 1.3rem;
 }
+
 .navbar .nav-link:hover {
   color: var(--azul-claro);
 }
+
 .navbar .nav-link:hover img {
   filter: invert(38%) sepia(81%) saturate(1529%) hue-rotate(184deg) brightness(96%) contrast(117%);
 }
+
 .navbar .nav-additional .profile {
   display: none;
 }
+
 @media (min-width: 1200px) {
   .navbar .nav-additional .profile {
     display: block;
   }
+
   .navbar .nav-additional .profile img {
     width: 3.5rem;
     height: 3.5rem;
@@ -109,30 +107,36 @@ body {
   padding-bottom: 1rem;
   flex-wrap: wrap;
 }
+
 @media (min-width: 1200px) {
   .status {
     flex-wrap: nowrap;
   }
 }
+
 @media (min-width: 1200px) {
   .status .status-item {
     border-right: 0.1rem solid gray;
     padding-left: 1rem;
     padding-right: 1rem;
   }
+
   .status .status-item:first-child {
     padding-left: 0;
   }
+
   .status .status-item:last-child {
     border-right: 0;
   }
 }
+
 .status .status-item span {
   margin-top: 0.2rem;
   font-size: 1rem;
   font-weight: 500;
   color: var(--laranja);
 }
+
 .status .status-item img {
   width: 1.5rem !important;
   filter: invert(44%) sepia(44%) saturate(6266%) hue-rotate(189deg) brightness(105%) contrast(104%);
@@ -145,6 +149,7 @@ body {
   background-position: center;
   height: 100vh;
 }
+
 .auth::before {
   content: "";
   position: absolute;
@@ -155,39 +160,48 @@ body {
   background-color: rgba(0, 0, 0, 0.027);
   z-index: 1;
 }
+
 .auth .container {
   position: relative;
   z-index: 3;
 }
+
 .auth .container .block-logo {
   margin-bottom: 2rem;
 }
+
 .auth .container .block-logo img {
   width: 11rem;
 }
+
 .auth .container .block-auth {
   background: var(--aurora);
   border-radius: 0.5rem;
   margin-bottom: 1rem;
 }
+
 .auth .container .block-auth form input {
   background-color: var(--aurora) -cinza;
   border: 0.1rem solid rgb(224, 224, 224);
   border-radius: 0.5rem;
 }
+
 .auth .container .block-auth form inputhover {
   border: 0.1rem solid rgb(224, 224, 224);
 }
+
 .auth .container .block-auth form button {
   background-color: var(--azul-claro);
   border-radius: 0.5rem;
   color: var(--aurora);
 }
+
 .auth .container .block-credits {
   color: var(--aurora);
   font-size: 0.9rem;
   font-weight: 400 !important;
 }
+
 .auth .container .block-credits a {
   color: var(--azul-claro);
 }
@@ -204,9 +218,11 @@ body {
   font-weight: 900;
   font-size: 1.5rem;
 }
+
 .dashboard .wellcome img {
   display: none;
 }
+
 @media (min-width: 1200px) {
   .dashboard .wellcome img {
     display: initial;
@@ -216,14 +232,17 @@ body {
     left: 0.5rem;
   }
 }
+
 .dashboard .acoes-rapidas .acoes-rapidas-carrousel {
   flex-wrap: wrap;
 }
+
 @media (min-width: 1200px) {
   .dashboard .acoes-rapidas .acoes-rapidas-carrousel {
     flex-wrap: nowrap;
   }
 }
+
 .dashboard .acoes-rapidas .acoes-rapidas-carrousel button {
   background: none;
   border-left: 0;
@@ -235,19 +254,23 @@ body {
   text-transform: uppercase;
   color: var(--azul-claro);
 }
+
 @media (min-width: 1200px) {
   .dashboard .acoes-rapidas .acoes-rapidas-carrousel button {
     padding-right: 1rem;
     border-right: 0.1rem solid gray;
   }
+
   .dashboard .acoes-rapidas .acoes-rapidas-carrousel button:last-child {
     border-right: 0;
   }
 }
+
 .dashboard .acoes-rapidas .acoes-rapidas-carrousel button img {
   width: 1.2rem;
   filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
 }
+
 .dashboard .warnings .warnings-carrousel {
   border-radius: 0.5rem;
   display: flex;
@@ -259,13 +282,17 @@ body {
   user-select: none;
   cursor: grab;
 }
+
 .dashboard .warnings .warnings-carrousel::-webkit-scrollbar {
   width: 0;
 }
+
 .dashboard .warnings .warnings-carrousel.active {
   cursor: grabbing;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item, .dashboard .warnings .warnings-carrousel .warnings-item-completed {
+
+.dashboard .warnings .warnings-carrousel .warnings-item,
+.dashboard .warnings .warnings-carrousel .warnings-item-completed {
   flex-shrink: 0;
   width: 100%;
   height: auto;
@@ -273,20 +300,27 @@ body {
   background-color: var(--azul-claro);
   border-radius: 0.5rem;
 }
+
 @media (min-width: 1200px) {
-  .dashboard .warnings .warnings-carrousel .warnings-item, .dashboard .warnings .warnings-carrousel .warnings-item-completed {
+
+  .dashboard .warnings .warnings-carrousel .warnings-item,
+  .dashboard .warnings .warnings-carrousel .warnings-item-completed {
     width: 25rem !important;
     height: 12rem;
   }
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-sender, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-sender {
+
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-sender,
+.dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-sender {
   font-size: 1.3rem;
   font-weight: 900;
   font-style: italic;
   color: var(--aurora);
   pointer-events: none;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-message, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-message {
+
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-message,
+.dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-message {
   height: 5.5rem;
   margin-top: -0.1rem;
   font-size: 0.75rem;
@@ -298,10 +332,14 @@ body {
   -webkit-box-orient: vertical;
   pointer-events: none;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-peoples-confirmations {
+
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations,
+.dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-peoples-confirmations {
   height: 1.8rem;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations img, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-peoples-confirmations img {
+
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations img,
+.dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-peoples-confirmations img {
   width: 1.8rem;
   height: 1.8rem;
   object-fit: cover;
@@ -309,14 +347,20 @@ body {
   border-radius: 22.5rem;
   background-color: var(--creme);
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations span, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-peoples-confirmations span {
+
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-peoples-confirmations span,
+.dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-peoples-confirmations span {
   font-size: 1.8rem;
   color: var(--aurora);
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-buttons-confirmations {
+
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations,
+.dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-buttons-confirmations {
   margin-top: -0.3rem;
 }
-.dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations button, .dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-buttons-confirmations button {
+
+.dashboard .warnings .warnings-carrousel .warnings-item .warnings-buttons-confirmations button,
+.dashboard .warnings .warnings-carrousel .warnings-item-completed .warnings-buttons-confirmations button {
   width: 1.8rem;
   height: 1.8rem;
   border: 0;
@@ -329,9 +373,11 @@ body {
   font-size: 1.5rem;
   color: var(--azul-medio-secondary);
 }
+
 .dashboard .warnings .warnings-carrousel .warnings-item-completed {
   background-color: var(--verde);
 }
+
 .dashboard .my-tasks .my-tasks-carrousel {
   border-radius: 0.5rem;
   display: flex;
@@ -343,13 +389,18 @@ body {
   user-select: none;
   cursor: grab;
 }
+
 .dashboard .my-tasks .my-tasks-carrousel::-webkit-scrollbar {
   width: 0;
 }
+
 .dashboard .my-tasks .my-tasks-carrousel.active {
   cursor: grabbing;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations {
+
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations {
   flex-shrink: 0;
   width: 34.5rem;
   height: 9rem;
@@ -357,17 +408,26 @@ body {
   background-color: var(--azul-claro);
   border-radius: 0.5rem;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content {
+
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content {
   width: 20rem;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content h1, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content h1, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content h1 {
+
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content h1,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content h1,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content h1 {
   font-size: 1.3rem;
   font-weight: 900;
   font-style: italic;
   color: var(--aurora);
   pointer-events: none;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content p, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content p, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content p {
+
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-content p,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content p,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content p {
   height: 5rem;
   font-size: 0.8rem;
   color: var(--aurora);
@@ -377,15 +437,24 @@ body {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion {
+
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion {
   position: relative;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar {
+
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar {
   width: 6.4rem;
   margin-top: -8rem;
   float: right;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-top, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-top, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-top {
+
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-top,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-top,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-top {
   width: 100%;
   height: 1.5rem;
   background-color: var(--azul-escuro);
@@ -395,7 +464,10 @@ body {
   font-size: 0.9rem;
   font-style: italic;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-content, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-content {
+
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-dates-and-completion .calendar .calendar-content,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-content,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-content {
   width: 100%;
   height: 2.5rem;
   background-color: var(--aurora);
@@ -405,12 +477,18 @@ body {
   color: var(--azul-escuro);
   font-style: italic;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-confirmations, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations {
+
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-confirmations,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations {
   margin-top: -2.5rem;
   position: absolute;
   right: 0;
 }
-.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations button, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-confirmations button, .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations button {
+
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-item .my-tasks-confirmations button,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-confirmations button,
+.dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations button {
   width: 1.8rem;
   height: 1.8rem;
   border: 0;
@@ -423,19 +501,23 @@ body {
   font-size: 1.5rem;
   color: var(--azul-medio-secondary);
 }
+
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations {
   background-color: var(--laranja-secondary);
 }
+
 @media (min-width: 1200px) {
   .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-content {
     width: 20rem;
   }
 }
+
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar {
   width: 6.4rem;
   margin-top: -8rem;
   float: right;
 }
+
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-top {
   width: 100%;
   height: 1.5rem;
@@ -446,6 +528,7 @@ body {
   font-size: 0.9rem;
   font-style: italic;
 }
+
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-dates-and-completion .calendar .calendar-content {
   width: 100%;
   height: 2.5rem;
@@ -456,6 +539,7 @@ body {
   color: var(--laranja-secondary);
   font-style: italic;
 }
+
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-expirations .my-tasks-confirmations button {
   width: 11rem;
   border: 0;
@@ -468,19 +552,23 @@ body {
   text-transform: uppercase;
   color: var(--aurora);
 }
+
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue {
   background-color: var(--vermelho);
 }
+
 @media (min-width: 1200px) {
   .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-content {
     width: 20rem;
   }
 }
+
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar {
   width: 6.4rem;
   margin-top: -8rem;
   float: right;
 }
+
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-top {
   width: 100%;
   height: 1.5rem;
@@ -491,6 +579,7 @@ body {
   font-size: 0.9rem;
   font-style: italic;
 }
+
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-dates-and-completion .calendar .calendar-content {
   width: 100%;
   height: 2.5rem;
@@ -501,6 +590,7 @@ body {
   color: var(--laranja-secondary);
   font-style: italic;
 }
+
 .dashboard .my-tasks .my-tasks-carrousel .my-tasks-overdue .my-tasks-confirmations button {
   width: 11rem;
   border: 0;
@@ -513,15 +603,18 @@ body {
   text-transform: uppercase;
   color: var(--vermelho);
 }
+
 .dashboard .last-posts .last-posts-carrousel {
   display: flex;
   flex-wrap: wrap;
 }
+
 @media (min-width: 1200px) {
   .dashboard .last-posts .last-posts-carrousel {
     flex-wrap: nowrap;
   }
 }
+
 .dashboard .last-posts .last-posts-carrousel .last-posts-item {
   width: 100%;
   height: 11.5rem;
@@ -529,11 +622,13 @@ body {
   border-radius: 0.5rem;
   padding: 0.8rem;
 }
+
 @media (min-width: 1200px) {
   .dashboard .last-posts .last-posts-carrousel .last-posts-item {
     width: 13.5625rem;
   }
 }
+
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-title {
   height: 7.65rem;
   font-size: 1rem;
@@ -544,34 +639,42 @@ body {
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
+
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author {
   padding-top: -0.5rem;
 }
+
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author span {
   color: var(--aurora);
   font-style: italic;
   font-weight: 900;
 }
+
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author div a {
   color: var(--aurora);
   font-size: 1.1rem;
 }
+
 .dashboard .last-posts .last-posts-carrousel .last-posts-item .last-posts-author div a img {
   width: 1.1rem;
   margin-top: -0.3rem;
   filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
 }
+
 .dashboard .calendar {
   margin-bottom: 8rem;
 }
+
 .dashboard .calendar .calendar-tags {
   flex-wrap: wrap;
 }
+
 @media (min-width: 1200px) {
   .dashboard .calendar .calendar-tags {
     flex-wrap: nowrap;
   }
 }
+
 .dashboard .calendar .calendar-tags .calendar-tags-item {
   width: 100%;
   height: 2rem;
@@ -584,41 +687,54 @@ body {
   font-weight: 900;
   font-style: italic;
 }
+
 .dashboard .calendar .calendar-tags .calendar-tags-item:nth-child(2) {
   background-color: var(--roxo);
 }
+
 .dashboard .calendar .calendar-tags .calendar-tags-item:nth-child(3) {
   background-color: var(--vermelho);
 }
+
 .dashboard .calendar .calendar-tags .calendar-tags-item:nth-child(4) {
   background-color: var(--verde);
 }
+
 .dashboard .calendar .calendar-days {
   flex-wrap: wrap;
 }
+
 @media (min-width: 1200px) {
   .dashboard .calendar .calendar-days {
     flex-wrap: nowrap;
   }
 }
+
 .dashboard .calendar .calendar-days .calendar-days-item {
   width: 100%;
   color: var(--aurora);
   font-weight: 900;
   font-style: italic;
 }
+
 .dashboard .calendar .calendar-tasks {
   flex-wrap: wrap;
 }
+
 @media (min-width: 1200px) {
   .dashboard .calendar .calendar-tasks {
     flex-wrap: nowrap;
   }
 }
+
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns {
   width: 100%;
 }
-.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives {
+
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item,
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast,
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube,
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives {
   width: 100%;
   background-color: var(--azul-claro);
   border-radius: 0.5rem;
@@ -628,20 +744,36 @@ body {
   padding-left: 0.8rem;
   padding-right: 0.8rem;
 }
-.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span {
+
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span,
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span,
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span,
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span {
   display: block;
 }
-.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span:nth-child(1), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span:nth-child(1), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span:nth-child(1), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span:nth-child(1) {
+
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span:nth-child(1),
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span:nth-child(1),
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span:nth-child(1),
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span:nth-child(1) {
   text-align: center;
   font-size: 1.3rem;
   color: var(--aurora);
 }
-.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span:nth-child(3), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span:nth-child(3), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span:nth-child(3), .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span:nth-child(3) {
+
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item span:nth-child(3),
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast span:nth-child(3),
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube span:nth-child(3),
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives span:nth-child(3) {
   text-align: center;
   font-size: 0.8rem;
   color: var(--aurora);
 }
-.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item h1, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast h1, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube h1, .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives h1 {
+
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item h1,
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast h1,
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube h1,
+.dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives h1 {
   margin-top: 0.3rem;
   margin-bottom: 0.5rem;
   font-size: 1.3rem;
@@ -650,14 +782,66 @@ body {
   text-align: center;
   color: var(--aurora);
 }
+
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-lives {
   background-color: var(--roxo);
 }
+
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-youtube {
   background-color: var(--vermelho);
 }
+
 .dashboard .calendar .calendar-tasks .calendar-tasks-columns .calendar-tasks-item-podcast {
   background-color: var(--verde);
+}
+
+.posts .alternator .default,
+.posts .alternator .button-eventos,
+.posts .alternator .button-reviews,
+.posts .alternator .button-posts {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.3rem;
+  padding-bottom: 0.2rem;
+  border-radius: 0.5rem;
+  background: none;
+  outline: none;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+}
+
+.posts .alternator .button-posts {
+  border: 0.2rem solid var(--azul-claro);
+  color: var(--azul-claro);
+}
+
+.posts .alternator .button-reviews {
+  border: 0.2rem solid var(--roxo);
+  color: var(--roxo);
+}
+
+.posts .alternator .button-eventos {
+  border: 0.2rem solid var(--laranja-terciary);
+  color: var(--laranja-terciary);
+}
+
+:root {
+  --background: #000036;
+  --aurora: #FFFAF3;
+  --aurora-cinza: #e6ded1;
+  --creme: #FFE8BF;
+  --vermelho: #ED3237;
+  --laranja: #FFA919;
+  --laranja-secondary: #F69700;
+  --laranja-terciary: #cc6633;
+  --azul-escuro: #00061A;
+  --azul-medio: #002080;
+  --azul-medio-secondary: #000036;
+  --azul-claro: #0091FF;
+  --roxo: #B82BFF;
+  --verde: #00A859;
 }
 
 /*# sourceMappingURL=panel.css.map */

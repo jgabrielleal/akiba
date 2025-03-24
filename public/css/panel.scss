@@ -1,5 +1,4 @@
 // Imports by folder base
-@use "base/colors.scss";
 @use "base/_reset.scss";
 @use "base/_helpers.scss";
 
@@ -19,3 +18,22 @@
 @use "views/panel/auth/_auth.scss";
 @use "views/panel/dashboard/_dashboard.scss";
 @use "views/panel/posts/_posts.scss";
+
+// ROOT Colors from panel interface
+:root {
+    --background: #000036;
+
+    --aurora: #FFFAF3;
+    --aurora-cinza: #e6ded1;
+    --creme: #FFE8BF;
+    --vermelho: #ED3237;
+    --laranja: #FFA919;
+    --laranja-secondary: #F69700;
+    --laranja-terciary: #cc6633;
+    --azul-escuro: #00061A;
+    --azul-medio: #002080;
+    --azul-medio-secondary: #000036;
+    --azul-claro: #0091FF;
+    --roxo: #B82BFF;
+    --verde: #00A859;
+}

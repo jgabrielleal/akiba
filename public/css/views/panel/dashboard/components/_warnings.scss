@@ -12,15 +12,12 @@
         -ms-overflow-style: none;
         user-select: none;
         cursor: grab;
-
         &::-webkit-scrollbar {
             width: 0;
         }
-
         &.active {
             cursor: grabbing;
         }
-
         .warnings-item {
             flex-shrink: 0;
             width: 100%;
@@ -28,12 +25,10 @@
             padding: 1rem;
             background-color: var(--azul-claro);
             border-radius: 0.5rem;
-
             @include breakpoints.xl {
                 width: 25rem !important;
                 height: 12rem;
             }
-
             .warnings-sender {
                 font-size: 1.3rem;
                 font-weight: 900;
@@ -41,7 +36,6 @@
                 color: var(--aurora);
                 pointer-events: none;
             }
-
             .warnings-message {
                 height: 5.5rem;
                 margin-top: -0.1rem;
@@ -50,10 +44,8 @@
                 @include textoverflow.text-overflow(5);
                 pointer-events: none;
             }
-
             .warnings-peoples-confirmations {
                 height: 1.8rem;
-
                 img {
                     width: 1.8rem;
                     height: 1.8rem;
@@ -62,16 +54,13 @@
                     border-radius: 22.5rem;
                     background-color: var(--creme);
                 }
-
                 span {
                     font-size: 1.8rem;
                     color: var(--aurora);
                 }
             }
-
             .warnings-buttons-confirmations {
                 margin-top: -0.3rem;
-
                 button {
                     width: 1.8rem;
                     height: 1.8rem;
@@ -87,7 +76,6 @@
                 }
             }
         }
-
         .warnings-item-completed {
             @extend .warnings-item;
             background-color: var(--verde);

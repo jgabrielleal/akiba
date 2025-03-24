@@ -1,0 +1,4 @@
+@use "sass:meta";
+.posts{
+    @include meta.load-css("components/switchposts.scss");
+}

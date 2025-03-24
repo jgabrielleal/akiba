@@ -12,11 +12,9 @@
         -ms-overflow-style: none;
         user-select: none;
         cursor: grab;
-
         &::-webkit-scrollbar {
             width: 0;
         }
-
         &.active {
             cursor: grabbing;
         }
@@ -28,10 +26,8 @@
             padding: 1rem;
             background-color: var(--azul-claro);
             border-radius: 0.5rem;
-
             .my-tasks-content {
                 width: 20rem;
-
                 h1 {
                     font-size: 1.3rem;
                     font-weight: 900;
@@ -39,7 +35,6 @@
                     color: var(--aurora);
                     pointer-events: none;
                 }
-
                 p {
                     height: 5rem;
                     font-size: 0.8rem;
@@ -47,15 +42,12 @@
                     @include textoverflow.text-overflow(4);
                 }
             }
-
             .my-tasks-dates-and-completion {
                 position: relative;
-
                 .calendar {
                     width: 6.4rem;
                     margin-top: -8rem;
                     float: right;
-
                     .calendar-top {
                         width: 100%;
                         height: 1.5rem;
@@ -66,7 +58,6 @@
                         font-size: 0.9rem;
                         font-style: italic;
                     }
-
                     .calendar-content {
                         width: 100%;
                         height: 2.5rem;
@@ -79,12 +70,10 @@
                     }
                 }
             }
-
             .my-tasks-confirmations {
                 margin-top: -2.5rem;
                 position: absolute;
                 right: 0;
-
                 button {
                     width: 1.8rem;
                     height: 1.8rem;
@@ -105,19 +94,16 @@
         .my-tasks-expirations {
             @extend .my-tasks-item;
             background-color: var(--laranja-secondary);
-
             .my-tasks-content {
                 @include breakpoints.xl {
                     width: 20rem;
                 }
             }
-
             .my-tasks-dates-and-completion {
                 .calendar {
                     width: 6.4rem;
                     margin-top: -8rem;
                     float: right;
-
                     .calendar-top {
                         width: 100%;
                         height: 1.5rem;
@@ -128,7 +114,6 @@
                         font-size: 0.9rem;
                         font-style: italic;
                     }
-
                     .calendar-content {
                         width: 100%;
                         height: 2.5rem;
@@ -141,7 +126,6 @@
                     }
                 }
             }
-
             .my-tasks-confirmations {
                 button {
                     width: 11rem;
@@ -162,19 +146,16 @@
         .my-tasks-overdue {
             @extend .my-tasks-item;
             background-color: var(--vermelho);
-
             .my-tasks-content {
                 @include breakpoints.xl {
                     width: 20rem;
                 }
             }
-
             .my-tasks-dates-and-completion {
                 .calendar {
                     width: 6.4rem;
                     margin-top: -8rem;
                     float: right;
-
                     .calendar-top {
                         width: 100%;
                         height: 1.5rem;
@@ -185,7 +166,6 @@
                         font-size: 0.9rem;
                         font-style: italic;
                     }
-
                     .calendar-content {
                         width: 100%;
                         height: 2.5rem;
@@ -198,7 +178,6 @@
                     }
                 }
             }
-
             .my-tasks-confirmations {
                 button {
                     width: 11rem;
