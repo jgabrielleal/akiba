@@ -1,4 +1,5 @@
 @use "sass:meta";
 .posts{
-    @include meta.load-css("components/switchposts.scss");
+    @include meta.load-css("components/_alternator.scss");
+    @include meta.load-css("components/_content.scss");
 }
