@@ -14,9 +14,12 @@ class Materials extends Component
                 <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3">
                     <div class="featured-image">
                         <span>Imagem em destaque</span>
-                        <label>+</label>
+                        <label for="featured-image">+</label>
+                        <input class="d-none" id="featured-image" name="featured-image" type="file" onchange="previewImage(event, this)">
                     </div>
                 </div>
+                <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3">
+
             </div>
         </form>
         HTML;

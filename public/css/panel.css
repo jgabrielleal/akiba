@@ -692,6 +692,12 @@ body {
   font-style: italic;
   text-transform: uppercase;
 }
+.posts .featured-image label img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
 
 :root {
   --background: #000036;

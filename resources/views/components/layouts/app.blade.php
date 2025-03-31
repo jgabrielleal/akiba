@@ -46,6 +46,9 @@
     @if (Request::is('*painel*'))
         <script src="{{ asset('js/panel/carrouselLateral.js') }}"></script>
     @endif
+    @if (Request::is('*painel*'))
+        <script src="{{ asset('js/panel/previewImage.js') }}"></script>
+    @endif
 </body>
 
 </html>
