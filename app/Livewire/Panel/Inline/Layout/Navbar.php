@@ -29,52 +29,52 @@ class Navbar extends Component
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mx-auto mb-3 mb-lg-0">
                         <li class="nav-item me-4">
-                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="/painel/dashboard">
+                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="/painel/dashboard" wire:navigate>
                                 <img src="{{ asset('icons/panel/dashboard.svg') }}" alt="Dashboard" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="/painel/materias">
+                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="/painel/materias" wire:navigate>
                                 <img src="{{ asset('icons/panel/materias.svg') }}" alt="Matérias" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
+                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#" wire:navigate>
                                 <img src="{{ asset('icons/panel/locucao.svg') }}" alt="Locução" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
+                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#" wire:navigate>
                                 <img src="{{ asset('icons/panel/radio.svg') }}" alt="Rádio" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
+                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#" wire:navigate>
                                 <img src="{{ asset('icons/panel/podcasts.svg') }}" alt="Podcasts" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
+                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#" wire:navigate>
                                 <img src="{{ asset('icons/panel/marketing.svg') }}" alt="Marketing" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
+                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#" wire:navigate>
                                 <img src="{{ asset('icons/panel/midias.svg') }}" alt="Mídias" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
+                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#" wire:navigate>
                                 <img src="{{ asset('icons/panel/adms.svg') }}" alt="ADM's" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
+                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#" wire:navigate>
                                 <img src="{{ asset('icons/panel/logs.svg') }}" alt="Logs's" />
                             </a>
                         </li>
                         <li class="nav-item me-4">
-                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#">
+                            <a class="nav-link active text-uppercase fst-italic d-flex gap-1" href="#" wire:navigate>
                                 <img src="{{ asset('icons/panel/avisos.svg') }}" alt="Avisos" />
                             </a>
                         </li>

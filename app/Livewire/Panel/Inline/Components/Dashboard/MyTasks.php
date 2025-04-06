@@ -9,7 +9,7 @@ use Livewire\Component;
 
 class MyTasks extends Component
 {
-    public function get_all()
+    public function get_all_tasks()
     {
         $tasks = Tasks::with(['applicant', 'executor'])->get();
 
@@ -33,7 +33,7 @@ class MyTasks extends Component
         return $filter_incompleted->values()->toArray();
     }
 
-    public function confirm_completion($task_id)
+    public function confirm_task_completion($task_id)
     {
         $task = Tasks::find($task_id);
         $task->completed = true;
@@ -44,20 +44,20 @@ class MyTasks extends Component
     {
         return <<<'HTML'
         <div class="row">
-            @if($this->get_all())
+            @if($this->get_all_tasks())
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
                     <section class="my-tasks mb-5">
                         <div class="title-default">
                             <h1>Minhas Tarefas</h1>
                         </div>
                         <div class="my-tasks-carrousel gap-3">
-                            @for($i = 0; $i < count($this->get_all()); $i++)
-                                @if($this->get_all()[$i]['is_due_soon'])
+                            @for($i = 0; $i < count($this->get_all_tasks()); $i++)
+                                @if($this->get_all_tasks()[$i]['is_due_soon'])
                                     <div class="my-tasks-expirations">
                                         <div class="my-tasks-content">
-                                            <h1 class="text-uppercase">{{ $this->get_all()[$i]['title'] }} </h1>
+                                            <h1 class="text-uppercase">{{ $this->get_all_tasks()[$i]['title'] }} </h1>
                                             <p>
-                                                {{ $this->get_all()[$i]['task'] }}
+                                                {{ $this->get_all_tasks()[$i]['task'] }}
                                             </p>
                                         </div>
                                         <div class="my-tasks-dates-and-completion">
@@ -66,22 +66,22 @@ class MyTasks extends Component
                                                     Data Limite
                                                 </span>
                                                 <span class="calendar-content d-block text-uppercase d-flex align-items-center justify-content-center">
-                                                    {{ $this->get_all()[$i]['limit_brazilian_format'] }}
+                                                    {{ $this->get_all_tasks()[$i]['limit_brazilian_format'] }}
                                                 </span>
                                             </div>
                                             <div class="my-tasks-confirmations">
-                                                <button class="btn" wire:click="confirm_completion({{ $this->get_all()[$i]['id'] }})">
+                                                <button class="btn" wire:click="confirm_task_completion({{ $this->get_all_tasks()[$i]['id'] }})">
                                                     Solicitar conclusão
                                                 </button>
                                             </div>
                                         </div>
                                     </div>
-                                @elseif($this->get_all()[$i]['is_overdue'])
+                                @elseif($this->get_all_tasks()[$i]['is_overdue'])
                                     <div class="my-tasks-overdue">
                                         <div class="my-tasks-content">
-                                            <h1 class="text-uppercase">{{ $this->get_all()[$i]['title'] }} </h1>
+                                            <h1 class="text-uppercase">{{ $this->get_all_tasks()[$i]['title'] }} </h1>
                                             <p>
-                                                {{ $this->get_all()[$i]['task'] }}
+                                                {{ $this->get_all_tasks()[$i]['task'] }}
                                             </p>
                                         </div>
                                         <div class="my-tasks-dates-and-completion">
@@ -90,11 +90,11 @@ class MyTasks extends Component
                                                     Data Limite
                                                 </span>
                                                 <span class="calendar-content d-block text-uppercase d-flex align-items-center justify-content-center">
-                                                    {{ $this->get_all()[$i]['limit_brazilian_format'] }}
+                                                    {{ $this->get_all_tasks()[$i]['limit_brazilian_format'] }}
                                                 </span>
                                             </div>
                                             <div class="my-tasks-confirmations">
-                                                <button class="btn" wire:click="confirm_completion({{ $this->get_all()[$i]['id'] }})">
+                                                <button class="btn" wire:click="confirm_task_completion({{ $this->get_all_tasks()[$i]['id'] }})">
                                                     Solicitar conclusão
                                                 </button>
                                             </div>
@@ -103,9 +103,9 @@ class MyTasks extends Component
                                 @else 
                                     <div class="my-tasks-item">
                                         <div class="my-tasks-content">
-                                            <h1 class="text-uppercase">{{ $this->get_all()[$i]['title'] }} </h1>
+                                            <h1 class="text-uppercase">{{ $this->get_all_tasks()[$i]['title'] }} </h1>
                                             <p>
-                                                {{ $this->get_all()[$i]['task'] }}
+                                                {{ $this->get_all_tasks()[$i]['task'] }}
                                             </p>
                                         </div>
                                         <div class="my-tasks-dates-and-completion">
@@ -114,11 +114,11 @@ class MyTasks extends Component
                                                     Data Limite
                                                 </span>
                                                 <span class="calendar-content d-block text-uppercase d-flex align-items-center justify-content-center">
-                                                    {{ $this->get_all()[$i]['limit_brazilian_format'] }}
+                                                    {{ $this->get_all_tasks()[$i]['limit_brazilian_format'] }}
                                                 </span>
                                             </div>
                                             <div class="my-tasks-confirmations">
-                                                <button class="btn" wire:click="confirm_completion({{ $this->get_all()[$i]['id'] }})">
+                                                <button class="btn" wire:click="confirm_task_completion({{ $this->get_all_tasks()[$i]['id'] }})">
                                                     <img src="{{ asset('icons/panel/aprovar.svg') }}" alt="Aprovar"/>
                                                 </button>
                                             </div>

@@ -10,7 +10,7 @@ use Livewire\Component;
 
 class Warnings extends Component
 {
-    public function get_all()
+    public function get_all_warnings()
     {
         $warnings = Warning::with('sender')->get();
         $warnings = $warnings->map(function ($warning) {
@@ -49,64 +49,62 @@ class Warnings extends Component
     {
         return <<<'HTML'
         <div class="row">
-            @if($this->get_all())
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
-                    <section class="warnings mb-5">
-                        <div class="title-default">
-                            <h1>Avisos para equipe</h1>
-                        </div>
-                        <div class="warnings-carrousel gap-3">
-                            @for($i = 0; $i < count($this->get_all()); $i++)
-                                @if($this->get_all()[$i]['participating'])
-                                    <div class="warnings-item-completed">
-                                        <h1 class="warnings-sender text-uppercase">
-                                            {{ $this->get_all()[$i]['sender']['nickname'] }}
-                                        </h1>
-                                        <p class="warnings-message">
-                                            {{ $this->get_all()[$i]['message'] }}
-                                        </p>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="warnings-peoples-confirmations d-flex gap-2">
-                                                @foreach($this->get_all()[$i]['avatars'] as $avatar)
-                                                    <img src="{{ $avatar }}" alt="Avatar do colaborador" class="avatar">
-                                                @endforeach
-                                            </div>
-                                            <div class="warnings-buttons-confirmations d-flex gap-1">
-                                                @if(!$this->get_all()[$i]['participating'])
-                                                    <button wire:click="confirm_user_for_warning({{ $this->get_all()[$i]['id'] }})">
-                                                        <img src="{{ asset('icons/panel/aprovar.svg') }}" alt="Aprovar"/>
-                                                    </button>
-                                                @endif
-                                            </div>
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xxl-12">
+                <section class="warnings mb-5">
+                    <div class="title-default">
+                        <h1>Avisos para equipe</h1>
+                    </div>
+                    <div class="warnings-carrousel gap-3">
+                        @for($i = 0; $i < count($this->get_all_warnings()); $i++)
+                            @if($this->get_all_warnings()[$i]['participating'])
+                                <div class="warnings-item-completed">
+                                    <h1 class="warnings-sender text-uppercase">
+                                        {{ $this->get_all_warnings()[$i]['sender']['nickname'] }}
+                                    </h1>
+                                    <p class="warnings-message">
+                                        {{ $this->get_all_warnings()[$i]['message'] }}
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="warnings-peoples-confirmations d-flex gap-2">
+                                            @foreach($this->get_all_warnings()[$i]['avatars'] as $avatar)
+                                                <img src="{{ $avatar }}" alt="Avatar do colaborador" class="avatar">
+                                            @endforeach
                                         </div>
-                                    </div>
-                                @else
-                                    <div class="warnings-item">
-                                        <h1 class="warnings-sender text-uppercase">
-                                            {{ $this->get_all()[$i]['sender']['nickname'] }}
-                                        </h1>
-                                        <p class="warnings-message">
-                                            {{ $this->get_all()[$i]['message'] }}
-                                        </p>
-                                        <div class="d-flex justify-content-between">
-                                            <div class="warnings-peoples-confirmations d-flex gap-2">
-                                                @foreach($this->get_all()[$i]['avatars'] as $avatar)
-                                                    <img src="{{ $avatar }}" alt="Avatar do colaborador" class="avatar">
-                                                @endforeach
-                                            </div>
-                                            <div class="warnings-buttons-confirmations d-flex gap-1">
-                                                <button wire:click="confirm_user_for_warning({{ $this->get_all()[$i]['id'] }})">
+                                        <div class="warnings-buttons-confirmations d-flex gap-1">
+                                            @if(!$this->get_all_warnings()[$i]['participating'])
+                                                <button wire:click="confirm_user_for_warning({{ $this->get_all_warnings()[$i]['id'] }})">
                                                     <img src="{{ asset('icons/panel/aprovar.svg') }}" alt="Aprovar"/>
                                                 </button>
-                                            </div>
+                                            @endif
                                         </div>
                                     </div>
-                                @endif
-                            @endfor
-                        </div>
-                    </section>
-                </div>
-            @endif
+                                </div>
+                            @else
+                                <div class="warnings-item">
+                                    <h1 class="warnings-sender text-uppercase">
+                                        {{ $this->get_all_warnings()[$i]['sender']['nickname'] }}
+                                    </h1>
+                                    <p class="warnings-message">
+                                        {{ $this->get_all_warnings()[$i]['message'] }}
+                                    </p>
+                                    <div class="d-flex justify-content-between">
+                                        <div class="warnings-peoples-confirmations d-flex gap-2">
+                                            @foreach($this->get_all_warnings()[$i]['avatars'] as $avatar)
+                                                <img src="{{ $avatar }}" alt="Avatar do colaborador" class="avatar">
+                                            @endforeach
+                                        </div>
+                                        <div class="warnings-buttons-confirmations d-flex gap-1">
+                                            <button wire:click="confirm_user_for_warning({{ $this->get_all_warnings()[$i]['id'] }})">
+                                                <img src="{{ asset('icons/panel/aprovar.svg') }}" alt="Aprovar"/>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @endfor
+                    </div>
+                </section>
+            </div>
         </div>
         HTML;
     }

@@ -83,6 +83,10 @@ body {
   }
 }
 
+.status-separator {
+  margin-bottom: 4rem;
+}
+
 .status {
   width: 100%;
   bottom: 0;
@@ -544,9 +548,6 @@ body {
   width: 1.1rem;
   margin-top: -0.3rem;
   filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
-}
-.dashboard .calendar {
-  margin-bottom: 8rem;
 }
 .dashboard .calendar .calendar-tags {
   flex-wrap: wrap;
