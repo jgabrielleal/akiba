@@ -1,8 +1,10 @@
 @use "../../../../functions/textoverflow";
+@use "../../../../functions/titledefault";
 @use "../../../../layout/breakpoints";
 
 //Bloco de últimas matérias
 .last-posts {
+    @include titledefault.title-default;
     .last-posts-carrousel {
         display: flex;
         flex-wrap: wrap;

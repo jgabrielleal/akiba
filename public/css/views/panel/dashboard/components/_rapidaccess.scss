@@ -1,6 +1,8 @@
 @use "../../../../layout/breakpoints";
+@use "../../../../functions/titledefault";
 
 .acoes-rapidas {
+    @include titledefault.title-default;
     .acoes-rapidas-carrousel {
         flex-wrap: wrap;
         @include breakpoints.xl {

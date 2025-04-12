@@ -28,7 +28,7 @@ class Status extends Component
         return <<<'HTML'
         <div>
             <div class="status-separator"></div>
-            <div class="position-fixed top-4 bottom-0 w-100">
+            <div class="position-fixed z-3 top-4 bottom-0 w-100">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">

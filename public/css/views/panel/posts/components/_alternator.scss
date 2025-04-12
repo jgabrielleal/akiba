@@ -1,4 +1,7 @@
+@use "../../../../functions/titledefault";
+
 .alternator {
+    @include titledefault.title-default;
     .default {
         padding-left: 1rem;
         padding-right: 1rem;

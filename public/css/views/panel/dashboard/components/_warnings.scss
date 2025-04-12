@@ -1,7 +1,9 @@
 @use "../../../../functions/textoverflow";
+@use "../../../../functions/titledefault";
 @use "../../../../layout/breakpoints";
 
 .warnings {
+    @include titledefault.title-default;
     .warnings-carrousel {
         border-radius: 0.5rem;
         display: flex;

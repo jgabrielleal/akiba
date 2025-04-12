@@ -30,10 +30,6 @@ body {
   border-bottom: 0.1rem solid var(--laranja);
 }
 
-.disabled {
-  opacity: 0.7;
-}
-
 .navbar {
   background-color: var(--aurora);
 }
@@ -204,6 +200,25 @@ body {
     left: 0.5rem;
   }
 }
+.dashboard .acoes-rapidas .title-default {
+  position: relative;
+  overflow: hidden !important;
+}
+.dashboard .acoes-rapidas .title-default h1 {
+  color: var(--laranja);
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.dashboard .acoes-rapidas .title-default h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  border-bottom: 0.1rem solid var(--laranja);
+}
 .dashboard .acoes-rapidas .acoes-rapidas-carrousel {
   flex-wrap: wrap;
 }
@@ -235,6 +250,25 @@ body {
 .dashboard .acoes-rapidas .acoes-rapidas-carrousel button img {
   width: 1.2rem;
   filter: invert(56%) sepia(73%) saturate(6053%) hue-rotate(188deg) brightness(104%) contrast(108%);
+}
+.dashboard .warnings .title-default {
+  position: relative;
+  overflow: hidden !important;
+}
+.dashboard .warnings .title-default h1 {
+  color: var(--laranja);
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.dashboard .warnings .title-default h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  border-bottom: 0.1rem solid var(--laranja);
 }
 .dashboard .warnings .warnings-carrousel {
   border-radius: 0.5rem;
@@ -319,6 +353,25 @@ body {
 }
 .dashboard .warnings .warnings-carrousel .warnings-item-completed {
   background-color: var(--verde);
+}
+.dashboard .my-tasks .title-default {
+  position: relative;
+  overflow: hidden !important;
+}
+.dashboard .my-tasks .title-default h1 {
+  color: var(--laranja);
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.dashboard .my-tasks .title-default h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  border-bottom: 0.1rem solid var(--laranja);
 }
 .dashboard .my-tasks .my-tasks-carrousel {
   border-radius: 0.5rem;
@@ -501,6 +554,25 @@ body {
   text-transform: uppercase;
   color: var(--vermelho);
 }
+.dashboard .last-posts .title-default {
+  position: relative;
+  overflow: hidden !important;
+}
+.dashboard .last-posts .title-default h1 {
+  color: var(--laranja);
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.dashboard .last-posts .title-default h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  border-bottom: 0.1rem solid var(--laranja);
+}
 .dashboard .last-posts .last-posts-carrousel {
   display: flex;
   flex-wrap: wrap;
@@ -548,6 +620,25 @@ body {
   width: 1.1rem;
   margin-top: -0.3rem;
   filter: invert(86%) sepia(1%) saturate(443%) hue-rotate(1deg) brightness(110%) contrast(102%);
+}
+.dashboard .calendar .title-default {
+  position: relative;
+  overflow: hidden !important;
+}
+.dashboard .calendar .title-default h1 {
+  color: var(--laranja);
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.dashboard .calendar .title-default h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  border-bottom: 0.1rem solid var(--laranja);
 }
 .dashboard .calendar .calendar-tags {
   flex-wrap: wrap;
@@ -645,6 +736,25 @@ body {
   background-color: var(--verde);
 }
 
+.posts .alternator .title-default {
+  position: relative;
+  overflow: hidden !important;
+}
+.posts .alternator .title-default h1 {
+  color: var(--laranja);
+  font-size: 1.3rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+}
+.posts .alternator .title-default h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  margin-top: 0.8rem;
+  margin-left: 1rem;
+  border-bottom: 0.1rem solid var(--laranja);
+}
 .posts .alternator .default, .posts .alternator .button-eventos, .posts .alternator .button-reviews, .posts .alternator .button-posts {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -670,7 +780,7 @@ body {
   border: 0.2rem solid var(--laranja-terciary);
   color: var(--laranja-terciary);
 }
-.posts .featured-image span {
+.posts .image-featured span {
   display: block;
   margin-bottom: 0.3rem;
   font-size: 1rem;
@@ -679,7 +789,7 @@ body {
   text-transform: uppercase;
   color: var(--laranja);
 }
-.posts .featured-image label {
+.posts .image-featured label {
   width: 100%;
   height: 15rem;
   display: flex;
@@ -693,11 +803,72 @@ body {
   font-style: italic;
   text-transform: uppercase;
 }
-.posts .featured-image label img {
+.posts .image-featured label img {
   width: 100%;
   height: 100%;
   border-radius: 0.5rem;
   object-fit: cover;
+}
+.posts .title label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--laranja);
+}
+.posts .title input {
+  border-radius: 0.5rem;
+}
+.posts .image-cover span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--laranja);
+}
+.posts .image-cover label {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: var(--aurora);
+  font-size: 5rem;
+  color: var(--azul-claro);
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  overflow: hidden;
+  object-fit: cover;
+}
+.posts .image-cover label img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+.posts .write-article label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--laranja);
+}
+.posts .write-article .trumbowyg-box {
+  height: 35rem !important;
+  background-color: var(--aurora);
+  border-radius: 0.5rem;
+}
+.posts .write-article .trumbowyg-box .trumbowyg-button-pane {
+  z-index: 1;
+  border-radius: 0.5rem;
 }
 
 :root {

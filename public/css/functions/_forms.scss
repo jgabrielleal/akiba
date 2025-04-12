@@ -1,0 +1,30 @@
+@mixin form($type) {
+    @if $type =='label' {
+        label {
+            display: block;
+            margin-bottom: 0.3rem;
+            font-size: 1rem;
+            font-weight: 900;
+            font-style: italic;
+            text-transform: uppercase;
+            color: var(--laranja);
+        }
+    }
+    @else if $type =='input' {
+        input{
+            border-radius: 0.5rem;
+        }
+    }
+    @else if $type =='trumbowyg' {
+        .trumbowyg-box {
+            height: 35rem !important;
+            background-color: var(--aurora);
+            border-radius: 0.5rem;
+
+            .trumbowyg-button-pane {
+                z-index: 1;
+                border-radius: 0.5rem;
+            }
+        }
+    }
+}

@@ -1,31 +1,20 @@
-.featured-image{
-    span{
-        display: block;
-        margin-bottom: 0.3rem;
-        font-size: 1rem;
-        font-weight: 900;
-        font-style: italic;
-        text-transform: uppercase;
-        color: var(--laranja);
-    }
-    label{
-        width: 100%;
-        height: 15rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 0.5rem;
-        background-color: var(--aurora);
-        font-size: 5rem;
-        color: var(--azul-claro);
-        font-weight: 900;
-        font-style: italic;
-        text-transform: uppercase;
-        img{
-            width: 100%;
-            height: 100%;
-            border-radius: 0.5rem;
-            object-fit: cover;
-        }
-    }  
+@use "../../../../functions/previewimage";
+@use "../../../../functions/forms";
+
+.image-featured{
+    @include previewimage.preview-image(15rem, false);
+}
+
+.title{
+    @include forms.form('label');
+    @include forms.form('input');
+}
+
+.image-cover{
+    @include previewimage.preview-image(15rem, true);
+}
+
+.write-article{
+    @include forms.form('label');
+    @include forms.form('trumbowyg');
 }
