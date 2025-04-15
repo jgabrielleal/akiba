@@ -18,3 +18,8 @@
     @include forms.form('label');
     @include forms.form('trumbowyg');
 }
+
+.first-tag, .second-tag{
+    @include forms.form('label', var(--azul-claro));
+    @include forms.form('trumbowyg');
+}

@@ -1,4 +1,4 @@
-@mixin form($type) {
+@mixin form($type, $color: var(--laranja)) {
     @if $type =='label' {
         label {
             display: block;
@@ -7,7 +7,7 @@
             font-weight: 900;
             font-style: italic;
             text-transform: uppercase;
-            color: var(--laranja);
+            color: $color;
         }
     }
     @else if $type =='input' {

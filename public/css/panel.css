@@ -870,6 +870,24 @@ body {
   z-index: 1;
   border-radius: 0.5rem;
 }
+.posts .first-tag label, .posts .second-tag label {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 1rem;
+  font-weight: 900;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--azul-claro);
+}
+.posts .first-tag .trumbowyg-box, .posts .second-tag .trumbowyg-box {
+  height: 35rem !important;
+  background-color: var(--aurora);
+  border-radius: 0.5rem;
+}
+.posts .first-tag .trumbowyg-box .trumbowyg-button-pane, .posts .second-tag .trumbowyg-box .trumbowyg-button-pane {
+  z-index: 1;
+  border-radius: 0.5rem;
+}
 
 :root {
   --background: #000036;

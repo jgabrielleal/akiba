@@ -9,6 +9,7 @@ class Materials extends Component
     public function render()
     {
         return <<<'HTML'
+        <form>
         <div class="row">
             <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 col-xxl-3">
                 <div class="image-featured">
@@ -33,6 +34,27 @@ class Materials extends Component
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xxl-6">
+                <div class="first-tag mb-3">
+                    <label for="first-tag" class="text-center">Primeira tag</label>
+                    <select id="first-tag" name="first-tag" class="form-select">
+                        <option>Valor1</option>
+                        <option>Valor1</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 col-xxl-6">
+                <div class="second-tag mb-3">
+                    <label for="second-tag" class="text-center">Segunda tag</label>
+                    <select id="second-tag" name="second-tag" class="form-select">
+                        <option>Valor1</option>
+                        <option>Valor1</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        </form>
         HTML;
     }
 }
